@@ -1,7 +1,0 @@
-C:\Users\Leandro\Documents\GitHub\DieTop\Teste\Teste\bin\Debug\Teste.exe.config
-C:\Users\Leandro\Documents\GitHub\DieTop\Teste\Teste\bin\Debug\Teste.exe
-C:\Users\Leandro\Documents\GitHub\DieTop\Teste\Teste\bin\Debug\Teste.pdb
-C:\Users\Leandro\Documents\GitHub\DieTop\Teste\Teste\obj\Debug\DieTopSource.csprojAssemblyReference.cache
-C:\Users\Leandro\Documents\GitHub\DieTop\Teste\Teste\obj\Debug\DieTopSource.csproj.CoreCompileInputs.cache
-C:\Users\Leandro\Documents\GitHub\DieTop\Teste\Teste\obj\Debug\Teste.exe
-C:\Users\Leandro\Documents\GitHub\DieTop\Teste\Teste\obj\Debug\Teste.pdb

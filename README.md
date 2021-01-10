@@ -1,2 +1,0 @@
-# DieTop
-Projeto Interdisciplinar
