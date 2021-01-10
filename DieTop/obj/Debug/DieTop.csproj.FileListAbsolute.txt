@@ -1,0 +1,10 @@
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\DieTop.exe.config
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\DieTop.exe
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\DieTop.pdb
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Properties.Resources.resources
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csproj.GenerateResource.cache
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csproj.CoreCompileInputs.cache
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.exe
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.pdb
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Welcome_View.resources
