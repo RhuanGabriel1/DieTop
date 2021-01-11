@@ -70,12 +70,10 @@ namespace DieTop
         private void LoadRegisterScreen(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Welcome_View welcome_View = new Welcome_View(); 
-            Views.Register_View registerView = new Views.Register_View();
-            //Fecha a Aba Welcome view
-            welcome_View.Closed += (s, args) => this.Close();
-            //Abre uma Nova tela (CADASTRO)
-            registerView.Show();
+            Welcome_View welcome_View = new Welcome_View();
+            Register_View.Register_View registerView = new Register_View.Register_View();
+           
+            Hooks.Hooks.StopAndStart(welcome_View,registerView);
 
 
         }

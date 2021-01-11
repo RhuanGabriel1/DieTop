@@ -1,5 +1,5 @@
 ﻿
-namespace DieTop.Views
+namespace Register_View
 {
     partial class Register_View
     {
@@ -37,7 +37,8 @@ namespace DieTop.Views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 574);
             this.Name = "Register_View";
-            this.Text = "Register_View";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Bem-Vindo a Tela de Cadastro!";
             this.ResumeLayout(false);
 
         }

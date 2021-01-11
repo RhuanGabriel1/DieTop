@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DieTop.Views
+namespace Register_View
 {
     public partial class Register_View : Form
     {

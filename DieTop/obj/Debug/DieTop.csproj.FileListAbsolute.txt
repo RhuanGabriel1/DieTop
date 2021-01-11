@@ -8,4 +8,4 @@ C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csproj.CoreComp
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.exe
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.pdb
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Welcome_View.resources
-C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.Register_View.resources
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\Register_View.Register_View.resources

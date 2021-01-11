@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Hooks.cs" />
     <Compile Include="Views\Register_View.cs">
       <SubType>Form</SubType>
     </Compile>
