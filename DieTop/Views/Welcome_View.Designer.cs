@@ -83,8 +83,8 @@ namespace DieTop
             this.inputLogin.Text = "Insira seu Login";
             this.inputLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputLogin.WordWrap = false;
-            this.inputLogin.Enter += new System.EventHandler(this.inputLogin_Enter);
-            this.inputLogin.Leave += new System.EventHandler(this.inputLogin_Leave);
+            this.inputLogin.Enter += new System.EventHandler(this.InputLogin_Enter);
+            this.inputLogin.Leave += new System.EventHandler(this.InputLogin_Leave);
             // 
             // label2
             // 
@@ -123,8 +123,8 @@ namespace DieTop
             this.inputSenha.Text = "Insira sua Senha";
             this.inputSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputSenha.WordWrap = false;
-            this.inputSenha.Enter += new System.EventHandler(this.inputSenha_enter);
-            this.inputSenha.Leave += new System.EventHandler(this.inputSenha_leave);
+            this.inputSenha.Enter += new System.EventHandler(this.InputSenha_enter);
+            this.inputSenha.Leave += new System.EventHandler(this.InputSenha_leave);
             // 
             // loginButton
             // 
@@ -153,7 +153,7 @@ namespace DieTop
             this.newRegister.TabIndex = 8;
             this.newRegister.TabStop = true;
             this.newRegister.Text = "Ainda não tenho Cadastro!";
-            this.newRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.newRegister_LinkClicked);
+            this.newRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LoadRegisterScreen);
             // 
             // Welcome_View
             // 

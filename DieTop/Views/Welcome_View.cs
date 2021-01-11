@@ -20,7 +20,7 @@ namespace DieTop
         }
         //If clicked is different of default text , will turn of personalized text
 
-        protected void changeInputTextClicked(TextBox textBox, String text)
+        protected void ChangeInputTextClicked(TextBox textBox, String text)
         {
             if (textBox.Text == text)
             {
@@ -30,7 +30,7 @@ namespace DieTop
             }
         }
         //If clicked button text === "", will turn all for default
-        protected void changeInputTextClickedNull(TextBox textBox, String text)
+        protected void ChangeInputTextClickedNull(TextBox textBox, String text)
         {
             if (textBox.Text == "")
             {
@@ -41,33 +41,33 @@ namespace DieTop
         }
 
        //Quando Clica no input
-        private void inputSenha_enter(object sender, EventArgs e)
+        private void InputSenha_enter(object sender, EventArgs e)
         {
-            changeInputTextClicked(inputSenha, "Insira sua Senha");
+            ChangeInputTextClicked(inputSenha, "Insira sua Senha");
 
         }
         //Quando Sai do input e nao contém nenhum dado
-        private void inputSenha_leave(object sender, EventArgs e)
+        private void InputSenha_leave(object sender, EventArgs e)
         {
-            changeInputTextClickedNull(inputSenha, "Insira sua Senha");
+            ChangeInputTextClickedNull(inputSenha, "Insira sua Senha");
 
         }
         //Quando Clica no input
 
-        private void inputLogin_Enter(object sender, EventArgs e)
+        private void InputLogin_Enter(object sender, EventArgs e)
         {
-            changeInputTextClicked(inputLogin, "Insira seu Login");
+            ChangeInputTextClicked(inputLogin, "Insira seu Login");
 
         }
         //Quando Sai do input e nao contém nenhum dado
 
-        private void inputLogin_Leave(object sender, EventArgs e)
+        private void InputLogin_Leave(object sender, EventArgs e)
         {
-            changeInputTextClickedNull(inputLogin, "Insira seu Login");
+            ChangeInputTextClickedNull(inputLogin, "Insira seu Login");
 
         }
 
-        private void newRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LoadRegisterScreen(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             Welcome_View welcome_View = new Welcome_View(); 
