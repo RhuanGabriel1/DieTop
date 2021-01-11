@@ -17,9 +17,6 @@ namespace DieTop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Welcome_View welcome = new Welcome_View();
-        
-        
             Application.Run(new Welcome_View());
         }
     }

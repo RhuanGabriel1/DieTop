@@ -10,17 +10,27 @@ using System.Windows.Forms;
 
 namespace Hooks
 {
-    static class Hooks
+     class Hooks
     {
-        //Set Method to do Where will appear the screen
-  
-        public static void StopAndStart(Form deleteView, Form startView)
+        public void ChangeInputTextClicked(TextBox textBox, String text)
         {
-            deleteView.Hide();
-            deleteView.Closed += (s, args) => deleteView.Close();
-            startView.Show();
-
+            if (textBox.Text == text)
+            {
+                textBox.Text = "";
+                textBox.ForeColor = Color.Black;
+                textBox.TextAlign = HorizontalAlignment.Left;
+            }
         }
-        
+        //If clicked button text === "", will turn all for default
+        public void ChangeInputTextClickedNull(TextBox textBox, String text)
+        {
+            if (textBox.Text == "")
+            {
+                textBox.Text = text;
+                textBox.ForeColor = Color.Silver;
+                textBox.TextAlign = HorizontalAlignment.Center;
+            }
+        }
+        //Will Return Datas
     }
 }
