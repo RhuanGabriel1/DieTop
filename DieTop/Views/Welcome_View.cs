@@ -40,62 +40,44 @@ namespace DieTop
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Welcome_View_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textWelcome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void welcomeText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginInput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-       
+       //Quando Clica no input
         private void inputSenha_enter(object sender, EventArgs e)
         {
             changeInputTextClicked(inputSenha, "Insira sua Senha");
 
         }
+        //Quando Sai do input e nao contém nenhum dado
         private void inputSenha_leave(object sender, EventArgs e)
         {
             changeInputTextClickedNull(inputSenha, "Insira sua Senha");
 
         }
+        //Quando Clica no input
+
         private void inputLogin_Enter(object sender, EventArgs e)
         {
             changeInputTextClicked(inputLogin, "Insira seu Login");
 
         }
+        //Quando Sai do input e nao contém nenhum dado
+
         private void inputLogin_Leave(object sender, EventArgs e)
         {
             changeInputTextClickedNull(inputLogin, "Insira seu Login");
 
         }
-        private void inputSenha_TextChanged(object sender, EventArgs e)
+
+        private void newRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
+            Welcome_View welcome_View = new Welcome_View(); 
+            Views.Register_View registerView = new Views.Register_View();
+            //Fecha a Aba Welcome view
+            welcome_View.Closed += (s, args) => this.Close();
+            //Abre uma Nova tela (CADASTRO)
+            registerView.Show();
+
 
         }
-
-       
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Register_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Register_View.Designer.cs">
+      <DependentUpon>Register_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Welcome_View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Register_View.resx">
+      <DependentUpon>Register_View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Welcome_View.resx">
       <DependentUpon>Welcome_View.cs</DependentUpon>
     </EmbeddedResource>

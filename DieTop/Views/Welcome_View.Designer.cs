@@ -56,7 +56,6 @@ namespace DieTop
             this.welcomeText.TabIndex = 0;
             this.welcomeText.Text = "Sejam Bem-Vindos ao DieTop!";
             this.welcomeText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.welcomeText.Click += new System.EventHandler(this.welcomeText_Click);
             // 
             // label1
             // 
@@ -84,7 +83,6 @@ namespace DieTop
             this.inputLogin.Text = "Insira seu Login";
             this.inputLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputLogin.WordWrap = false;
-            this.inputLogin.TextChanged += new System.EventHandler(this.loginInput_TextChanged);
             this.inputLogin.Enter += new System.EventHandler(this.inputLogin_Enter);
             this.inputLogin.Leave += new System.EventHandler(this.inputLogin_Leave);
             // 
@@ -99,7 +97,6 @@ namespace DieTop
             this.label2.Size = new System.Drawing.Size(80, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "Login";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -126,7 +123,6 @@ namespace DieTop
             this.inputSenha.Text = "Insira sua Senha";
             this.inputSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputSenha.WordWrap = false;
-            this.inputSenha.TextChanged += new System.EventHandler(this.loginInput_TextChanged);
             this.inputSenha.Enter += new System.EventHandler(this.inputSenha_enter);
             this.inputSenha.Leave += new System.EventHandler(this.inputSenha_leave);
             // 
@@ -157,6 +153,7 @@ namespace DieTop
             this.newRegister.TabIndex = 8;
             this.newRegister.TabStop = true;
             this.newRegister.Text = "Ainda não tenho Cadastro!";
+            this.newRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.newRegister_LinkClicked);
             // 
             // Welcome_View
             // 
@@ -176,7 +173,6 @@ namespace DieTop
             this.Controls.Add(this.welcomeText);
             this.Name = "Welcome_View";
             this.Text = "Die Top Program!";
-            this.Load += new System.EventHandler(this.Welcome_View_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
