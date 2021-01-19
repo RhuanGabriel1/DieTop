@@ -94,18 +94,18 @@ namespace Register_View
             // 
             this.labelNome.AutoSize = true;
             this.labelNome.BackColor = System.Drawing.Color.Transparent;
-            this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelNome.Location = new System.Drawing.Point(54, 69);
+            this.labelNome.Location = new System.Drawing.Point(54, 71);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(101, 31);
+            this.labelNome.Size = new System.Drawing.Size(91, 29);
             this.labelNome.TabIndex = 5;
             this.labelNome.Text = "Nome :";
             // 
             // inputNome
             // 
             this.inputNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inputNome.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNome.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputNome.ForeColor = System.Drawing.Color.Silver;
             this.inputNome.Location = new System.Drawing.Point(172, 69);
             this.inputNome.Multiline = true;
@@ -123,20 +123,20 @@ namespace Register_View
             // 
             this.labelIdade.AutoSize = true;
             this.labelIdade.BackColor = System.Drawing.Color.Transparent;
-            this.labelIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIdade.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelIdade.Location = new System.Drawing.Point(54, 137);
+            this.labelIdade.Location = new System.Drawing.Point(54, 136);
             this.labelIdade.Name = "labelIdade";
-            this.labelIdade.Size = new System.Drawing.Size(97, 31);
+            this.labelIdade.Size = new System.Drawing.Size(86, 29);
             this.labelIdade.TabIndex = 7;
             this.labelIdade.Text = "Idade :";
             // 
             // inputIdade
             // 
             this.inputIdade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inputIdade.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputIdade.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputIdade.ForeColor = System.Drawing.Color.Silver;
-            this.inputIdade.Location = new System.Drawing.Point(172, 138);
+            this.inputIdade.Location = new System.Drawing.Point(172, 136);
             this.inputIdade.Multiline = true;
             this.inputIdade.Name = "inputIdade";
             this.inputIdade.Size = new System.Drawing.Size(229, 31);
@@ -150,11 +150,11 @@ namespace Register_View
             // 
             this.labelSexo.AutoSize = true;
             this.labelSexo.BackColor = System.Drawing.Color.Transparent;
-            this.labelSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSexo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelSexo.Location = new System.Drawing.Point(54, 207);
             this.labelSexo.Name = "labelSexo";
-            this.labelSexo.Size = new System.Drawing.Size(97, 31);
+            this.labelSexo.Size = new System.Drawing.Size(86, 29);
             this.labelSexo.TabIndex = 9;
             this.labelSexo.Text = "Sexo  :";
             // 
@@ -162,20 +162,20 @@ namespace Register_View
             // 
             this.labelPeso.AutoSize = true;
             this.labelPeso.BackColor = System.Drawing.Color.Transparent;
-            this.labelPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPeso.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelPeso.Location = new System.Drawing.Point(54, 279);
+            this.labelPeso.Location = new System.Drawing.Point(54, 280);
             this.labelPeso.Name = "labelPeso";
-            this.labelPeso.Size = new System.Drawing.Size(91, 31);
+            this.labelPeso.Size = new System.Drawing.Size(81, 29);
             this.labelPeso.TabIndex = 11;
             this.labelPeso.Text = "Peso :";
             // 
             // inputPeso
             // 
             this.inputPeso.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inputPeso.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputPeso.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputPeso.ForeColor = System.Drawing.Color.Silver;
-            this.inputPeso.Location = new System.Drawing.Point(179, 280);
+            this.inputPeso.Location = new System.Drawing.Point(172, 278);
             this.inputPeso.Multiline = true;
             this.inputPeso.Name = "inputPeso";
             this.inputPeso.Size = new System.Drawing.Size(229, 31);
@@ -188,9 +188,9 @@ namespace Register_View
             // inputAltura
             // 
             this.inputAltura.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inputAltura.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputAltura.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAltura.ForeColor = System.Drawing.Color.Silver;
-            this.inputAltura.Location = new System.Drawing.Point(179, 345);
+            this.inputAltura.Location = new System.Drawing.Point(172, 345);
             this.inputAltura.Multiline = true;
             this.inputAltura.Name = "inputAltura";
             this.inputAltura.Size = new System.Drawing.Size(229, 31);
@@ -204,18 +204,18 @@ namespace Register_View
             // 
             this.labelAltura.AutoSize = true;
             this.labelAltura.BackColor = System.Drawing.Color.Transparent;
-            this.labelAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAltura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelAltura.Location = new System.Drawing.Point(54, 345);
             this.labelAltura.Name = "labelAltura";
-            this.labelAltura.Size = new System.Drawing.Size(100, 31);
+            this.labelAltura.Size = new System.Drawing.Size(86, 29);
             this.labelAltura.TabIndex = 13;
             this.labelAltura.Text = "Altura :";
             // 
             // inputConfirmarSenha
             // 
             this.inputConfirmarSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inputConfirmarSenha.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputConfirmarSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputConfirmarSenha.ForeColor = System.Drawing.Color.Silver;
             this.inputConfirmarSenha.Location = new System.Drawing.Point(682, 134);
             this.inputConfirmarSenha.Multiline = true;
@@ -242,7 +242,7 @@ namespace Register_View
             // inputSenha
             // 
             this.inputSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inputSenha.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputSenha.ForeColor = System.Drawing.Color.Silver;
             this.inputSenha.Location = new System.Drawing.Point(682, 69);
             this.inputSenha.Multiline = true;
@@ -258,11 +258,11 @@ namespace Register_View
             // 
             this.labelSenha.AutoSize = true;
             this.labelSenha.BackColor = System.Drawing.Color.Transparent;
-            this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelSenha.Location = new System.Drawing.Point(557, 68);
+            this.labelSenha.Location = new System.Drawing.Point(582, 69);
             this.labelSenha.Name = "labelSenha";
-            this.labelSenha.Size = new System.Drawing.Size(107, 31);
+            this.labelSenha.Size = new System.Drawing.Size(94, 29);
             this.labelSenha.TabIndex = 15;
             this.labelSenha.Text = "Senha :";
             // 
@@ -290,7 +290,7 @@ namespace Register_View
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(181, 47);
             this.buttonConfirmar.TabIndex = 20;
-            this.buttonConfirmar.Text = "Cofirmar";
+            this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.handleFormSubmit);
             // 
