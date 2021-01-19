@@ -171,6 +171,7 @@ namespace DieTop
             this.Controls.Add(this.inputLogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.welcomeText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Welcome_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Die Top Program!";

@@ -146,9 +146,9 @@ namespace Register_View
             this.inputIdade.Text = "Insira sua Idade";
             this.inputIdade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputIdade.WordWrap = false;
-            this.inputIdade.Click += new System.EventHandler(this.inputIIdadeClick);
-            this.inputIdade.LocationChanged += new System.EventHandler(this.inputIdadeLeave);
+            this.inputIdade.Enter += new System.EventHandler(this.inputIIdadeClick);
             this.inputIdade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputIdadeKeyPress);
+            this.inputIdade.Leave += new System.EventHandler(this.inputIdadeLeave);
             // 
             // labelSexo
             // 
@@ -188,7 +188,9 @@ namespace Register_View
             this.inputPeso.Text = "Insira seu Peso";
             this.inputPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputPeso.WordWrap = false;
+            this.inputPeso.Enter += new System.EventHandler(this.inputPesoEnter);
             this.inputPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputPesoKeyPress);
+            this.inputPeso.Leave += new System.EventHandler(this.inputPesoLeave);
             // 
             // inputAltura
             // 
@@ -204,7 +206,9 @@ namespace Register_View
             this.inputAltura.Text = "Insira sua Altura";
             this.inputAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputAltura.WordWrap = false;
+            this.inputAltura.Enter += new System.EventHandler(this.inputAlturaEnter);
             this.inputAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputAlturaKeyPress);
+            this.inputAltura.Leave += new System.EventHandler(this.inputAlturaLeave);
             // 
             // labelAltura
             // 
@@ -326,6 +330,7 @@ namespace Register_View
             this.Controls.Add(this.inputNome);
             this.Controls.Add(this.labelNome);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Register_View";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro";

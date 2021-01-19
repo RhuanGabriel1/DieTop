@@ -16,8 +16,10 @@ namespace DieTop
     {
         public Welcome_View()
         {
+            MaximizeBox = false;
             InitializeComponent();
         }
+      
         //If clicked is different of default text , will turn of personalized text
         Hooks.Hooks hook = new Hooks.Hooks();
        

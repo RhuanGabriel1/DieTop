@@ -15,6 +15,7 @@ namespace Register_View
         Hooks.Hooks hook = new Hooks.Hooks();
         public Register_View()
         {
+            MaximizeBox = false;
             InitializeComponent();
         }
 
@@ -39,6 +40,42 @@ namespace Register_View
 
         }
 
+        //Idade Attributes
+        private void inputIIdadeClick(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClicked(inputIdade, "Insira sua Idade");
+        }
+
+        private void inputIdadeLeave(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClickedNull(inputIdade, "Insira sua Idade");
+        }
+
+        //Input Peso Attributes
+        private void inputPesoEnter(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClicked(inputPeso, "Insira seu Peso");
+
+
+        }
+        private void inputPesoLeave(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClickedNull(inputPeso, "Insira seu Peso");
+
+        }
+        //Input Altura Attributes
+        private void inputAlturaEnter(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClicked(inputAltura, "Insira sua Altura");
+
+        }
+        private void inputAlturaLeave(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClickedNull(inputAltura, "Insira sua Altura");
+
+        }
+
+
         private void handleFormSubmit(object sender, EventArgs e)
         {
 
@@ -54,17 +91,7 @@ namespace Register_View
         }
 
 
-        //Idade Attributes
-        private void inputIIdadeClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputIdadeLeave(object sender, EventArgs e)
-        {
-
-        }
-
+       
 
         //Password Attributes
 
