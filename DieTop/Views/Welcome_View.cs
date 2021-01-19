@@ -26,12 +26,15 @@ namespace DieTop
         private void InputSenha_enter(object sender, EventArgs e)
         {
            hook.ChangeInputTextClicked(inputSenha, "Insira sua Senha");
+            hook.TurnItToPassword(inputSenha, "Insira sua Senha");
 
         }
         //Quando Sai do input e nao contém nenhum dado
         private void InputSenha_leave(object sender, EventArgs e)
         {
             hook.ChangeInputTextClickedNull(inputSenha, "Insira sua Senha");
+            hook.TurnItToPassword(inputSenha, "Insira sua Senha");
+
 
         }
         //Quando Clica no input

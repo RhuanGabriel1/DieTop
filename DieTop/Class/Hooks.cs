@@ -12,7 +12,19 @@ namespace Hooks
 {
      class Hooks
     {
-        public void ChangeInputTextClicked(TextBox textBox, String text)
+        //ONLY FOR PASSWORD BOXES
+        public void TurnItToPassword(TextBox textBox,string text)
+        {
+            if (textBox.Text != text)
+            {
+                textBox.PasswordChar = '*';
+            }
+            else
+            {
+                textBox.PasswordChar = default;
+            }
+        }
+        public void ChangeInputTextClicked(TextBox textBox, string text)
         {
             if (textBox.Text == text)
             {
@@ -22,7 +34,7 @@ namespace Hooks
             }
         }
         //If clicked button text === "", will turn all for default
-        public void ChangeInputTextClickedNull(TextBox textBox, String text)
+        public void ChangeInputTextClickedNull(TextBox textBox, string text)
         {
             if (textBox.Text == "")
             {
