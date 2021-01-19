@@ -117,6 +117,7 @@ namespace Register_View
             this.inputNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputNome.WordWrap = false;
             this.inputNome.Click += new System.EventHandler(this.onClickNome);
+            this.inputNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputNameKeyPress);
             this.inputNome.Leave += new System.EventHandler(this.leaveNome);
             // 
             // labelIdade
@@ -145,6 +146,9 @@ namespace Register_View
             this.inputIdade.Text = "Insira sua Idade";
             this.inputIdade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputIdade.WordWrap = false;
+            this.inputIdade.Click += new System.EventHandler(this.inputIIdadeClick);
+            this.inputIdade.LocationChanged += new System.EventHandler(this.inputIdadeLeave);
+            this.inputIdade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputIdadeKeyPress);
             // 
             // labelSexo
             // 
@@ -184,6 +188,7 @@ namespace Register_View
             this.inputPeso.Text = "Insira seu Peso";
             this.inputPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputPeso.WordWrap = false;
+            this.inputPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputPesoKeyPress);
             // 
             // inputAltura
             // 
@@ -199,6 +204,7 @@ namespace Register_View
             this.inputAltura.Text = "Insira sua Altura";
             this.inputAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputAltura.WordWrap = false;
+            this.inputAltura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputAlturaKeyPress);
             // 
             // labelAltura
             // 
@@ -226,6 +232,8 @@ namespace Register_View
             this.inputConfirmarSenha.Text = "Confirme sua Senha";
             this.inputConfirmarSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputConfirmarSenha.WordWrap = false;
+            this.inputConfirmarSenha.Click += new System.EventHandler(this.inputConfirmaClick);
+            this.inputConfirmarSenha.Leave += new System.EventHandler(this.inputConfirmaLeave);
             // 
             // labelConfirmarSenha
             // 
@@ -253,6 +261,8 @@ namespace Register_View
             this.inputSenha.Text = "Insira sua  Senha";
             this.inputSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputSenha.WordWrap = false;
+            this.inputSenha.Click += new System.EventHandler(this.inputClickSenha);
+            this.inputSenha.Leave += new System.EventHandler(this.inputSenhaLeave);
             // 
             // labelSenha
             // 

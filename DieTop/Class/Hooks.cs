@@ -12,6 +12,29 @@ namespace Hooks
 {
      class Hooks
     {
+
+
+        //Accept onltNumbers
+        public void AcceptOnlyNumbers(KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+
+            {
+                e.Handled = true;
+
+            }
+        }
+            //Accept only Letters
+            public void AcceptOnlyLetters(KeyPressEventArgs e)
+            {
+                if (char.IsDigit(e.KeyChar))
+
+                {
+                    e.Handled = true;
+
+                }
+            }
+
         //ONLY FOR PASSWORD BOXES
         public void TurnItToPassword(TextBox textBox,string text)
         {
