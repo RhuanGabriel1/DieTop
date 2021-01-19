@@ -236,7 +236,7 @@ namespace Register_View
             this.inputConfirmarSenha.Text = "Confirme sua Senha";
             this.inputConfirmarSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputConfirmarSenha.WordWrap = false;
-            this.inputConfirmarSenha.Click += new System.EventHandler(this.inputConfirmaClick);
+            this.inputConfirmarSenha.Enter += new System.EventHandler(this.inputConfirmaEnter);
             this.inputConfirmarSenha.Leave += new System.EventHandler(this.inputConfirmaLeave);
             // 
             // labelConfirmarSenha
@@ -262,10 +262,10 @@ namespace Register_View
             this.inputSenha.Size = new System.Drawing.Size(229, 31);
             this.inputSenha.TabIndex = 16;
             this.inputSenha.Tag = "";
-            this.inputSenha.Text = "Insira sua  Senha";
+            this.inputSenha.Text = "Insira sua Senha";
             this.inputSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputSenha.WordWrap = false;
-            this.inputSenha.Click += new System.EventHandler(this.inputClickSenha);
+            this.inputSenha.Enter += new System.EventHandler(this.inputSenhaEnter);
             this.inputSenha.Leave += new System.EventHandler(this.inputSenhaLeave);
             // 
             // labelSenha

@@ -75,7 +75,37 @@ namespace Register_View
 
         }
 
+        //Input Senha
+        private void inputSenhaEnter(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClicked(inputSenha, "Insira sua Senha");
 
+        }
+
+
+        private void inputSenhaLeave(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClickedNull(inputSenha, "Insira sua Senha");
+
+        }
+        //Input Confirmar Senha
+
+        private void inputConfirmaEnter(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClicked(inputConfirmarSenha, "Confirme sua Senha");
+
+        }
+
+        private void inputConfirmaLeave(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClickedNull(inputConfirmarSenha, "Confirme sua Senha");
+
+        }
+
+
+
+
+        //Form Submit ( Envio de Formulário)
         private void handleFormSubmit(object sender, EventArgs e)
         {
 
@@ -90,30 +120,7 @@ namespace Register_View
             }
         }
 
-
-       
-
-        //Password Attributes
-
-        private void inputClickSenha(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inputSenhaLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        //Confirm Password attributes
-        private void inputConfirmaClick(object sender, EventArgs e)
-        {
-
-        }
-        private void inputConfirmaLeave(object sender, EventArgs e)
-        {
-
-        }
+     
         //Key press attributes
         private void inputNameKeyPress(object sender, KeyPressEventArgs e)
         {
