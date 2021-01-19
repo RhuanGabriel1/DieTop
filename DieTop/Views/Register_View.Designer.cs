@@ -107,7 +107,7 @@ namespace Register_View
             this.inputNome.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputNome.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputNome.ForeColor = System.Drawing.Color.Silver;
-            this.inputNome.Location = new System.Drawing.Point(172, 69);
+            this.inputNome.Location = new System.Drawing.Point(172, 77);
             this.inputNome.Multiline = true;
             this.inputNome.Name = "inputNome";
             this.inputNome.Size = new System.Drawing.Size(229, 31);
@@ -116,7 +116,7 @@ namespace Register_View
             this.inputNome.Text = "Insira seu Nome";
             this.inputNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputNome.WordWrap = false;
-            this.inputNome.Click += new System.EventHandler(this.onClickNome);
+            this.inputNome.Enter += new System.EventHandler(this.onClickNome);
             this.inputNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.inputNameKeyPress);
             this.inputNome.Leave += new System.EventHandler(this.leaveNome);
             // 
