@@ -13,14 +13,14 @@ namespace Hooks
     class Hooks 
     {
 
-
+        //Validação de Formulário
         public bool FormValidator(bool check, int call ,string text , string textDefault, int condition )
         {
-            if (check == false)
+            if (!check)
             {
                 return false;
             }
-                // 0 para < && 1 para >
+                // 0 para < && 1 para > && 2 para ==
                else if (call == 0)
                 {
                     if (text.Length < condition && text != textDefault)
@@ -66,25 +66,56 @@ namespace Hooks
         }
 
         //Accept only Numbers
-        public void AcceptOnlyNumbers(KeyPressEventArgs e)
+        public string AcceptOnlyNumbers(KeyPressEventArgs e,string texto )
         {
-            if (!char.IsDigit(e.KeyChar))
+            if (e.KeyChar == (char)8)
+            {
+                try
+                {
+                    texto = texto.Remove(texto.Length - 1);
+
+                }
+                catch (Exception q)
+                {
+                    Console.WriteLine("Não é possível apagar o que não existe!");
+                }
+                return texto;
+
+            }
+
+            if (!char.IsNumber(e.KeyChar) )
 
             {
                 e.Handled = true;
+                return texto;
 
             }
+            return texto;
         }
-            //Accept only Letters
-            public void AcceptOnlyLetters(KeyPressEventArgs e)
+        //Accept only Letters
+            public string AcceptOnlyLetters(KeyPressEventArgs e,string texto)
             {
-                if (char.IsDigit(e.KeyChar))
-
+            if (e.KeyChar == (char)8)
+            {
+                try
                 {
-                    e.Handled = true;
+                    texto = texto.Remove(texto.Length - 1);
 
                 }
+                catch (Exception q)
+                {
+                    Console.WriteLine("Não é possível apagar o que não existe!");
+                }
+                return texto;
+
             }
+            if (!((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z')))
+            {
+                e.Handled = true;
+                return texto;
+            }
+            return texto;
+        }
 
         //ONLY FOR PASSWORD BOXES
         public void TurnItToPassword(TextBox textBox,string text)

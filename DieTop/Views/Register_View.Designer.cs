@@ -186,7 +186,7 @@ namespace Register_View
             this.inputPeso.Size = new System.Drawing.Size(229, 31);
             this.inputPeso.TabIndex = 12;
             this.inputPeso.Tag = "";
-            this.inputPeso.Text = "Insira seu Peso";
+            this.inputPeso.Text = "Insira seu Peso em KG";
             this.inputPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputPeso.WordWrap = false;
             this.inputPeso.Enter += new System.EventHandler(this.inputPesoEnter);
