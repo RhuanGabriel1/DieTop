@@ -47,6 +47,9 @@ namespace Register_View
             this.labelSenha = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             sexoGroup = new System.Windows.Forms.GroupBox();
             sexoGroup.SuspendLayout();
             this.SuspendLayout();
@@ -228,7 +231,7 @@ namespace Register_View
             this.inputConfirmarSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputConfirmarSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputConfirmarSenha.ForeColor = System.Drawing.Color.Silver;
-            this.inputConfirmarSenha.Location = new System.Drawing.Point(682, 134);
+            this.inputConfirmarSenha.Location = new System.Drawing.Point(685, 343);
             this.inputConfirmarSenha.Multiline = true;
             this.inputConfirmarSenha.Name = "inputConfirmarSenha";
             this.inputConfirmarSenha.Size = new System.Drawing.Size(229, 31);
@@ -246,7 +249,7 @@ namespace Register_View
             this.labelConfirmarSenha.BackColor = System.Drawing.Color.Transparent;
             this.labelConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmarSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelConfirmarSenha.Location = new System.Drawing.Point(471, 136);
+            this.labelConfirmarSenha.Location = new System.Drawing.Point(474, 345);
             this.labelConfirmarSenha.Name = "labelConfirmarSenha";
             this.labelConfirmarSenha.Size = new System.Drawing.Size(205, 29);
             this.labelConfirmarSenha.TabIndex = 17;
@@ -257,7 +260,7 @@ namespace Register_View
             this.inputSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputSenha.ForeColor = System.Drawing.Color.Silver;
-            this.inputSenha.Location = new System.Drawing.Point(682, 69);
+            this.inputSenha.Location = new System.Drawing.Point(685, 278);
             this.inputSenha.Multiline = true;
             this.inputSenha.Name = "inputSenha";
             this.inputSenha.Size = new System.Drawing.Size(229, 31);
@@ -275,7 +278,7 @@ namespace Register_View
             this.labelSenha.BackColor = System.Drawing.Color.Transparent;
             this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelSenha.Location = new System.Drawing.Point(582, 69);
+            this.labelSenha.Location = new System.Drawing.Point(585, 278);
             this.labelSenha.Name = "labelSenha";
             this.labelSenha.Size = new System.Drawing.Size(94, 29);
             this.labelSenha.TabIndex = 15;
@@ -309,12 +312,47 @@ namespace Register_View
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.handleFormSubmit);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(556, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(327, 29);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Quantas Vezes Vocês Pratica";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(556, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(327, 29);
+            this.label2.TabIndex = 22;
+            this.label2.Text = " Atividade Física na Semana?";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(550, 146);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(361,60);
+            this.comboBox1.TabIndex = 23;
+            // 
             // Register_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(956, 574);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.inputConfirmarSenha);
@@ -362,5 +400,8 @@ namespace Register_View
         private System.Windows.Forms.Label labelSenha;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonConfirmar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
