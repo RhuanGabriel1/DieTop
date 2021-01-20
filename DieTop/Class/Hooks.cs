@@ -10,11 +10,62 @@ using System.Windows.Forms;
 
 namespace Hooks
 {
-     class Hooks
+    class Hooks 
     {
 
 
-        //Accept onltNumbers
+        public bool FormValidator(bool check, int call ,string text , string textDefault, int condition )
+        {
+            if (check == false)
+            {
+                return false;
+            }
+                // 0 para < && 1 para >
+               else if (call == 0)
+                {
+                    if (text.Length < condition && text != textDefault)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+                else if (call == 1)
+                {
+                    if (text.Length > condition && text != textDefault)
+                    {
+                    return true;
+                    }
+                    else
+                    {
+
+                    return false;
+                    }
+                }
+                else if (call == 2 && text != textDefault)
+                {
+                    if (text.Length == condition)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                
+            }
+           
+
+        }
+
+        //Accept only Numbers
         public void AcceptOnlyNumbers(KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar))

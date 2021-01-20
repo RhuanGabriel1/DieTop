@@ -53,12 +53,13 @@ namespace Register_View
             // 
             // sexoGroup
             // 
+            sexoGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             sexoGroup.BackColor = System.Drawing.Color.Transparent;
             sexoGroup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             sexoGroup.CausesValidation = false;
             sexoGroup.Controls.Add(this.radioFemea);
             sexoGroup.Controls.Add(this.radioMacho);
-            sexoGroup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            sexoGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             sexoGroup.ForeColor = System.Drawing.Color.Black;
             sexoGroup.Location = new System.Drawing.Point(172, 207);
             sexoGroup.Name = "sexoGroup";
@@ -312,6 +313,7 @@ namespace Register_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(956, 574);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.buttonCancelar);

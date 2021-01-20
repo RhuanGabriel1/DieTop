@@ -12,6 +12,53 @@ namespace Register_View
 {
     public partial class Register_View : Form
     {
+        //Get Default Texts
+        string nomeDefault = "Insira seu Nome";
+        string idadeDefault = "Insira sua Idade";
+        string pesoDefault = "Insira seu Peso";
+        string alturaDefault = "Insira sua Altura";
+        string senhaDefault = "Insira sua Senha";
+        string confirmarDefault = "Confirme sua Senha";
+
+
+        //Get of all these inputs
+        public string getNome()
+        {
+            return inputNome.Text;
+        }
+
+        public string getIdade()
+        {
+            return inputIdade.Text;
+        }
+        public string getSexo()
+        {
+            if(radioMacho.Checked == true)
+            {
+            return "Macho";
+            }
+            else
+            {
+                return "Femêa";
+            }
+        }
+        public string getPeso()
+        {
+            return inputPeso.Text;
+        }
+        public string getAltura()
+        {
+            return inputAltura.Text;
+        }
+        public string getSenha()
+        {
+            return inputSenha.Text;
+        }
+        public string getConfirmarSenha()
+        {
+            return inputConfirmarSenha.Text;
+        }
+
         Hooks.Hooks hook = new Hooks.Hooks();
         public Register_View()
         {
@@ -31,74 +78,74 @@ namespace Register_View
 
         private void leaveNome(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClickedNull(inputNome,"Insira seu Nome");
+            hook.ChangeInputTextClickedNull(inputNome,nomeDefault);
         }
 
         private void onClickNome(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClicked(inputNome, "Insira seu Nome");
+            hook.ChangeInputTextClicked(inputNome, nomeDefault);
 
         }
 
         //Idade Attributes
         private void inputIIdadeClick(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClicked(inputIdade, "Insira sua Idade");
+            hook.ChangeInputTextClicked(inputIdade, idadeDefault);
         }
 
         private void inputIdadeLeave(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClickedNull(inputIdade, "Insira sua Idade");
+            hook.ChangeInputTextClickedNull(inputIdade, idadeDefault);
         }
 
         //Input Peso Attributes
         private void inputPesoEnter(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClicked(inputPeso, "Insira seu Peso");
+            hook.ChangeInputTextClicked(inputPeso, pesoDefault);
 
 
         }
         private void inputPesoLeave(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClickedNull(inputPeso, "Insira seu Peso");
+            hook.ChangeInputTextClickedNull(inputPeso, pesoDefault);
 
         }
         //Input Altura Attributes
         private void inputAlturaEnter(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClicked(inputAltura, "Insira sua Altura");
+            hook.ChangeInputTextClicked(inputAltura, alturaDefault);
 
         }
         private void inputAlturaLeave(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClickedNull(inputAltura, "Insira sua Altura");
+            hook.ChangeInputTextClickedNull(inputAltura, alturaDefault);
 
         }
 
         //Input Senha
         private void inputSenhaEnter(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClicked(inputSenha, "Insira sua Senha");
+            hook.ChangeInputTextClicked(inputSenha, senhaDefault);
 
         }
 
 
         private void inputSenhaLeave(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClickedNull(inputSenha, "Insira sua Senha");
+            hook.ChangeInputTextClickedNull(inputSenha, senhaDefault);
 
         }
         //Input Confirmar Senha
 
         private void inputConfirmaEnter(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClicked(inputConfirmarSenha, "Confirme sua Senha");
+            hook.ChangeInputTextClicked(inputConfirmarSenha, confirmarDefault);
 
         }
 
         private void inputConfirmaLeave(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClickedNull(inputConfirmarSenha, "Confirme sua Senha");
+            hook.ChangeInputTextClickedNull(inputConfirmarSenha, confirmarDefault);
 
         }
 
@@ -106,21 +153,35 @@ namespace Register_View
 
 
         //Form Submit ( Envio de Formulário)
+
         private void handleFormSubmit(object sender, EventArgs e)
+        //Fazer toda uma Verificação antes de Cadastrar.
         {
+            bool correct = true;
+            correct = hook.FormValidator(correct,1,getNome(),nomeDefault,3);
+            correct = hook.FormValidator(correct, 1, getIdade(), idadeDefault, 3);
+            correct = hook.FormValidator(correct, 1, getPeso(), pesoDefault, 3);
 
-            if(inputSenha.Text == inputConfirmarSenha.Text)
+
+            if (correct == true)
             {
-                //Usuário Logou
-
+                if (getSenha()==getConfirmarSenha())
+                {
+                    Console.WriteLine("Cadastrou");
+                }
+                else
+                {
+                    Console.WriteLine("Erro de Login!");
+                }
             }
             else
             {
+                Console.WriteLine("Verifique o Formulário!");
 
             }
         }
 
-     
+
         //Key press attributes
         private void inputNameKeyPress(object sender, KeyPressEventArgs e)
         {
