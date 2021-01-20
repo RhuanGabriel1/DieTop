@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Register_View
@@ -178,17 +171,15 @@ namespace Register_View
                     MessageBox.Show("Peso Inválido/ PROCURE UM MÉDICO URGENTEMENTE");
                 }
             }
-           
-
 
             if (correct)
             {
-                if (getSenha()==getConfirmarSenha())
+                if (getSenha() == getConfirmarSenha())
                 {
                     //\
                     //Consegue pegar os Dados 
                     //Passar para o banco
-                    MessageBox.Show("Nome : " + getNome()+ "\nIdade : "+getIdade()+ "\nSexo : "+getSexo()+ "\nPeso : "+getPeso()+ "\nAltura : "+getAltura()+ "\nSenha : "+getSenha());
+                    MessageBox.Show("Nome : " + getNome() + "\nIdade : " + getIdade() + "\nSexo : " + getSexo() + "\nPeso : " + getPeso() + "\nAltura : " + getAltura() + "\nSenha : " + getSenha());
                 }
                 else
                 {
