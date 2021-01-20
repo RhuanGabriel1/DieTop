@@ -70,15 +70,7 @@ namespace Hooks
         {
             if (e.KeyChar == (char)8)
             {
-                try
-                {
-                    texto = texto.Remove(texto.Length - 1);
-
-                }
-                catch (Exception q)
-                {
-                    Console.WriteLine("Não é possível apagar o que não existe!");
-                }
+               
                 return texto;
 
             }
@@ -97,15 +89,6 @@ namespace Hooks
             {
             if (e.KeyChar == (char)8)
             {
-                try
-                {
-                    texto = texto.Remove(texto.Length - 1);
-
-                }
-                catch (Exception q)
-                {
-                    Console.WriteLine("Não é possível apagar o que não existe!");
-                }
                 return texto;
 
             }

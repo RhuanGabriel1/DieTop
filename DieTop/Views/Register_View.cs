@@ -170,11 +170,15 @@ namespace Register_View
             correct = hook.FormValidator(correct, 0, getAltura(), alturaDefault, 4);
 
 
-            if (int.Parse(getPeso()) > 400)
+            if (getPeso() != "" && getPeso() != pesoDefault)
             {
-                correct = false;
-                MessageBox.Show("Peso Inválido/ PROCURE UM MÉDICO URGENTEMENTE");
+                if (int.Parse(getPeso()) > 400)
+                {
+                    correct = false;
+                    MessageBox.Show("Peso Inválido/ PROCURE UM MÉDICO URGENTEMENTE");
+                }
             }
+           
 
 
             if (correct)
@@ -182,6 +186,8 @@ namespace Register_View
                 if (getSenha()==getConfirmarSenha())
                 {
                     //\
+                    //Consegue pegar os Dados 
+                    //Passar para o banco
                     MessageBox.Show("Nome : " + getNome()+ "\nIdade : "+getIdade()+ "\nSexo : "+getSexo()+ "\nPeso : "+getPeso()+ "\nAltura : "+getAltura()+ "\nSenha : "+getSenha());
                 }
                 else
