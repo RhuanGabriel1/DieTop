@@ -48,8 +48,9 @@ namespace Register_View
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             sexoGroup = new System.Windows.Forms.GroupBox();
             sexoGroup.SuspendLayout();
             this.SuspendLayout();
@@ -231,7 +232,7 @@ namespace Register_View
             this.inputConfirmarSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputConfirmarSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputConfirmarSenha.ForeColor = System.Drawing.Color.Silver;
-            this.inputConfirmarSenha.Location = new System.Drawing.Point(685, 343);
+            this.inputConfirmarSenha.Location = new System.Drawing.Point(697, 134);
             this.inputConfirmarSenha.Multiline = true;
             this.inputConfirmarSenha.Name = "inputConfirmarSenha";
             this.inputConfirmarSenha.Size = new System.Drawing.Size(229, 31);
@@ -249,7 +250,7 @@ namespace Register_View
             this.labelConfirmarSenha.BackColor = System.Drawing.Color.Transparent;
             this.labelConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmarSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelConfirmarSenha.Location = new System.Drawing.Point(474, 345);
+            this.labelConfirmarSenha.Location = new System.Drawing.Point(486, 136);
             this.labelConfirmarSenha.Name = "labelConfirmarSenha";
             this.labelConfirmarSenha.Size = new System.Drawing.Size(205, 29);
             this.labelConfirmarSenha.TabIndex = 17;
@@ -260,7 +261,7 @@ namespace Register_View
             this.inputSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputSenha.ForeColor = System.Drawing.Color.Silver;
-            this.inputSenha.Location = new System.Drawing.Point(685, 278);
+            this.inputSenha.Location = new System.Drawing.Point(697, 69);
             this.inputSenha.Multiline = true;
             this.inputSenha.Name = "inputSenha";
             this.inputSenha.Size = new System.Drawing.Size(229, 31);
@@ -278,7 +279,7 @@ namespace Register_View
             this.labelSenha.BackColor = System.Drawing.Color.Transparent;
             this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelSenha.Location = new System.Drawing.Point(585, 278);
+            this.labelSenha.Location = new System.Drawing.Point(597, 69);
             this.labelSenha.Name = "labelSenha";
             this.labelSenha.Size = new System.Drawing.Size(94, 29);
             this.labelSenha.TabIndex = 15;
@@ -318,11 +319,26 @@ namespace Register_View
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(556, 71);
+            this.label1.Location = new System.Drawing.Point(499, 223);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(327, 29);
+            this.label1.Size = new System.Drawing.Size(427, 29);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Quantas Vezes Vocês Pratica";
+            this.label1.Text = "Qtd. de Atv. Fís. Práticadas na Semana";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.comboBox1.Items.AddRange(new object[] {
+            "NÃO PRATICO ATV FÍSICA",
+            "1 A 3 VEZES POR SEMANA",
+            "3 A 7 VEZES POR SEMANA",
+            "7+ VEZES POR SEMANA"});
+            this.comboBox1.Location = new System.Drawing.Point(550, 280);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(361, 21);
+            this.comboBox1.TabIndex = 23;
             // 
             // label2
             // 
@@ -330,19 +346,20 @@ namespace Register_View
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(556, 100);
+            this.label2.Location = new System.Drawing.Point(565, 319);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(327, 29);
-            this.label2.TabIndex = 22;
-            this.label2.Text = " Atividade Física na Semana?";
+            this.label2.Size = new System.Drawing.Size(334, 29);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Escolha uma Dieta Desejada :";
             // 
-            // comboBox1
+            // comboBox2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(550, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(361,60);
-            this.comboBox1.TabIndex = 23;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(550, 357);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(361, 21);
+            this.comboBox2.TabIndex = 25;
             // 
             // Register_View
             // 
@@ -350,8 +367,9 @@ namespace Register_View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(956, 574);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.buttonCancelar);
@@ -401,7 +419,8 @@ namespace Register_View
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
