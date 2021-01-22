@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -48,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Hooks.cs" />
+    <Compile Include="db\database.cs" />
     <Compile Include="Views\Register_View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,7 +95,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ComidaSaudavel1.jpg" />
+    <Content Include="Assets\ComidaSaudavel2.jpg" />
+    <Content Include="Assets\Obesidade1.jpg" />
+    <Content Include="Assets\Obesidade2.jpg" />
+    <Content Include="Assets\ReferenciaSaudavel1.jpg" />
+    <Content Include="Assets\ReferenciaSaudavel2.jpg" />
     <Content Include="Assets\welcomeMage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

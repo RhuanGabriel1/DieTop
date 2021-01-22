@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DieTop
@@ -17,7 +13,10 @@ namespace DieTop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            db.Database data = new db.Database();
+            data.mostraResultados();
             Application.Run(new Welcome_View());
+         
 
         }
     }
