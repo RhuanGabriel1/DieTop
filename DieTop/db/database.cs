@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace DieTop.db
@@ -23,8 +24,10 @@ namespace DieTop.db
                
             }catch(Exception e)
             {
-                Console.WriteLine("Erro informado : "+e);
+                MessageBox.Show("Conexão com o Banco Falhou!!", "FAILED CONNECTION INTO DATABASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Erro informado : " + e);
                 connection.Close();
+                Application.Exit();
             }
         }
         
@@ -35,14 +38,18 @@ namespace DieTop.db
             {
             MySqlCommand command = new MySqlCommand(sqlCommand, connection);
             command.ExecuteReader();
-            Console.WriteLine("Ação Realizada com Sucesso!");
+                MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Console.WriteLine("Ação Realizada com Sucesso!");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Erro informado : " + e);
+                MessageBox.Show("Houve um Erro!", e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        public void CloseConnection()
+        {
+            connection.Close();
+        }
 
     }
 }

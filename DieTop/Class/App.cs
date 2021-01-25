@@ -13,10 +13,23 @@ namespace DieTop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             db.Database data = new db.Database();
+            try
+            {
             data.ConnectDB();
+            }
+            
+            
+            catch (Exception e)
+            {
+                data.CloseConnection();
+                Application.Exit();
+
+            }
+
             Application.Run(new Welcome_View());
-         
+
 
         }
     }
