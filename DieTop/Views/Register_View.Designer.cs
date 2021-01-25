@@ -49,9 +49,9 @@ namespace Register_View
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.selectDieta = new System.Windows.Forms.ComboBox();
             sexoGroup = new System.Windows.Forms.GroupBox();
             sexoGroup.SuspendLayout();
             this.SuspendLayout();
@@ -326,20 +326,23 @@ namespace Register_View
             this.label1.TabIndex = 21;
             this.label1.Text = "Qtd. de Atv. Fís. Práticadas na Semana";
             // 
-            // comboBox1
+            // selectAtvFisica
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.selectAtvFisica.BackColor = System.Drawing.SystemColors.Window;
+            this.selectAtvFisica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selectAtvFisica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectAtvFisica.FormattingEnabled = true;
+            this.selectAtvFisica.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.selectAtvFisica.Items.AddRange(new object[] {
             "NÃO PRATICO ATV FÍSICA",
             "1 A 3 VEZES POR SEMANA",
             "3 A 7 VEZES POR SEMANA",
             "7+ VEZES POR SEMANA"});
-            this.comboBox1.Location = new System.Drawing.Point(550, 280);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(361, 21);
-            this.comboBox1.TabIndex = 23;
+            this.selectAtvFisica.Location = new System.Drawing.Point(550, 280);
+            this.selectAtvFisica.Name = "selectAtvFisica";
+            this.selectAtvFisica.Size = new System.Drawing.Size(361, 21);
+            this.selectAtvFisica.TabIndex = 23;
+            this.selectAtvFisica.SelectedItem = 0;
             // 
             // label2
             // 
@@ -353,18 +356,20 @@ namespace Register_View
             this.label2.TabIndex = 24;
             this.label2.Text = "Escolha uma Dieta Desejada :";
             // 
-            // comboBox2
+            // selectDieta
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.selectDieta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectDieta.FormattingEnabled = true;
+            this.selectDieta.Items.AddRange(new object[] {
             "GANHAR PESO",
             "MANTER PESO",
             "PERDER PESO"});
-            this.comboBox2.Location = new System.Drawing.Point(550, 357);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(361, 21);
-            this.comboBox2.TabIndex = 25;
+            this.selectDieta.Location = new System.Drawing.Point(550, 357);
+            this.selectDieta.Name = "selectDieta";
+            this.selectDieta.Size = new System.Drawing.Size(361, 21);
+            this.selectDieta.TabIndex = 25;
+            this.selectDieta.SelectedItem= 0;
+
             // 
             // Register_View
             // 
@@ -373,9 +378,9 @@ namespace Register_View
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(956, 574);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.selectDieta);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.selectAtvFisica);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonConfirmar);
             this.Controls.Add(this.buttonCancelar);
@@ -425,8 +430,8 @@ namespace Register_View
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox selectAtvFisica;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox selectDieta;
     }
 }

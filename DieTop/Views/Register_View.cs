@@ -14,6 +14,8 @@ namespace Register_View
         string confirmarDefault = "Confirme sua Senha";
 
 
+
+
         //Get of all these inputs
         public string getNome()
         {
@@ -61,7 +63,6 @@ namespace Register_View
 
         private void handleCancelSubmit(object sender, EventArgs e)
         {
-
             DialogResult result = MessageBox.Show("Deseja Voltar para a Tela de Login?", "MENSAGEM DE ALERTA!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result.ToString() == "Yes")
             {
@@ -196,7 +197,9 @@ namespace Register_View
           
                         {
                             //insert into pessoa(senha, nome, idade, sexo, altura, peso) values('123','Leandro',18,'Macho',161,55);
-                            data.CommandSQL("insert into pessoa(senha, nome, idade, sexo, altura, peso) values('"+getSenha()+"', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " + getAltura()+","+getPeso()+");");
+                            data.CommandSQL("insert into pessoa(senha, nome, idade, sexo, altura, peso,dieta,fisica) values('"+getSenha()+
+                                "', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " +
+                                getAltura()+","+getPeso()+ ",'" + selectDieta.SelectedItem.ToString() + "','" + selectAtvFisica.SelectedItem.ToString() + "');");
 
                             MessageBox.Show("Obrigado por se Cadastrar! Faça Login para Continuar", "Muito Obrigado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                            

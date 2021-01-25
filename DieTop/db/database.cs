@@ -11,6 +11,8 @@ namespace DieTop.db
 
 
         private MySqlConnection connection;
+        string data_source = "datasource=localhost;username=root;password=;database=testedb";
+
 
         public void ConnectDB()
         {
@@ -18,7 +20,6 @@ namespace DieTop.db
             {
                 //Create a connect to mysql database
                 //THIS DATASOURCE IS ONLY USED IN DEVELOPMENT, DONT USE THIS VARIABLE IN PRODUCTION 
-                string data_source = "datasource=localhost;username=root;password=;database=testedb";
                 connection = new MySqlConnection(data_source);
                 connection.Open();
                 Console.WriteLine("Banco Conectado com Sucesso!");
@@ -26,9 +27,7 @@ namespace DieTop.db
             }catch(Exception e)
             {
                 MessageBox.Show("Conexão com o Banco Falhou!!", "FAILED CONNECTION INTO DATABASE", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine("Erro informado : " + e);
-                connection.Close();
-                Application.Exit();
+            
             }
             finally
             {
@@ -41,11 +40,10 @@ namespace DieTop.db
             //Insert Data into Database
             try
             {
-                string data_source = "datasource=localhost;username=root;password=;database=testedb";
                 connection = new MySqlConnection(data_source);
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(sqlCommand, connection);
-            command.ExecuteReader();
+                command.ExecuteReader();
                 MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 Console.WriteLine("Ação Realizada com Sucesso!");
             }
@@ -53,44 +51,12 @@ namespace DieTop.db
             {
                 MessageBox.Show("Houve um Erro!  " +e.ToString(), e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                CloseConnection();
+            }
         }
-        //public List<string> CommandSelectSQL(string sqlCommand ,int totalTables)
-        //{
-        //    //Insert Data into Database
-        //    try
-        //    {
-
-
-        //        //List<string> list = new List<string>();
-        //        Application.EnableVisualStyles();
-        //        Application.SetCompatibleTextRenderingDefault(false);
-        //        MySqlCommand command = new MySqlCommand(sqlCommand, connection);
-        //        //list.Clear();
-        //        MySqlDataReader reader = command.ExecuteReader();
-        //        while (reader.Read())
-        //        {
-
-        //            for(int i = 0; i<totalTables; i++)
-        //            {
-        //                string[] row = {
-        //                    reader.GetString(i)
-
-        //            };
-                        
-        //                //return row;
-        //            }
-                  
-        //        }
-        //        MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-        //        Console.WriteLine("Ação Realizada com Sucesso!");
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show("Houve um Erro!", e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    List<string> teste = new List<string>();
-        //    return teste;
-        //}
+      
         public void CloseConnection()
         {
             connection.Close();
