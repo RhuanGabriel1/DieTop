@@ -186,8 +186,25 @@ namespace Register_View
                     //Passar para o banco
                     //Input data: getNome()  getIdade()  getSexo() getPeso() getAltura() getSenha()
 
-                    MessageBox.Show("Os Seguintes Dados Serão Cadastrados : \n" + "Nome : " + getNome() + "\nIdade : " + getIdade() + 
-                        "\nSexo : " + getSexo() + "\nPeso : " + getPeso() + "\nAltura : " + getAltura() + "\nSenha : " + getSenha()+"\n Deseja Prosseguir?");
+                   DialogResult result = MessageBox.Show("Os Seguintes Dados Serão Cadastrados : \n" + "Nome : " + getNome() + "\nIdade : " + getIdade() + 
+                        "\nSexo : " + getSexo() + "\nPeso : " + getPeso() + "\nAltura : " + getAltura() + "\nSenha : " + "*"+"\n Deseja Prosseguir?","Deseja Prosseguir?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                    if (result.ToString() == "Yes" )
+                    {
+                        DieTop.db.Database data = new DieTop.db.Database();
+                        try
+          
+                        {
+                            //insert into pessoa(senha, nome, idade, sexo, altura, peso) values('123','Leandro',18,'Macho',161,55);
+                            data.CommandSQL("insert into pessoa(senha, nome, idade, sexo, altura, peso) values('"+getSenha()+"', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " + getAltura()+","+getPeso()+");");
+                        }
+                        catch (Exception error)
+                        {
+                            MessageBox.Show(error.ToString());
+
+                        }
+                    }
+                    
                 }
                 else
                 {

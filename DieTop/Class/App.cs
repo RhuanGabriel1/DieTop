@@ -10,8 +10,7 @@ namespace DieTop
         /// </summary>
         [STAThread]
         static void Main()
-        {   
-           
+        {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -28,7 +27,7 @@ namespace DieTop
                 Application.Exit();
 
             }
-
+           
             Application.Run(new Welcome_View());
 
 
