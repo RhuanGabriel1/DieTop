@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
 namespace DieTop.db
@@ -11,26 +7,58 @@ namespace DieTop.db
     class Database
     {
 
-        private MySqlConnection mConn;
-        private MySqlDataAdapter mAdapter;
-        private DataSet mDataSet;
+
+        MySqlConnection connection;
+
+        public void ConnectDB()
+        {
+            try
+            {
+                //Create a connect to mysql database
+                string data_source = "datasource=localhost;username=root;password=;database=testedb";
+                connection = new MySqlConnection(data_source);
+
+                //Insert Data to test
+                string insertData = "insert into alimento(nome_alim, tipo_alim, calorias_alim) values('Rola','Pênis',1000);";
+                MySqlCommand command = new MySqlCommand(insertData,connection);
+
+                connection.Open();
+                command.ExecuteReader();
+                Console.WriteLine("INSERT OK!");
+            }catch(Exception e)
+            {
+                Console.WriteLine("Deu Bosta");
+                Console.WriteLine(e);
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+
+        //private MySqlConnection mConn;
+        //private MySqlDataAdapter mAdapter;
+        //private DataSet mDataSet;
 
     
 
-        public void mostraResultados()
-        {
-            mDataSet = new DataSet();
-            mConn = new MySqlConnection("Persist Security Info=False; server=127.0.0.1;database=testedb;uid=root");
-            mConn.Open();
 
-            //cria um adapter utilizando a instrução SQL para aceder à tabela
-            mAdapter = new MySqlDataAdapter("insert into alimento(nome_alim, tipo_alim, calorias_alim) values('Rola','Pênis',1000);", mConn);
+        //public void mostraResultados()
+        //{
+        //    mDataSet = new DataSet();
+        //    mConn = new MySqlConnection("Persist Security Info=False; server=127.0.0.1;database=testedb;uid=root");
+        //    mConn.Open();
 
-            //preenche o dataset através do adapter
-            //mAdapter.Fill(mDataSet, "tabela_dados");
+        //    //cria um adapter utilizando a instrução SQL para aceder à tabela
+        //    mAdapter = new MySqlDataAdapter("insert into alimento(nome_alim, tipo_alim, calorias_alim) values('Rola','Pênis',1000);", mConn);
+
+        //    //preenche o dataset através do adapter
+        //    //mAdapter.Fill(mDataSet, "tabela_dados");
 
          
-        }
+        //}
        
 
 
