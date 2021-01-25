@@ -30,6 +30,7 @@ namespace Register_View
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox sexoGroup;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register_View));
             this.radioFemea = new System.Windows.Forms.RadioButton();
             this.radioMacho = new System.Windows.Forms.RadioButton();
             this.labelNome = new System.Windows.Forms.Label();
@@ -370,6 +371,7 @@ namespace Register_View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(956, 574);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
