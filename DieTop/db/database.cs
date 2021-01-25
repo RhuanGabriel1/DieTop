@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -38,6 +39,41 @@ namespace DieTop.db
             {
             MySqlCommand command = new MySqlCommand(sqlCommand, connection);
             command.ExecuteReader();
+                MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Console.WriteLine("Ação Realizada com Sucesso!");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Houve um Erro!", e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public string[] CommandSelectSQL(string sqlCommand ,int totalTables)
+        {
+            //Insert Data into Database
+            try
+            {
+
+
+                //List<string> list = new List<string>();
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                MySqlCommand command = new MySqlCommand(sqlCommand, connection);
+                //list.Clear();
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    for(int i = 0; i<totalTables; i++)
+                    {
+                        string[] row = {
+                            reader.GetString(i)
+
+                    };
+                        
+                        return row;
+                    }
+                  
+                }
                 MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 Console.WriteLine("Ação Realizada com Sucesso!");
             }
