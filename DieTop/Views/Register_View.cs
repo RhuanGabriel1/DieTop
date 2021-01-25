@@ -197,6 +197,16 @@ namespace Register_View
                         {
                             //insert into pessoa(senha, nome, idade, sexo, altura, peso) values('123','Leandro',18,'Macho',161,55);
                             data.CommandSQL("insert into pessoa(senha, nome, idade, sexo, altura, peso) values('"+getSenha()+"', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " + getAltura()+","+getPeso()+");");
+
+                            MessageBox.Show("Obrigado por se Cadastrar! Faça Login para Continuar", "Muito Obrigado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                           
+                            
+                                DieTop.Welcome_View welcome = new DieTop.Welcome_View();
+                                this.Hide();
+                                this.Closed += (s, args) => this.Close();
+                                welcome.Show();
+                            
+
                         }
                         catch (Exception error)
                         {
