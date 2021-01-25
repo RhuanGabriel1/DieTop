@@ -61,12 +61,15 @@ namespace Register_View
 
         private void handleCancelSubmit(object sender, EventArgs e)
         {
-            DieTop.Welcome_View welcome = new DieTop.Welcome_View(); 
 
-
-            this.Hide();
-            this.Closed += (s, args) => this.Close();
-            welcome.Show();
+            DialogResult result = MessageBox.Show("Deseja Voltar para a Tela de Login?", "MENSAGEM DE ALERTA!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result.ToString() == "Yes")
+            {
+                DieTop.Welcome_View welcome = new DieTop.Welcome_View();
+                this.Hide();
+                this.Closed += (s, args) => this.Close();
+                welcome.Show();
+            }
         }
 
         private void leaveNome(object sender, EventArgs e)
@@ -156,6 +159,7 @@ namespace Register_View
         private void handleFormSubmit(object sender, EventArgs e)
         //Fazer toda uma Verificação antes de Cadastrar.
         {
+            bool stop = false;
             bool correct = true;
             correct = hook.FormValidator(correct,1,getNome(),nomeDefault,2);
             correct = hook.FormValidator(correct, 0, getIdade(), idadeDefault, 4);
@@ -168,7 +172,8 @@ namespace Register_View
                 if (int.Parse(getPeso()) > 400)
                 {
                     correct = false;
-                    MessageBox.Show("Peso Inválido/ PROCURE UM MÉDICO URGENTEMENTE");
+                    stop = true;
+                    MessageBox.Show("Peso Inválido/ PROCURE UM MÉDICO URGENTEMENTE","Favor Procurar um Médico!!",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 }
             }
 
@@ -179,17 +184,24 @@ namespace Register_View
                     //\
                     //Consegue pegar os Dados 
                     //Passar para o banco
-                    MessageBox.Show("Nome : " + getNome() + "\nIdade : " + getIdade() + "\nSexo : " + getSexo() + "\nPeso : " + getPeso() + "\nAltura : " + getAltura() + "\nSenha : " + getSenha());
+                    //Input data: getNome()  getIdade()  getSexo() getPeso() getAltura() getSenha()
+
+                    MessageBox.Show("Os Seguintes Dados Serão Cadastrados : \n" + "Nome : " + getNome() + "\nIdade : " + getIdade() + 
+                        "\nSexo : " + getSexo() + "\nPeso : " + getPeso() + "\nAltura : " + getAltura() + "\nSenha : " + getSenha()+"\n Deseja Prosseguir?");
                 }
                 else
                 {
-                    MessageBox.Show("As Senhas Diferem!");
-
+                    MessageBox.Show("As Senhas Estão Diferentes, Favor Refaze-las!","As Senhas Diferem!");
+                    inputSenha.Text = "";
+                    inputConfirmarSenha.Text = "";
                 }
             }
             else
             {
-                MessageBox.Show("Erro de Formulário, Favor Revisar!");
+                if(stop == false)
+                {
+                MessageBox.Show("Erro de Formulário, Favor Revisar!","Erro de Formulário!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
 
 
             }
