@@ -69,7 +69,7 @@ namespace DieTop
         private void loginButton_Click(object sender, EventArgs e)
         {
             db.Database data = new db.Database();
-            data.CommandSelectSQL("SELECT * FROM pessoa",6);
+            data.CommandSelectSQL("SELECT * FROM pessoa");
 
         }
     }

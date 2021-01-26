@@ -64,7 +64,7 @@ namespace DieTop.db
 
         //TEST LIST FIELDS
 
-        public void CommandSelectSQL(string sqlCommand, int totalTables)
+        public void CommandSelectSQL(string sqlCommand)
         {
             //Insert Data into Database
             try
@@ -73,15 +73,13 @@ namespace DieTop.db
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(sqlCommand, connection);
                 MySqlDataReader reader = command.ExecuteReader();
+                int total = reader.VisibleFieldCount;
                 while (reader.Read())
                 {
-                    Console.WriteLine(reader.GetString(0));
-                    Console.WriteLine(reader.GetString(1));
-                    Console.WriteLine(reader.GetString(2));
-                    Console.WriteLine(reader.GetString(3));
-                    Console.WriteLine(reader.GetString(4));
-                    Console.WriteLine(reader.GetString(5));
-
+                    for (int i = 0; i < total; i++)
+                    {
+                        Console.WriteLine(reader.GetName(i)+":  "+reader.GetValue(i));
+                    }
                 }
                 //MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 //Console.WriteLine("Ação Realizada com Sucesso!");
