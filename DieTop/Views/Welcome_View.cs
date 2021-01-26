@@ -43,14 +43,14 @@ namespace DieTop
 
         private void InputLogin_Enter(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClicked(inputLogin, "Insira seu Login");
+            hook.ChangeInputTextClicked(inputLogin, "Insira seu CPF");
 
         }
         //Quando Sai do input e nao contém nenhum dado
 
         private void InputLogin_Leave(object sender, EventArgs e)
         {
-            hook.ChangeInputTextClickedNull(inputLogin, "Insira seu Login");
+            hook.ChangeInputTextClickedNull(inputLogin, "Insira seu CPF");
 
         }
 

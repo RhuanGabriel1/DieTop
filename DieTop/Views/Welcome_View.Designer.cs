@@ -80,7 +80,7 @@ namespace DieTop
             this.inputLogin.Size = new System.Drawing.Size(433, 31);
             this.inputLogin.TabIndex = 2;
             this.inputLogin.Tag = "";
-            this.inputLogin.Text = "Insira seu Login";
+            this.inputLogin.Text = "Insira seu CPF";
             this.inputLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.inputLogin.WordWrap = false;
             this.inputLogin.Enter += new System.EventHandler(this.InputLogin_Enter);
@@ -94,9 +94,9 @@ namespace DieTop
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(150, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 31);
+            this.label2.Size = new System.Drawing.Size(69, 31);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Login";
+            this.label2.Text = "CPF";
             // 
             // label3
             // 

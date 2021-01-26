@@ -52,6 +52,8 @@ namespace Register_View
             this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.selectDieta = new System.Windows.Forms.ComboBox();
+            this.inputCPF = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             sexoGroup = new System.Windows.Forms.GroupBox();
             sexoGroup.SuspendLayout();
             this.SuspendLayout();
@@ -342,7 +344,6 @@ namespace Register_View
             this.selectAtvFisica.Name = "selectAtvFisica";
             this.selectAtvFisica.Size = new System.Drawing.Size(361, 21);
             this.selectAtvFisica.TabIndex = 23;
-            this.selectAtvFisica.SelectedItem = 0;
             // 
             // label2
             // 
@@ -368,8 +369,35 @@ namespace Register_View
             this.selectDieta.Name = "selectDieta";
             this.selectDieta.Size = new System.Drawing.Size(361, 21);
             this.selectDieta.TabIndex = 25;
-            this.selectDieta.SelectedItem= 0;
-
+            // 
+            // inputCPF
+            // 
+            this.inputCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inputCPF.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputCPF.ForeColor = System.Drawing.Color.Silver;
+            this.inputCPF.Location = new System.Drawing.Point(172, 410);
+            this.inputCPF.Multiline = true;
+            this.inputCPF.Name = "inputCPF";
+            this.inputCPF.Size = new System.Drawing.Size(229, 31);
+            this.inputCPF.TabIndex = 27;
+            this.inputCPF.Tag = "";
+            this.inputCPF.Text = "Insira seu CPF";
+            this.inputCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.inputCPF.WordWrap = false;
+            this.inputCPF.Enter += new System.EventHandler(this.inputEnterCPF);
+            this.inputCPF.Leave += new System.EventHandler(this.inputLeaveCPF);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(54, 410);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 29);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "CPF :";
             // 
             // Register_View
             // 
@@ -378,6 +406,8 @@ namespace Register_View
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(956, 574);
+            this.Controls.Add(this.inputCPF);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.selectDieta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.selectAtvFisica);
@@ -433,5 +463,7 @@ namespace Register_View
         private System.Windows.Forms.ComboBox selectAtvFisica;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox selectDieta;
+        private System.Windows.Forms.TextBox inputCPF;
+        private System.Windows.Forms.Label label3;
     }
 }

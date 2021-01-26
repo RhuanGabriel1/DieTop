@@ -12,6 +12,7 @@ namespace Register_View
         string alturaDefault = "Insira sua Altura";
         string senhaDefault = "Insira sua Senha";
         string confirmarDefault = "Confirme sua Senha";
+        string cpfDefault = "Insira seu CPF";
 
 
 
@@ -30,11 +31,11 @@ namespace Register_View
         {
             if(radioMacho.Checked == true)
             {
-            return "Macho";
+            return "Masculino";
             }
             else
             {
-                return "Femêa";
+                return "Feminino";
             }
         }
         public string getPeso()
@@ -44,6 +45,10 @@ namespace Register_View
         public string getAltura()
         {
             return inputAltura.Text;
+        }
+        public string getCPF()
+        {
+            return inputCPF.Text;
         }
         public string getSenha()
         {
@@ -111,12 +116,10 @@ namespace Register_View
         private void inputAlturaEnter(object sender, EventArgs e)
         {
             hook.ChangeInputTextClicked(inputAltura, alturaDefault);
-
         }
         private void inputAlturaLeave(object sender, EventArgs e)
         {
             hook.ChangeInputTextClickedNull(inputAltura, alturaDefault);
-
         }
 
         //Input Senha
@@ -124,16 +127,12 @@ namespace Register_View
         {
             hook.ChangeInputTextClicked(inputSenha, senhaDefault);
             hook.TurnItToPassword(inputSenha, senhaDefault);
-
-
         }
-
 
         private void inputSenhaLeave(object sender, EventArgs e)
         {
             hook.ChangeInputTextClickedNull(inputSenha, senhaDefault);
             hook.TurnItToPassword(inputSenha, senhaDefault);
-
 
         }
         //Input Confirmar Senha
@@ -152,7 +151,14 @@ namespace Register_View
 
         }
 
-
+        private void inputEnterCPF(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClicked(inputCPF, cpfDefault);
+        }
+        private void inputLeaveCPF(object sender, EventArgs e)
+        {
+            hook.ChangeInputTextClickedNull(inputCPF, cpfDefault);
+        }
 
 
         //Form Submit ( Envio de Formulário)
@@ -166,7 +172,6 @@ namespace Register_View
             correct = hook.FormValidator(correct, 0, getIdade(), idadeDefault, 4);
             correct = hook.FormValidator(correct, 0, getPeso(), pesoDefault, 4);
             correct = hook.FormValidator(correct, 0, getAltura(), alturaDefault, 4);
-
 
             if (getPeso() != "" && getPeso() != pesoDefault)
             {
@@ -194,10 +199,9 @@ namespace Register_View
                     {
                         DieTop.db.Database data = new DieTop.db.Database();
                         try
-          
                         {
                             //insert into pessoa(senha, nome, idade, sexo, altura, peso) values('123','Leandro',18,'Macho',161,55);
-                            data.CommandSQL("insert into pessoa(senha, nome, idade, sexo, altura, peso,dieta,fisica) values('"+getSenha()+
+                            data.CommandSQL("insert into pessoa(cpf,senha, nome, idade, sexo, altura, peso,dieta,fisica) values('" + getCPF() + "','"+getSenha()+
                                 "', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " +
                                 getAltura()+","+getPeso()+ ",'" + selectDieta.SelectedItem.ToString() + "','" + selectAtvFisica.SelectedItem.ToString() + "');");
 
@@ -208,8 +212,6 @@ namespace Register_View
                                 this.Hide();
                                 this.Closed += (s, args) => this.Close();
                                 welcome.Show();
-                            
-
                         }
                         catch (Exception error)
                         {
@@ -217,7 +219,6 @@ namespace Register_View
 
                         }
                     }
-                    
                 }
                 else
                 {
@@ -232,8 +233,6 @@ namespace Register_View
                 {
                 MessageBox.Show("Erro de Formulário, Favor Revisar!","Erro de Formulário!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-
-
             }
         }
 
@@ -247,21 +246,18 @@ namespace Register_View
         private void inputIdadeKeyPress(object sender, KeyPressEventArgs e)
         {
             inputIdade.Text = hook.AcceptOnlyNumbers(e,getIdade());
-
         }
 
         private void inputPesoKeyPress(object sender, KeyPressEventArgs e)
         {
            inputPeso.Text = hook.AcceptOnlyNumbers(e,getPeso());
-
         }
 
         private void inputAlturaKeyPress(object sender, KeyPressEventArgs e)
         {
            inputAltura.Text =  hook.AcceptOnlyNumbers(e,getAltura());
-
         }
 
-
+      
     }
 }
