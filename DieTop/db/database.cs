@@ -64,11 +64,16 @@ namespace DieTop.db
 
         //TEST LIST FIELDS
 
-        public void CommandSelectSQL(string sqlCommand)
+        public List<string> CommandSelectSQL(string sqlCommand)
         {
-            //Insert Data into Database
+            //Create a list for return
+            List<string> getData = new List<string>();
+
+
+            //Get Data into Database
             try
             {
+              
                 connection = new MySqlConnection(data_source);
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(sqlCommand, connection);
@@ -78,7 +83,9 @@ namespace DieTop.db
                 {
                     for (int i = 0; i < total; i++)
                     {
-                        Console.WriteLine(reader.GetName(i)+":  "+reader.GetValue(i));
+                        //Console.WriteLine(reader.GetName(i) + ":  " + reader.GetValue(i));
+                        getData.Add(reader.GetValue(i).ToString());
+
                     }
                 }
                 //MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -88,7 +95,13 @@ namespace DieTop.db
             {
                 MessageBox.Show("Houve um Erro! "+e.ToString(), e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-         
+
+            //For view what we can get  with this method
+            //for(int i = 0; i< getData.Count; i++)
+            //{
+            //    Console.WriteLine(getData[i]);
+            //}
+            return getData;
         }
 
 

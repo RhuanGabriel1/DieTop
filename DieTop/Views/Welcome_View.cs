@@ -68,8 +68,14 @@ namespace DieTop
         //HandleFormSubmit
         private void loginButton_Click(object sender, EventArgs e)
         {
+            List<string> getData = new List<string>();
             db.Database data = new db.Database();
-            data.CommandSelectSQL("SELECT * FROM pessoa");
+            getData = data.CommandSelectSQL("select nome,senha from pessoa where nome = '" + inputLogin.Text+"' and senha ='"+inputSenha.Text+"'");
+            Console.WriteLine("GET DATA");
+            for (int i = 0; i < getData.Count; i++)
+            {
+                Console.WriteLine(getData[i]);
+            }
 
         }
     }
