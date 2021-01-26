@@ -205,13 +205,10 @@ namespace Register_View
                                 "', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " +
                                 getAltura()+","+getPeso()+ ",'" + selectDieta.SelectedItem.ToString() + "','" + selectAtvFisica.SelectedItem.ToString() + "');");
 
-                            MessageBox.Show("Obrigado por se Cadastrar! Faça Login para Continuar", "Muito Obrigado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                           
-                            
-                                DieTop.Welcome_View welcome = new DieTop.Welcome_View();
-                                this.Hide();
-                                this.Closed += (s, args) => this.Close();
-                                welcome.Show();
+                                //DieTop.Welcome_View welcome = new DieTop.Welcome_View();
+                                //this.Hide();
+                                //this.Closed += (s, args) => this.Close();
+                                //welcome.Show();
                         }
                         catch (Exception error)
                         {

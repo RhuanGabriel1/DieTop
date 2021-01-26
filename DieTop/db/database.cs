@@ -37,6 +37,7 @@ namespace DieTop.db
         
         public void CommandSQL(string sqlCommand)
         {
+            bool error = false;
             //Insert Data into Database
             try
             {
@@ -44,15 +45,24 @@ namespace DieTop.db
                 connection.Open();
                 MySqlCommand command = new MySqlCommand(sqlCommand, connection);
                 command.ExecuteReader();
-                MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Console.WriteLine("Ação Realizada com Sucesso!");
+                
+               
             }
             catch (Exception e)
             {
-                MessageBox.Show("Houve um Erro!  " +e.ToString(), e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                error = true;
             }
             finally
             {
+                if(error == false)
+                {
+                    MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("Houve um Erro na Inserção de Dados!", "Houve um Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
                 CloseConnection();
             }
         }

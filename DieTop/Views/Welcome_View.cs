@@ -70,11 +70,19 @@ namespace DieTop
         {
             List<string> getData = new List<string>();
             db.Database data = new db.Database();
-            getData = data.CommandSelectSQL("select nome,senha from pessoa where nome = '" + inputLogin.Text+"' and senha ='"+inputSenha.Text+"'");
-            Console.WriteLine("GET DATA");
+            getData = data.CommandSelectSQL("select cpf,senha from pessoa where cpf = '" + inputLogin.Text+"' and senha ='"+inputSenha.Text+"'");
             for (int i = 0; i < getData.Count; i++)
             {
-                Console.WriteLine(getData[i]);
+                //Console.WriteLine(getData[i]);
+            }
+            if (getData.Count != 0)
+            {
+                MessageBox.Show("Logado com Sucesso!","Seu Login foi Efetuado!",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                MessageBox.Show("Login ou Senha Incorretos!", "Seu Login foi mal Sucedido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
         }
