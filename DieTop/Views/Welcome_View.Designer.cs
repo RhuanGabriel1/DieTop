@@ -138,6 +138,7 @@ namespace DieTop
             this.loginButton.TabIndex = 7;
             this.loginButton.Text = "Logar";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // newRegister
             // 

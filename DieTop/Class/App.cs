@@ -23,11 +23,11 @@ namespace DieTop
             
             catch (Exception e)
             {
-                data.CloseConnection();
                 Application.Exit();
+                data.CloseConnection();
 
             }
-           
+            
             Application.Run(new Welcome_View());
 
 
