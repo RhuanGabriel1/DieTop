@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Hooks.cs" />
+    <Compile Include="Class\UserVar.cs" />
     <Compile Include="db\database.cs" />
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>

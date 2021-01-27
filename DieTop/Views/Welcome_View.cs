@@ -18,8 +18,14 @@ namespace DieTop
         {
             MaximizeBox = false;
             InitializeComponent();
+            SendLogin();
         }
+
+       
+
+        List<string> getData = new List<string>();
       
+
         //If clicked is different of default text , will turn of personalized text
         Hooks.Hooks hook = new Hooks.Hooks();
        
@@ -53,7 +59,10 @@ namespace DieTop
             hook.ChangeInputTextClickedNull(inputLogin, "Insira seu CPF");
 
         }
-
+        private List<string> SendLogin()
+        {
+            return getData;
+        }
         private void LoadRegisterScreen(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Welcome_View welcome_View = new Welcome_View();
@@ -62,18 +71,21 @@ namespace DieTop
             this.Hide();
             this.Closed += (s, args) => welcome_View.Close();
             registerView.Show();
-
+            getData.Add(inputLogin.Text);
+            getData.Add(inputSenha.Text);
 
         }
+       
         //HandleFormSubmit
         private void loginButton_Click(object sender, EventArgs e)
         {
             List<string> getData = new List<string>();
-            List<string> getUserName = new List<string>();
 
             db.Database data = new db.Database();
-            getData = data.CommandSelectSQL("select cpf,senha from pessoa where cpf = '" + inputLogin.Text+"' and senha ='"+inputSenha.Text+"'");
-            getUserName  = data.CommandSelectSQL("select nome from pessoa where cpf = '" + inputLogin.Text + "' and senha ='" + inputSenha.Text + "'");
+
+            //getData = data.CommandSelectSQL("select cpf,senha,nome from pessoa where cpf = '" + inputLogin.Text+"' and senha ='"+inputSenha.Text+"'");
+            Class.UserVar userAttributes = new Class.UserVar();
+            getData = userAttributes.returnLogin("select cpf,senha,nome from pessoa where cpf = '" + inputLogin.Text + "' and senha ='" + inputSenha.Text + "'");
             if (getData.Count != 0)
             {
                 Views.Dashboard userView = new Views.Dashboard();
@@ -82,7 +94,7 @@ namespace DieTop
                 this.Hide();
                 this.Closed += (s, args) => welcome_View.Close();
                 userView.Show();
-                MessageBox.Show("Logado com Sucesso! Seja Bem-vindo , " + getUserName[0], "Seu Login foi Efetuado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Logado com Sucesso! Seja Bem-vindo , " + getData[2], "Seu Login foi Efetuado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
             }
             else
