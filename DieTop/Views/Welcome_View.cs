@@ -69,15 +69,21 @@ namespace DieTop
         private void loginButton_Click(object sender, EventArgs e)
         {
             List<string> getData = new List<string>();
+            List<string> getUserName = new List<string>();
+
             db.Database data = new db.Database();
             getData = data.CommandSelectSQL("select cpf,senha from pessoa where cpf = '" + inputLogin.Text+"' and senha ='"+inputSenha.Text+"'");
-            for (int i = 0; i < getData.Count; i++)
-            {
-                //Console.WriteLine(getData[i]);
-            }
+            getUserName  = data.CommandSelectSQL("select nome from pessoa where cpf = '" + inputLogin.Text + "' and senha ='" + inputSenha.Text + "'");
             if (getData.Count != 0)
             {
-                MessageBox.Show("Logado com Sucesso!","Seu Login foi Efetuado!",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                Views.Dashboard userView = new Views.Dashboard();
+                Welcome_View welcome_View = new Welcome_View();
+
+                this.Hide();
+                this.Closed += (s, args) => welcome_View.Close();
+                userView.Show();
+                MessageBox.Show("Logado com Sucesso! Seja Bem-vindo , " + getUserName[0], "Seu Login foi Efetuado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
             }
             else
             {
