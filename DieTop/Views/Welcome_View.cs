@@ -13,8 +13,11 @@ namespace DieTop
             MaximizeBox = false;
             InitializeComponent();
             SendLogin();
+            
         }
 
+
+        
        
 
         List<string> getData = new List<string>();
@@ -81,15 +84,13 @@ namespace DieTop
 
             if (getData.Count != 0)
             {
+                Class.UserVar.CPF_LOGIN = getData[0];
+                Class.UserVar.SENHA_LOGIN = getData[1];
+
                 Views.Dashboard userView = new Views.Dashboard();
                 Welcome_View welcome_View = new Welcome_View();
                 this.Hide();
                 this.Closed += (s, args) => welcome_View.Close();
-                Class.UserVar.CPF_LOGIN= getData[0];
-                Class.UserVar.SENHA_LOGIN = getData[1];
-                Class.UserVar user = new Class.UserVar();
-                MessageBox.Show("Logado com Sucesso! Seja Bem-vindo , " + getData[2], "Seu Login foi Efetuado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
                 userView.Show();
 
 
