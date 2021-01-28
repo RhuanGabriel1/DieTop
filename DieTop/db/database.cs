@@ -93,24 +93,18 @@ namespace DieTop.db
                 {
                     for (int i = 0; i < total; i++)
                     {
-                        //Console.WriteLine(reader.GetName(i) + ":  " + reader.GetValue(i));
                         getData.Add(reader.GetValue(i).ToString());
 
                     }
                 }
-                //MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                //Console.WriteLine("Ação Realizada com Sucesso!");
+       
             }
             catch (Exception e)
             {
                 MessageBox.Show("Houve um Erro! "+e.ToString(), e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //For view what we can get  with this method
-            //for(int i = 0; i< getData.Count; i++)
-            //{
-            //    Console.WriteLine(getData[i]);
-            //}
+        
             return getData;
         }
 
