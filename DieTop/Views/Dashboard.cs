@@ -12,20 +12,24 @@ namespace DieTop.Views
 {
     public partial class Dashboard : Form
     {
+
+        
         public Dashboard()
         {
             InitializeComponent();
             ChangeScreen();
+
         }
-        Welcome_View welcome = new Welcome_View();
-        List<string> getUserLogin = new List<string>();
-        Class.UserVar userData = new Class.UserVar();
-     
 
         private void ChangeScreen()
         {
-            userData.SettingAttribuites();
-            labelUserInformation.Text = "Segue suas Informações, " + userData.getNome();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Class.UserVar user = new Class.UserVar();
+            Console.WriteLine(user.Cpf);
         }
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DieTop
@@ -67,40 +61,42 @@ namespace DieTop
         {
             Welcome_View welcome_View = new Welcome_View();
             Register_View.Register_View registerView = new Register_View.Register_View();
-
             this.Hide();
             this.Closed += (s, args) => welcome_View.Close();
             registerView.Show();
-            getData.Add(inputLogin.Text);
-            getData.Add(inputSenha.Text);
+          
 
         }
-       
+
         //HandleFormSubmit
+
+       
+
+
         private void loginButton_Click(object sender, EventArgs e)
         {
             List<string> getData = new List<string>();
-
             db.Database data = new db.Database();
+            getData = data.CommandSelectSQL("select cpf,senha,nome from pessoa where cpf = '" + inputLogin.Text + "' and senha ='" + inputSenha.Text + "'");
 
-            //getData = data.CommandSelectSQL("select cpf,senha,nome from pessoa where cpf = '" + inputLogin.Text+"' and senha ='"+inputSenha.Text+"'");
-            Class.UserVar userAttributes = new Class.UserVar();
-            getData = userAttributes.returnLogin("select cpf,senha,nome from pessoa where cpf = '" + inputLogin.Text + "' and senha ='" + inputSenha.Text + "'");
             if (getData.Count != 0)
             {
                 Views.Dashboard userView = new Views.Dashboard();
                 Welcome_View welcome_View = new Welcome_View();
-
                 this.Hide();
                 this.Closed += (s, args) => welcome_View.Close();
-                userView.Show();
+                Class.UserVar.CPF_LOGIN= getData[0];
+                Class.UserVar.SENHA_LOGIN = getData[1];
+                Class.UserVar user = new Class.UserVar();
                 MessageBox.Show("Logado com Sucesso! Seja Bem-vindo , " + getData[2], "Seu Login foi Efetuado!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                userView.Show();
+
 
             }
             else
             {
                 MessageBox.Show("Login ou Senha Incorretos!", "Seu Login foi mal Sucedido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
 
         }

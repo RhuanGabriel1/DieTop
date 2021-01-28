@@ -19,7 +19,6 @@ C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Runtime.Compile
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\MySql.Data.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\MySql.Data.EntityFramework.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\MySql.Web.xml
-C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Properties.Resources.resources
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\Register_View.Register_View.resources
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Welcome_View.resources
@@ -39,3 +38,4 @@ C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Buffers.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Memory.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache
