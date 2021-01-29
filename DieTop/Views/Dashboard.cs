@@ -64,12 +64,12 @@ namespace DieTop.Views
             RealTime();
         }
 
-        private void ButtonAlterar_Click(object sender, System.EventArgs e)
+        private void ButtonAlterar_Click(object sender, EventArgs e)
         {
             TurnOn(ButtonAceitar,ButtonVoltar,ButtonAlterar);
         }
 
-        private void ButtonAceitar_Click(object sender, System.EventArgs e)
+        private void ButtonAceitar_Click(object sender, EventArgs e)
         {
 
             //(cpf,senha, nome, idade, sexo, altura, peso,dieta,fisica) 
@@ -93,7 +93,7 @@ namespace DieTop.Views
             }
             }
 
-        private void ButtonVoltar_Click(object sender, System.EventArgs e)
+        private void ButtonVoltar_Click(object sender, EventArgs e)
         {
 
             TurnOff(ButtonAceitar, ButtonVoltar, ButtonAlterar);
