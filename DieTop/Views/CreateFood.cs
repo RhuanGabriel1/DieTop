@@ -17,19 +17,15 @@ namespace DieTop.Views
             InitializeComponent();
         }
 
-        private void ButtonAceitar_Click(object sender, EventArgs e)
+
+        private void ButtonVoltar_Click_1(object sender, EventArgs e)
         {
 
-        }
-
-        private void ButtonAlterar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonVoltar_Click(object sender, EventArgs e)
-        {
-
+            CreateFood here = new CreateFood();
+            Dashboard dash = new Dashboard();
+            this.Hide();
+            this.Closed += (s, args) => here.Close();
+            dash.Show();
         }
     }
 }

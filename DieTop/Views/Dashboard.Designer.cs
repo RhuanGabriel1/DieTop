@@ -31,6 +31,9 @@ namespace DieTop.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.user = new System.Windows.Forms.Panel();
+            this.ButtonAceitar = new System.Windows.Forms.Button();
+            this.ButtonAlterar = new System.Windows.Forms.Button();
+            this.ButtonVoltar = new System.Windows.Forms.Button();
             this.inputPeso = new System.Windows.Forms.TextBox();
             this.inputAltura = new System.Windows.Forms.TextBox();
             this.inputSexo = new System.Windows.Forms.TextBox();
@@ -45,16 +48,13 @@ namespace DieTop.Views
             this.label1 = new System.Windows.Forms.Label();
             this.labelUserInformation = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ButtonAlterar = new System.Windows.Forms.Button();
             this.selectDieta = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.loginButton = new System.Windows.Forms.Button();
-            this.ButtonAceitar = new System.Windows.Forms.Button();
-            this.ButtonVoltar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ButtonRefeicao = new System.Windows.Forms.Button();
+            this.ButtonFinalizar = new System.Windows.Forms.Button();
+            this.ButtonAtvFisica = new System.Windows.Forms.Button();
             this.user.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +83,50 @@ namespace DieTop.Views
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(424, 531);
             this.user.TabIndex = 0;
+            // 
+            // ButtonAceitar
+            // 
+            this.ButtonAceitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.ButtonAceitar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAceitar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAceitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ButtonAceitar.Location = new System.Drawing.Point(233, 461);
+            this.ButtonAceitar.Name = "ButtonAceitar";
+            this.ButtonAceitar.Size = new System.Drawing.Size(144, 47);
+            this.ButtonAceitar.TabIndex = 33;
+            this.ButtonAceitar.Text = "Aceitar";
+            this.ButtonAceitar.UseVisualStyleBackColor = false;
+            this.ButtonAceitar.Visible = false;
+            this.ButtonAceitar.Click += new System.EventHandler(this.ButtonAceitar_Click);
+            // 
+            // ButtonAlterar
+            // 
+            this.ButtonAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.ButtonAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAlterar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAlterar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ButtonAlterar.Location = new System.Drawing.Point(146, 461);
+            this.ButtonAlterar.Name = "ButtonAlterar";
+            this.ButtonAlterar.Size = new System.Drawing.Size(159, 42);
+            this.ButtonAlterar.TabIndex = 14;
+            this.ButtonAlterar.Text = "Alterar";
+            this.ButtonAlterar.UseVisualStyleBackColor = false;
+            this.ButtonAlterar.Click += new System.EventHandler(this.ButtonAlterar_Click);
+            // 
+            // ButtonVoltar
+            // 
+            this.ButtonVoltar.BackColor = System.Drawing.Color.DarkRed;
+            this.ButtonVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonVoltar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonVoltar.ForeColor = System.Drawing.SystemColors.Control;
+            this.ButtonVoltar.Location = new System.Drawing.Point(68, 459);
+            this.ButtonVoltar.Name = "ButtonVoltar";
+            this.ButtonVoltar.Size = new System.Drawing.Size(144, 47);
+            this.ButtonVoltar.TabIndex = 32;
+            this.ButtonVoltar.Text = "Voltar";
+            this.ButtonVoltar.UseVisualStyleBackColor = false;
+            this.ButtonVoltar.Visible = false;
+            this.ButtonVoltar.Click += new System.EventHandler(this.ButtonVoltar_Click);
             // 
             // inputPeso
             // 
@@ -227,20 +271,6 @@ namespace DieTop.Views
             this.panel1.Size = new System.Drawing.Size(492, 199);
             this.panel1.TabIndex = 13;
             // 
-            // ButtonAlterar
-            // 
-            this.ButtonAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ButtonAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAlterar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonAlterar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ButtonAlterar.Location = new System.Drawing.Point(146, 461);
-            this.ButtonAlterar.Name = "ButtonAlterar";
-            this.ButtonAlterar.Size = new System.Drawing.Size(159, 42);
-            this.ButtonAlterar.TabIndex = 14;
-            this.ButtonAlterar.Text = "Alterar";
-            this.ButtonAlterar.UseVisualStyleBackColor = false;
-            this.ButtonAlterar.Click += new System.EventHandler(this.ButtonAlterar_Click);
-            // 
             // selectDieta
             // 
             this.selectDieta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -297,75 +327,46 @@ namespace DieTop.Views
             this.label8.TabIndex = 26;
             this.label8.Text = "Qtd. de Atv. Fís. Práticadas na Semana";
             // 
-            // loginButton
+            // ButtonRefeicao
             // 
-            this.loginButton.BackColor = System.Drawing.SystemColors.Window;
-            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginButton.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.loginButton.Location = new System.Drawing.Point(522, 365);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(422, 47);
-            this.loginButton.TabIndex = 30;
-            this.loginButton.Text = "Adicionar Refeição";
-            this.loginButton.UseVisualStyleBackColor = false;
+            this.ButtonRefeicao.BackColor = System.Drawing.SystemColors.Window;
+            this.ButtonRefeicao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonRefeicao.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonRefeicao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonRefeicao.Location = new System.Drawing.Point(522, 365);
+            this.ButtonRefeicao.Name = "ButtonRefeicao";
+            this.ButtonRefeicao.Size = new System.Drawing.Size(422, 47);
+            this.ButtonRefeicao.TabIndex = 30;
+            this.ButtonRefeicao.Text = "Adicionar Refeição";
+            this.ButtonRefeicao.UseVisualStyleBackColor = false;
+            this.ButtonRefeicao.Click += new System.EventHandler(this.ButtonRefeicao_Click);
             // 
-            // ButtonAceitar
+            // ButtonFinalizar
             // 
-            this.ButtonAceitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ButtonAceitar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAceitar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonAceitar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ButtonAceitar.Location = new System.Drawing.Point(233, 461);
-            this.ButtonAceitar.Name = "ButtonAceitar";
-            this.ButtonAceitar.Size = new System.Drawing.Size(144, 47);
-            this.ButtonAceitar.TabIndex = 33;
-            this.ButtonAceitar.Text = "Aceitar";
-            this.ButtonAceitar.UseVisualStyleBackColor = false;
-            this.ButtonAceitar.Visible = false;
-            this.ButtonAceitar.Click += new System.EventHandler(this.ButtonAceitar_Click);
+            this.ButtonFinalizar.BackColor = System.Drawing.Color.DarkRed;
+            this.ButtonFinalizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonFinalizar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonFinalizar.ForeColor = System.Drawing.SystemColors.Control;
+            this.ButtonFinalizar.Location = new System.Drawing.Point(711, 505);
+            this.ButtonFinalizar.Name = "ButtonFinalizar";
+            this.ButtonFinalizar.Size = new System.Drawing.Size(233, 47);
+            this.ButtonFinalizar.TabIndex = 34;
+            this.ButtonFinalizar.Text = "Finalizar Dia";
+            this.ButtonFinalizar.UseVisualStyleBackColor = false;
+            this.ButtonFinalizar.Visible = false;
             // 
-            // ButtonVoltar
+            // ButtonAtvFisica
             // 
-            this.ButtonVoltar.BackColor = System.Drawing.Color.DarkRed;
-            this.ButtonVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonVoltar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonVoltar.ForeColor = System.Drawing.SystemColors.Control;
-            this.ButtonVoltar.Location = new System.Drawing.Point(68, 459);
-            this.ButtonVoltar.Name = "ButtonVoltar";
-            this.ButtonVoltar.Size = new System.Drawing.Size(144, 47);
-            this.ButtonVoltar.TabIndex = 32;
-            this.ButtonVoltar.Text = "Voltar";
-            this.ButtonVoltar.UseVisualStyleBackColor = false;
-            this.ButtonVoltar.Visible = false;
-            this.ButtonVoltar.Click += new System.EventHandler(this.ButtonVoltar_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DarkRed;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(711, 505);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(233, 47);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Finalizar Dia";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(522, 434);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(422, 47);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Adicionar Atividade Física";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ButtonAtvFisica.BackColor = System.Drawing.SystemColors.Window;
+            this.ButtonAtvFisica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAtvFisica.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAtvFisica.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonAtvFisica.Location = new System.Drawing.Point(522, 434);
+            this.ButtonAtvFisica.Name = "ButtonAtvFisica";
+            this.ButtonAtvFisica.Size = new System.Drawing.Size(422, 47);
+            this.ButtonAtvFisica.TabIndex = 35;
+            this.ButtonAtvFisica.Text = "Adicionar Atividade Física";
+            this.ButtonAtvFisica.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
@@ -373,9 +374,9 @@ namespace DieTop.Views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(956, 574);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.ButtonAtvFisica);
+            this.Controls.Add(this.ButtonFinalizar);
+            this.Controls.Add(this.ButtonRefeicao);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.user);
             this.Name = "Dashboard";
@@ -411,10 +412,10 @@ namespace DieTop.Views
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox selectAtvFisica;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button ButtonRefeicao;
         private System.Windows.Forms.Button ButtonAceitar;
         private System.Windows.Forms.Button ButtonVoltar;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ButtonFinalizar;
+        private System.Windows.Forms.Button ButtonAtvFisica;
     }
 }

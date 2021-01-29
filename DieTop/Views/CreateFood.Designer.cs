@@ -31,29 +31,29 @@ namespace DieTop.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateFood));
             this.user = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelCalorias = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
-            this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelCalorias = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ButtonVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.user.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,112 @@ namespace DieTop.Views
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(424, 531);
             this.user.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(33, 330);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(353, 27);
+            this.button3.TabIndex = 35;
+            this.button3.Text = "Adicionar um Alimento";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.comboBox3.Location = new System.Drawing.Point(144, 277);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(128, 21);
+            this.comboBox3.TabIndex = 34;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 271);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 25);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Alimento 3 :";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.comboBox2.Location = new System.Drawing.Point(144, 227);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(128, 21);
+            this.comboBox2.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 221);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(123, 25);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Alimento 2 :";
+            // 
+            // labelCalorias
+            // 
+            this.labelCalorias.AutoSize = true;
+            this.labelCalorias.Cursor = System.Windows.Forms.Cursors.Default;
+            this.labelCalorias.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCalorias.Location = new System.Drawing.Point(212, 474);
+            this.labelCalorias.Name = "labelCalorias";
+            this.labelCalorias.Size = new System.Drawing.Size(23, 25);
+            this.labelCalorias.TabIndex = 30;
+            this.labelCalorias.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(15, 474);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(191, 25);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Calorias Restantes :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.comboBox1.Location = new System.Drawing.Point(144, 177);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(128, 21);
+            this.comboBox1.TabIndex = 28;
+            // 
+            // selectAtvFisica
+            // 
+            this.selectAtvFisica.BackColor = System.Drawing.SystemColors.Window;
+            this.selectAtvFisica.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.selectAtvFisica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectAtvFisica.FormattingEnabled = true;
+            this.selectAtvFisica.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.selectAtvFisica.Items.AddRange(new object[] {
+            "Café da Manhã",
+            "Almoço",
+            "Janta"});
+            this.selectAtvFisica.Location = new System.Drawing.Point(144, 127);
+            this.selectAtvFisica.Name = "selectAtvFisica";
+            this.selectAtvFisica.Size = new System.Drawing.Size(128, 21);
+            this.selectAtvFisica.TabIndex = 27;
             // 
             // label2
             // 
@@ -109,23 +215,6 @@ namespace DieTop.Views
             this.label.TabIndex = 0;
             this.label.Text = "Cadastre sua Refeição!";
             // 
-            // selectAtvFisica
-            // 
-            this.selectAtvFisica.BackColor = System.Drawing.SystemColors.Window;
-            this.selectAtvFisica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selectAtvFisica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectAtvFisica.Enabled = false;
-            this.selectAtvFisica.FormattingEnabled = true;
-            this.selectAtvFisica.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.selectAtvFisica.Items.AddRange(new object[] {
-            "Café da Manhã",
-            "Almoço",
-            "Janta"});
-            this.selectAtvFisica.Location = new System.Drawing.Point(144, 127);
-            this.selectAtvFisica.Name = "selectAtvFisica";
-            this.selectAtvFisica.Size = new System.Drawing.Size(128, 21);
-            this.selectAtvFisica.TabIndex = 27;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Window;
@@ -139,111 +228,19 @@ namespace DieTop.Views
             this.button1.Text = "Adicionar Alimento";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // ButtonVoltar
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.comboBox1.Location = new System.Drawing.Point(144, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 21);
-            this.comboBox1.TabIndex = 28;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 474);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 25);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Calorias Restantes :";
-            // 
-            // labelCalorias
-            // 
-            this.labelCalorias.AutoSize = true;
-            this.labelCalorias.Cursor = System.Windows.Forms.Cursors.Default;
-            this.labelCalorias.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCalorias.Location = new System.Drawing.Point(212, 474);
-            this.labelCalorias.Name = "labelCalorias";
-            this.labelCalorias.Size = new System.Drawing.Size(23, 25);
-            this.labelCalorias.TabIndex = 30;
-            this.labelCalorias.Text = "0";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Window;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(522, 485);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 47);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Voltar";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Enabled = false;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.comboBox2.Location = new System.Drawing.Point(144, 227);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 21);
-            this.comboBox2.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 221);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 25);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Alimento 2 :";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Enabled = false;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.comboBox3.Location = new System.Drawing.Point(144, 277);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 21);
-            this.comboBox3.TabIndex = 34;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 25);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Alimento 3 :";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(33, 330);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(353, 27);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "Adicionar um Alimento";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ButtonVoltar.BackColor = System.Drawing.SystemColors.Window;
+            this.ButtonVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonVoltar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonVoltar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonVoltar.Location = new System.Drawing.Point(522, 485);
+            this.ButtonVoltar.Name = "ButtonVoltar";
+            this.ButtonVoltar.Size = new System.Drawing.Size(155, 47);
+            this.ButtonVoltar.TabIndex = 33;
+            this.ButtonVoltar.Text = "Voltar";
+            this.ButtonVoltar.UseVisualStyleBackColor = false;
+            this.ButtonVoltar.Click += new System.EventHandler(this.ButtonVoltar_Click_1);
             // 
             // label7
             // 
@@ -293,28 +290,6 @@ namespace DieTop.Views
             this.panel2.Size = new System.Drawing.Size(488, 358);
             this.panel2.TabIndex = 14;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Alimento2";
-            this.label3.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(54, 238);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 28);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Alimento3";
-            this.label10.Visible = false;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -348,6 +323,28 @@ namespace DieTop.Views
             this.label13.Text = "Caloria1";
             this.label13.Visible = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(54, 238);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(117, 28);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Alimento3";
+            this.label10.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(54, 168);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 28);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Alimento2";
+            this.label3.Visible = false;
+            // 
             // CreateFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,7 +352,7 @@ namespace DieTop.Views
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(956, 574);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ButtonVoltar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.user);
             this.Name = "CreateFood";
@@ -385,7 +382,7 @@ namespace DieTop.Views
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelCalorias;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ButtonVoltar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -397,5 +394,4 @@ namespace DieTop.Views
         private System.Windows.Forms.Label label3;
     }
 }
-    }
-}
+    

@@ -98,5 +98,14 @@ namespace DieTop.Views
 
             TurnOff(ButtonAceitar, ButtonVoltar, ButtonAlterar);
         }
+
+        private void ButtonRefeicao_Click(object sender, EventArgs e)
+        {
+            CreateFood food = new CreateFood();
+            Dashboard here= new Dashboard();
+            this.Hide();
+            this.Closed += (s, args) => here.Close();
+            food.Show();
+        }
     }
 }

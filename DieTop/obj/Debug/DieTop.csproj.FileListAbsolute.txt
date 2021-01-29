@@ -40,3 +40,4 @@ C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Numerics.Vector
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Warning.resources
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.CreateFood.resources
