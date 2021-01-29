@@ -22,7 +22,7 @@ namespace DieTop.Class
            getData = data.CommandSelectSQL("select nome,cpf,idade,senha,sexo,altura,peso,fisica,dieta from pessoa where cpf = '" + CPF_LOGIN + "' and senha ='" + SENHA_LOGIN + "'");
         }
 
-        private void Populate()
+        public void Populate()
         {
             Connect();
             Nome = getData[0]; 

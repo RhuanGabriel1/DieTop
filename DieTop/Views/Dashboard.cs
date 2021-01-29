@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace DieTop.Views
 {
@@ -11,13 +12,22 @@ namespace DieTop.Views
         {
             MaximizeBox = false;
             InitializeComponent();
-            labelUserInformation.Text = "Segue suas Informações, " + dataUser.Nome+"!";
+            RealTime();
+
+        }
+
+        public void RealTime()
+        {
+            dataUser.Populate();
+            labelUserInformation.Text = "Segue suas Informações, " + dataUser.Nome + "!";
             inputNome.Text = dataUser.Nome;
             inputCPF.Text = dataUser.Cpf;
             inputIdade.Text = dataUser.Idade;
             inputSexo.Text = dataUser.Sexo;
             inputAltura.Text = dataUser.Altura;
             inputPeso.Text = dataUser.Peso;
+            selectAtvFisica.SelectedItem = dataUser.AtvSem;
+            selectDieta.SelectedItem = dataUser.Dieta;
 
         }
 
@@ -34,6 +44,8 @@ namespace DieTop.Views
             inputPeso.Enabled = true;
             selectDieta.Enabled = true;
             selectAtvFisica.Enabled = true;
+
+            RealTime();
         }
         public void TurnOff(Button buttonOff, Button buttonOff2, Button buttonOn)
         {
@@ -49,6 +61,7 @@ namespace DieTop.Views
             selectDieta.Enabled = false;
             selectAtvFisica.Enabled = false;
 
+            RealTime();
         }
 
         private void ButtonAlterar_Click(object sender, System.EventArgs e)
@@ -58,16 +71,27 @@ namespace DieTop.Views
 
         private void ButtonAceitar_Click(object sender, System.EventArgs e)
         {
-            TurnOff(ButtonAceitar,ButtonVoltar,ButtonAlterar);
 
             //(cpf,senha, nome, idade, sexo, altura, peso,dieta,fisica) 
 
-            db.Database data = new db.Database();
-            data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
-                "', peso = '" + inputPeso.Text + "', dieta = '" + selectDieta.SelectedItem.ToString()+ "', fisica = '" + selectAtvFisica.SelectedItem.ToString()+
-                "' WHERE cpf ='"+dataUser.Cpf+"';");
+            try
+            {
+                db.Database data = new db.Database();
+                data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
+                    "', peso = '" + inputPeso.Text + "', dieta = '" + selectDieta.SelectedItem.ToString() + "', fisica = '" + selectAtvFisica.SelectedItem.ToString() +
+                    "' WHERE cpf ='" + dataUser.Cpf + "';");
+                Dashboard dash = new Dashboard();
+               
+                TurnOff(ButtonAceitar,ButtonVoltar,ButtonAlterar);
 
-        }
+
+
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(error);
+            }
+            }
 
         private void ButtonVoltar_Click(object sender, System.EventArgs e)
         {
