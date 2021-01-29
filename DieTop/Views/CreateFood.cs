@@ -96,7 +96,7 @@ namespace DieTop.Views
 
 
             Hooks.Hooks hook = new Hooks.Hooks();
-            hook.RealTimeCal(getComida1Name, getComida2Name, getComida3Name, getComida1Cal, getComida2Cal, getComida3Cal);
+            hook.RealTimeCal(getComida1Name, getComida2Name, getComida3Name, getComida1Cal, getComida2Cal, getComida3Cal,labelAli1, labelAli2, labelAli3,labelCal1, labelCal2, labelCal3,labelCalTotal);
         }
     }
 }

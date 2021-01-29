@@ -36,7 +36,7 @@ namespace DieTop.Views
             this.label6 = new System.Windows.Forms.Label();
             this.SelectA2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.labelCalorias = new System.Windows.Forms.Label();
+            this.labelCalTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SelectA1 = new System.Windows.Forms.ComboBox();
             this.selectTipo = new System.Windows.Forms.ComboBox();
@@ -47,13 +47,13 @@ namespace DieTop.Views
             this.ButtonVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelAli1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelCal3 = new System.Windows.Forms.Label();
+            this.labelCal2 = new System.Windows.Forms.Label();
+            this.labelCal1 = new System.Windows.Forms.Label();
+            this.labelAli3 = new System.Windows.Forms.Label();
+            this.labelAli2 = new System.Windows.Forms.Label();
             this.user.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@ namespace DieTop.Views
             this.user.Controls.Add(this.label6);
             this.user.Controls.Add(this.SelectA2);
             this.user.Controls.Add(this.label5);
-            this.user.Controls.Add(this.labelCalorias);
+            this.user.Controls.Add(this.labelCalTotal);
             this.user.Controls.Add(this.label4);
             this.user.Controls.Add(this.SelectA1);
             this.user.Controls.Add(this.selectTipo);
@@ -141,16 +141,16 @@ namespace DieTop.Views
             this.label5.TabIndex = 31;
             this.label5.Text = "Alimento 2 :";
             // 
-            // labelCalorias
+            // labelCalTotal
             // 
-            this.labelCalorias.AutoSize = true;
-            this.labelCalorias.Cursor = System.Windows.Forms.Cursors.Default;
-            this.labelCalorias.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCalorias.Location = new System.Drawing.Point(212, 474);
-            this.labelCalorias.Name = "labelCalorias";
-            this.labelCalorias.Size = new System.Drawing.Size(23, 25);
-            this.labelCalorias.TabIndex = 30;
-            this.labelCalorias.Text = "0";
+            this.labelCalTotal.AutoSize = true;
+            this.labelCalTotal.Cursor = System.Windows.Forms.Cursors.Default;
+            this.labelCalTotal.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCalTotal.Location = new System.Drawing.Point(212, 474);
+            this.labelCalTotal.Name = "labelCalTotal";
+            this.labelCalTotal.Size = new System.Drawing.Size(23, 25);
+            this.labelCalTotal.TabIndex = 30;
+            this.labelCalTotal.Text = "0";
             // 
             // label4
             // 
@@ -270,27 +270,27 @@ namespace DieTop.Views
             this.label8.TabIndex = 2;
             this.label8.Text = "Calorias :";
             // 
-            // label9
+            // labelAli1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(54, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 28);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Alimento1";
-            this.label9.Visible = false;
+            this.labelAli1.AutoSize = true;
+            this.labelAli1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAli1.Location = new System.Drawing.Point(54, 96);
+            this.labelAli1.Name = "labelAli1";
+            this.labelAli1.Size = new System.Drawing.Size(117, 28);
+            this.labelAli1.TabIndex = 3;
+            this.labelAli1.Text = "Alimento1";
+            this.labelAli1.Visible = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.labelCal3);
+            this.panel2.Controls.Add(this.labelCal2);
+            this.panel2.Controls.Add(this.labelCal1);
+            this.panel2.Controls.Add(this.labelAli3);
+            this.panel2.Controls.Add(this.labelAli2);
+            this.panel2.Controls.Add(this.labelAli1);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(456, 21);
@@ -298,60 +298,60 @@ namespace DieTop.Views
             this.panel2.Size = new System.Drawing.Size(488, 358);
             this.panel2.TabIndex = 14;
             // 
-            // label11
+            // labelCal3
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(309, 238);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 28);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Caloria3";
-            this.label11.Visible = false;
+            this.labelCal3.AutoSize = true;
+            this.labelCal3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCal3.Location = new System.Drawing.Point(309, 238);
+            this.labelCal3.Name = "labelCal3";
+            this.labelCal3.Size = new System.Drawing.Size(95, 28);
+            this.labelCal3.TabIndex = 8;
+            this.labelCal3.Text = "Caloria3";
+            this.labelCal3.Visible = false;
             // 
-            // label12
+            // labelCal2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(309, 168);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 28);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Caloria2";
-            this.label12.Visible = false;
+            this.labelCal2.AutoSize = true;
+            this.labelCal2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCal2.Location = new System.Drawing.Point(309, 168);
+            this.labelCal2.Name = "labelCal2";
+            this.labelCal2.Size = new System.Drawing.Size(95, 28);
+            this.labelCal2.TabIndex = 7;
+            this.labelCal2.Text = "Caloria2";
+            this.labelCal2.Visible = false;
             // 
-            // label13
+            // labelCal1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(309, 96);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 28);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "Caloria1";
-            this.label13.Visible = false;
+            this.labelCal1.AutoSize = true;
+            this.labelCal1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCal1.Location = new System.Drawing.Point(309, 96);
+            this.labelCal1.Name = "labelCal1";
+            this.labelCal1.Size = new System.Drawing.Size(95, 28);
+            this.labelCal1.TabIndex = 6;
+            this.labelCal1.Text = "Caloria1";
+            this.labelCal1.Visible = false;
             // 
-            // label10
+            // labelAli3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(54, 238);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 28);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Alimento3";
-            this.label10.Visible = false;
+            this.labelAli3.AutoSize = true;
+            this.labelAli3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAli3.Location = new System.Drawing.Point(54, 238);
+            this.labelAli3.Name = "labelAli3";
+            this.labelAli3.Size = new System.Drawing.Size(117, 28);
+            this.labelAli3.TabIndex = 5;
+            this.labelAli3.Text = "Alimento3";
+            this.labelAli3.Visible = false;
             // 
-            // label3
+            // labelAli2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 168);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Alimento2";
-            this.label3.Visible = false;
+            this.labelAli2.AutoSize = true;
+            this.labelAli2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAli2.Location = new System.Drawing.Point(54, 168);
+            this.labelAli2.Name = "labelAli2";
+            this.labelAli2.Size = new System.Drawing.Size(117, 28);
+            this.labelAli2.TabIndex = 4;
+            this.labelAli2.Text = "Alimento2";
+            this.labelAli2.Visible = false;
             // 
             // CreateFood
             // 
@@ -388,18 +388,18 @@ namespace DieTop.Views
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox SelectA2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelCalorias;
+        private System.Windows.Forms.Label labelCalTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ButtonVoltar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelAli1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelCal3;
+        private System.Windows.Forms.Label labelCal2;
+        private System.Windows.Forms.Label labelCal1;
+        private System.Windows.Forms.Label labelAli3;
+        private System.Windows.Forms.Label labelAli2;
     }
 }
     

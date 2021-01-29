@@ -8,22 +8,62 @@ namespace Hooks
     class Hooks 
     {
         //Validação de Caloria para Simulação RealTime
-        public void RealTimeCal(string name1, string name2, string name3, string num1, string num2, string num3)
+        public void RealTimeCal(string aliName1, string aliName2, string aliName3, string cal1, string cal2, string cal3,Label comidaName1,Label comidaName2, 
+            Label comidaName3,Label comidaCal1,Label comidaCal2, Label comidaCal3 ,Label caloriesTotal)
         {
 
-            
-                Console.WriteLine(name1);
-                Console.WriteLine(num1);
-            
-                Console.WriteLine(name2);
-                Console.WriteLine(num2 );
-            
-            
-                Console.WriteLine(name3);
-                Console.WriteLine(num3);
-            
-            
+            if (aliName1 != "Nada")
+            {
+                comidaName1.Visible = true;
+                comidaCal1.Visible = true;
+                comidaName1.Text = aliName1;
+                comidaCal1.Text = cal1;
 
+            }
+            else
+            {
+                comidaName1.Visible = false;
+                comidaCal1.Visible = false;
+            }
+            if (aliName2 != "Nada")
+            {
+                comidaName2.Visible = true;
+                comidaCal2.Visible = true;
+                comidaName2.Text = aliName2;
+                comidaCal2.Text = cal2;
+
+
+            }
+            else
+            {
+                comidaName2.Visible = false;
+                comidaCal2.Visible = false;
+            }
+            if (aliName3 != "Nada")
+            {
+                comidaName3.Visible = true;
+                comidaCal3.Visible = true;
+                comidaName3.Text = aliName3;
+                comidaCal3.Text = cal3;
+
+
+            }
+            else
+            {
+                comidaName3.Visible = false;
+                comidaCal3.Visible = false;
+            }
+
+
+
+
+
+
+
+
+            //int total = int.Parse(cal1 + cal2 + cal3) ;
+
+            //caloriesTotal.Text = total+"";
 
         }
 
