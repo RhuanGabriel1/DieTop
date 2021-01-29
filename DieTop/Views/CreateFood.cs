@@ -16,5 +16,20 @@ namespace DieTop.Views
         {
             InitializeComponent();
         }
+
+        private void ButtonAceitar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonVoltar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
