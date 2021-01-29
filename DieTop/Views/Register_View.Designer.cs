@@ -340,6 +340,7 @@ namespace Register_View
             "1 A 3 VEZES POR SEMANA",
             "3 A 7 VEZES POR SEMANA",
             "7+ VEZES POR SEMANA"});
+            this.selectAtvFisica.SelectedIndex = 0;
             this.selectAtvFisica.Location = new System.Drawing.Point(550, 280);
             this.selectAtvFisica.Name = "selectAtvFisica";
             this.selectAtvFisica.Size = new System.Drawing.Size(361, 21);
@@ -365,6 +366,7 @@ namespace Register_View
             "GANHAR PESO",
             "MANTER PESO",
             "PERDER PESO"});
+            this.selectDieta.SelectedIndex = 0;
             this.selectDieta.Location = new System.Drawing.Point(550, 357);
             this.selectDieta.Name = "selectDieta";
             this.selectDieta.Size = new System.Drawing.Size(361, 21);
