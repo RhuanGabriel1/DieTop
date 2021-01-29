@@ -29,11 +29,6 @@ namespace DieTop.Views
         /// </summary>
         private void InitializeComponent()
         {
-
-            //
-            //Selected index in 0
-           
-            //
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateFood));
             this.user = new System.Windows.Forms.Panel();
             this.ButtonAddNew = new System.Windows.Forms.Button();
@@ -43,7 +38,7 @@ namespace DieTop.Views
             this.label5 = new System.Windows.Forms.Label();
             this.labelCalorias = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.selectA1 = new System.Windows.Forms.ComboBox();
+            this.SelectA1 = new System.Windows.Forms.ComboBox();
             this.selectTipo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -74,7 +69,7 @@ namespace DieTop.Views
             this.user.Controls.Add(this.label5);
             this.user.Controls.Add(this.labelCalorias);
             this.user.Controls.Add(this.label4);
-            this.user.Controls.Add(this.selectA1);
+            this.user.Controls.Add(this.SelectA1);
             this.user.Controls.Add(this.selectTipo);
             this.user.Controls.Add(this.label2);
             this.user.Controls.Add(this.label1);
@@ -163,17 +158,17 @@ namespace DieTop.Views
             this.label4.TabIndex = 29;
             this.label4.Text = "Calorias Restantes :";
             // 
-            // selectA1
+            // SelectA1
             // 
-            this.selectA1.BackColor = System.Drawing.SystemColors.Window;
-            this.selectA1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selectA1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectA1.FormattingEnabled = true;
-            this.selectA1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.selectA1.Location = new System.Drawing.Point(144, 177);
-            this.selectA1.Name = "selectA1";
-            this.selectA1.Size = new System.Drawing.Size(128, 21);
-            this.selectA1.TabIndex = 28;
+            this.SelectA1.BackColor = System.Drawing.SystemColors.Window;
+            this.SelectA1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SelectA1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectA1.FormattingEnabled = true;
+            this.SelectA1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.SelectA1.Location = new System.Drawing.Point(144, 177);
+            this.SelectA1.Name = "SelectA1";
+            this.SelectA1.Size = new System.Drawing.Size(128, 21);
+            this.SelectA1.TabIndex = 28;
             // 
             // selectTipo
             // 
@@ -186,7 +181,6 @@ namespace DieTop.Views
             "Café da Manhã",
             "Almoço",
             "Janta"});
-            this.selectTipo.SelectedIndex = 0;
             this.selectTipo.Location = new System.Drawing.Point(144, 127);
             this.selectTipo.Name = "selectTipo";
             this.selectTipo.Size = new System.Drawing.Size(128, 21);
@@ -380,7 +374,7 @@ namespace DieTop.Views
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox selectTipo;
-        private System.Windows.Forms.ComboBox selectA1;
+        private System.Windows.Forms.ComboBox SelectA1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button ButtonAddNew;
         private System.Windows.Forms.ComboBox SelectA3;

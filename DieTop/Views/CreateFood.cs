@@ -1,30 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DieTop.Views
 {
     public partial class CreateFood : Form
     {
-
+        List<string> getNomeAli = new List<string>();
+        List<string> getCaloriasAli = new List<string>();
 
         public CreateFood()
         {
+            Populate();
             InitializeComponent();
-            Teste();
+            ReceiveData();
+            for (int i = 0; i < getNomeAli.Count; i++)
+            {
+                SelectA1.Items.AddRange(new object[] {
+                getNomeAli[i]
+                });
+                SelectA2.Items.AddRange(new object[] {
+                getNomeAli[i]
+                });
+                SelectA3.Items.AddRange(new object[] {
+                getNomeAli[i]
+                });
+            }
+            SelectA1.SelectedIndex = 0;
+            SelectA2.SelectedIndex = 0;
+            SelectA3.SelectedIndex = 0;
+
         }
-
-        private void Teste()
+        private void ReceiveData()
         {
-            List<string> getNomeAli = new List<string>();
-            List<string> getCaloriasAli = new List<string>();
-
             db.Database dataZ = new db.Database();
             getNomeAli = dataZ.CommandSelectSQL("select nome_alim from alimento ");
             getCaloriasAli = dataZ.CommandSelectSQL("select calorias_alim from alimento ");
