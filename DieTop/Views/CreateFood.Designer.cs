@@ -100,14 +100,12 @@ namespace DieTop.Views
             this.SelectA3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectA3.FormattingEnabled = true;
             this.SelectA3.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.SelectA3.Items.AddRange(new object[] {
+            "Nada"});
             this.SelectA3.Location = new System.Drawing.Point(144, 277);
             this.SelectA3.Name = "SelectA3";
             this.SelectA3.Size = new System.Drawing.Size(128, 21);
             this.SelectA3.TabIndex = 34;
-            this.SelectA3.Items.AddRange(new object[] {
-            "Nada"});
-            this.SelectA3.SelectedIndex = 0;
-
             // 
             // label6
             // 
@@ -126,13 +124,12 @@ namespace DieTop.Views
             this.SelectA2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectA2.FormattingEnabled = true;
             this.SelectA2.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.SelectA2.Items.AddRange(new object[] {
+            "Nada"});
             this.SelectA2.Location = new System.Drawing.Point(144, 227);
             this.SelectA2.Name = "SelectA2";
             this.SelectA2.Size = new System.Drawing.Size(128, 21);
             this.SelectA2.TabIndex = 32;
-            this.SelectA2.Items.AddRange(new object[] {
-            "Nada"});
-            this.SelectA2.SelectedIndex = 0;
             // 
             // label5
             // 
@@ -172,14 +169,12 @@ namespace DieTop.Views
             this.SelectA1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SelectA1.FormattingEnabled = true;
             this.SelectA1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.SelectA1.Items.AddRange(new object[] {
+            "Nada"});
             this.SelectA1.Location = new System.Drawing.Point(144, 177);
             this.SelectA1.Name = "SelectA1";
             this.SelectA1.Size = new System.Drawing.Size(128, 21);
             this.SelectA1.TabIndex = 28;
-            this.SelectA1.Items.AddRange(new object[] {
-            "Nada"});
-            this.SelectA1.SelectedIndex = 0;
-
             // 
             // selectTipo
             // 
@@ -192,7 +187,6 @@ namespace DieTop.Views
             "Café da Manhã",
             "Almoço",
             "Janta"});
-            this.selectTipo.SelectedIndex = 0;
             this.selectTipo.Location = new System.Drawing.Point(144, 127);
             this.selectTipo.Name = "selectTipo";
             this.selectTipo.Size = new System.Drawing.Size(128, 21);
@@ -217,6 +211,7 @@ namespace DieTop.Views
             this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tipo :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label
             // 

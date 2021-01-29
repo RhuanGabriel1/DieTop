@@ -1,10 +1,32 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Hooks
 {
     class Hooks 
     {
+        //Validação de Caloria para Simulação RealTime
+        public void RealTimeCal(string name1, string name2, string name3, string num1, string num2, string num3)
+        {
+
+            
+                Console.WriteLine(name1);
+                Console.WriteLine(num1);
+            
+                Console.WriteLine(name2);
+                Console.WriteLine(num2 );
+            
+            
+                Console.WriteLine(name3);
+                Console.WriteLine(num3);
+            
+            
+
+
+        }
+
 
         //Validação de Formulário
         public bool FormValidator(bool check, int call ,string text , string textDefault, int condition )
