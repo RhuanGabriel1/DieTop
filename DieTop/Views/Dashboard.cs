@@ -28,7 +28,6 @@ namespace DieTop.Views
             buttonOff.Visible = false;
 
             inputNome.Enabled = true;
-            inputCPF.Enabled = true;
             inputIdade.Enabled = true;
             inputSexo.Enabled = true;
             inputAltura.Enabled = true;
@@ -43,7 +42,6 @@ namespace DieTop.Views
             buttonOff.Visible = false;
 
             inputNome.Enabled = false;
-            inputCPF.Enabled = false;
             inputIdade.Enabled = false;
             inputSexo.Enabled = false;
             inputAltura.Enabled = false;
@@ -61,6 +59,13 @@ namespace DieTop.Views
         private void ButtonAceitar_Click(object sender, System.EventArgs e)
         {
             TurnOff(ButtonAceitar,ButtonVoltar,ButtonAlterar);
+
+            //(cpf,senha, nome, idade, sexo, altura, peso,dieta,fisica) 
+
+            db.Database data = new db.Database();
+            data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
+                "', peso = '" + inputPeso.Text + "', dieta = '" + selectDieta.SelectedItem.ToString()+ "', fisica = '" + selectAtvFisica.SelectedItem.ToString()+
+                "' WHERE cpf ='"+dataUser.Cpf+"';");
 
         }
 
