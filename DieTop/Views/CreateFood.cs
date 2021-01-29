@@ -11,7 +11,6 @@ namespace DieTop.Views
 
         public CreateFood()
         {
-            Populate();
             InitializeComponent();
             ReceiveData();
             for (int i = 0; i < getNomeAli.Count; i++)
@@ -26,10 +25,6 @@ namespace DieTop.Views
                 getNomeAli[i]
                 });
             }
-            SelectA1.SelectedIndex = 0;
-            SelectA2.SelectedIndex = 0;
-            SelectA3.SelectedIndex = 0;
-
         }
         private void ReceiveData()
         {

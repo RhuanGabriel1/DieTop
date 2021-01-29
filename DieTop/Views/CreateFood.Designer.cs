@@ -104,6 +104,10 @@ namespace DieTop.Views
             this.SelectA3.Name = "SelectA3";
             this.SelectA3.Size = new System.Drawing.Size(128, 21);
             this.SelectA3.TabIndex = 34;
+            this.SelectA3.Items.AddRange(new object[] {
+            "Nada"});
+            this.SelectA3.SelectedIndex = 0;
+
             // 
             // label6
             // 
@@ -126,6 +130,9 @@ namespace DieTop.Views
             this.SelectA2.Name = "SelectA2";
             this.SelectA2.Size = new System.Drawing.Size(128, 21);
             this.SelectA2.TabIndex = 32;
+            this.SelectA2.Items.AddRange(new object[] {
+            "Nada"});
+            this.SelectA2.SelectedIndex = 0;
             // 
             // label5
             // 
@@ -169,6 +176,10 @@ namespace DieTop.Views
             this.SelectA1.Name = "SelectA1";
             this.SelectA1.Size = new System.Drawing.Size(128, 21);
             this.SelectA1.TabIndex = 28;
+            this.SelectA1.Items.AddRange(new object[] {
+            "Nada"});
+            this.SelectA1.SelectedIndex = 0;
+
             // 
             // selectTipo
             // 
@@ -181,6 +192,7 @@ namespace DieTop.Views
             "Café da Manhã",
             "Almoço",
             "Janta"});
+            this.selectTipo.SelectedIndex = 0;
             this.selectTipo.Location = new System.Drawing.Point(144, 127);
             this.selectTipo.Name = "selectTipo";
             this.selectTipo.Size = new System.Drawing.Size(128, 21);
