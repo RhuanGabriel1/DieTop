@@ -11,15 +11,13 @@ namespace DieTop
         public Welcome_View()
         {
             MaximizeBox = false;
+           
             InitializeComponent();
             SendLogin();
             
         }
 
-
-        
-       
-
+    
         List<string> getData = new List<string>();
       
 
