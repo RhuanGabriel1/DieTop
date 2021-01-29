@@ -63,10 +63,10 @@ namespace DieTop
         private void LoadRegisterScreen(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Welcome_View welcome_View = new Welcome_View();
-            Register_View.Register_View registerView = new Register_View.Register_View();
+            Warning warning = new Warning();
             this.Hide();
             this.Closed += (s, args) => welcome_View.Close();
-            registerView.Show();
+            warning.Show();
           
 
         }

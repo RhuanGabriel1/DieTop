@@ -99,7 +99,6 @@ namespace DieTop
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // loginButton
             // 
@@ -113,6 +112,7 @@ namespace DieTop
             this.loginButton.TabIndex = 8;
             this.loginButton.Text = "Voltar";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.ButtonVoltar);
             // 
             // button1
             // 
@@ -126,6 +126,7 @@ namespace DieTop
             this.button1.TabIndex = 9;
             this.button1.Text = "Aceitar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.ButtonAceitar);
             // 
             // Warning
             // 
@@ -142,8 +143,8 @@ namespace DieTop
             this.Controls.Add(this.labelAvisoLinha1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Warning";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Warning";
-            this.Load += new System.EventHandler(this.Warning_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

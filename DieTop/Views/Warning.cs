@@ -17,14 +17,22 @@ namespace DieTop
             InitializeComponent();
         }
 
-        private void Warning_Load(object sender, EventArgs e)
+        private void ButtonAceitar(object sender, EventArgs e)
         {
-
+            Warning warning = new Warning();
+        Register_View.Register_View registerView = new Register_View.Register_View();
+            this.Hide();
+            this.Closed += (s, args) => warning.Close();
+            registerView.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void ButtonVoltar(object sender, EventArgs e)
         {
-
+            Warning warning = new Warning();
+        Welcome_View welcome_View = new Welcome_View();
+            this.Hide();
+            this.Closed += (s, args) => warning.Close();
+            welcome_View.Show();
         }
     }
 }
