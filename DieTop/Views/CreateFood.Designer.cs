@@ -78,6 +78,7 @@ namespace DieTop.Views
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(424, 531);
             this.user.TabIndex = 0;
+            this.user.MouseHover += new System.EventHandler(this.painelHover);
             // 
             // ButtonAddNew
             // 
@@ -92,6 +93,7 @@ namespace DieTop.Views
             this.ButtonAddNew.Text = "Adicionar um Alimento";
             this.ButtonAddNew.UseVisualStyleBackColor = false;
             this.ButtonAddNew.Click += new System.EventHandler(this.ButtonAddNew_Click);
+            this.ButtonAddNew.MouseHover += new System.EventHandler(this.ButtonAddHover);
             // 
             // SelectA3
             // 
@@ -106,6 +108,7 @@ namespace DieTop.Views
             this.SelectA3.Name = "SelectA3";
             this.SelectA3.Size = new System.Drawing.Size(128, 21);
             this.SelectA3.TabIndex = 34;
+            this.SelectA3.MouseHover += new System.EventHandler(this.ali3Hover);
             // 
             // label6
             // 
@@ -130,6 +133,7 @@ namespace DieTop.Views
             this.SelectA2.Name = "SelectA2";
             this.SelectA2.Size = new System.Drawing.Size(128, 21);
             this.SelectA2.TabIndex = 32;
+            this.SelectA2.MouseHover += new System.EventHandler(this.ali2Hover);
             // 
             // label5
             // 
@@ -175,6 +179,7 @@ namespace DieTop.Views
             this.SelectA1.Name = "SelectA1";
             this.SelectA1.Size = new System.Drawing.Size(128, 21);
             this.SelectA1.TabIndex = 28;
+            this.SelectA1.MouseHover += new System.EventHandler(this.ali1Hover);
             // 
             // selectTipo
             // 
@@ -211,7 +216,6 @@ namespace DieTop.Views
             this.label1.Size = new System.Drawing.Size(63, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tipo :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label
             // 

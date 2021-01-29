@@ -30,8 +30,9 @@ namespace DieTop.Views
             SelectA2.SelectedIndex = 0;
             SelectA3.SelectedIndex = 0;
 
-            Console.WriteLine(selectTipo.GetItemText(2));
         }
+
+
         private void ReceiveData()
         {
             db.Database dataZ = new db.Database();
@@ -39,6 +40,43 @@ namespace DieTop.Views
             getCaloriasAli = dataZ.CommandSelectSQL("select calorias_alim from alimento ");
            
         }
+
+        private void RealTimeLabels()
+        {
+            string getComida1Name = "";
+            string getComida2Name = "";
+            string getComida3Name = "";
+            string getComida1Cal = "";
+            string getComida2Cal = "";
+            string getComida3Cal = "";
+            int getComida1Index = -1;
+            int getComida2Index = -1;
+            int getComida3Index = -1;
+            if (SelectA1.SelectedIndex != 0)
+            {
+                getComida1Name = SelectA1.Text;
+                getComida1Index = SelectA1.SelectedIndex - 1;
+                getComida1Cal = getCaloriasAli[getComida1Index];
+            }
+            if (SelectA2.SelectedIndex != 0)
+            {
+                getComida2Name = SelectA2.Text;
+                getComida2Index = SelectA2.SelectedIndex - 1;
+                getComida2Cal = getCaloriasAli[getComida2Index];
+
+            }
+
+            if (SelectA3.SelectedIndex != 0)
+            {
+                getComida3Name = SelectA3.Text;
+                getComida3Index = SelectA3.SelectedIndex - 1;
+                getComida3Cal = getCaloriasAli[getComida3Index];
+
+            }
+            Hooks.Hooks hook = new Hooks.Hooks();
+            hook.RealTimeCal(getComida1Name, getComida2Name, getComida3Name, getComida1Cal, getComida2Cal, getComida3Cal, labelAli1, labelAli2, labelAli3, labelCal1, labelCal2, labelCal3, labelCalTotal);
+        }
+
 
         private void ButtonVoltar_Click_1(object sender, EventArgs e)
         {
@@ -59,44 +97,38 @@ namespace DieTop.Views
             food.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+     
+      
+
+        private void ali1Hover(object sender, EventArgs e)
         {
-            string getComida1Name ="";
-            string getComida2Name = "";
-            string getComida3Name = "";
-            string getComida1Cal = "";
-            string getComida2Cal = "";
-            string getComida3Cal = "";
-            int getComida1Index = -1;
-            int getComida2Index= -1;
-            int getComida3Index = -1;
+            RealTimeLabels();
 
+        }
 
-            if (SelectA1.SelectedIndex != 0)
-            {
-                getComida1Name = SelectA1.Text;
-                getComida1Index = SelectA1.SelectedIndex-1;
-                getComida1Cal = getCaloriasAli[getComida1Index];
-            }
-            if (SelectA2.SelectedIndex != 0)
-            {
-                getComida2Name = SelectA2.Text;
-                getComida2Index = SelectA2.SelectedIndex-1;
-                getComida2Cal = getCaloriasAli[getComida2Index];
+        private void painelHover(object sender, EventArgs e)
+        {
+            RealTimeLabels();
 
-            }
+        }
 
-            if (SelectA3.SelectedIndex != 0)
-            {
-                getComida3Name = SelectA3.Text;
-                getComida3Index = SelectA3.SelectedIndex-1;
-                getComida3Cal = getCaloriasAli[getComida3Index];
+        private void ali2Hover(object sender, EventArgs e)
+        {
+            RealTimeLabels();
 
-            }
+        }
 
+        private void ali3Hover(object sender, EventArgs e)
+        {
+            RealTimeLabels();
 
-            Hooks.Hooks hook = new Hooks.Hooks();
-            hook.RealTimeCal(getComida1Name, getComida2Name, getComida3Name, getComida1Cal, getComida2Cal, getComida3Cal,labelAli1, labelAli2, labelAli3,labelCal1, labelCal2, labelCal3,labelCalTotal);
+        }
+
+        private void ButtonAddHover(object sender, EventArgs e)
+        {
+            RealTimeLabels();
+
         }
     }
 }
