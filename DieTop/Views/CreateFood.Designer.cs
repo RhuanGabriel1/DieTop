@@ -31,7 +31,7 @@ namespace DieTop.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateFood));
             this.user = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ButtonAddNew = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -62,7 +62,7 @@ namespace DieTop.Views
             // 
             this.user.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.user.Controls.Add(this.button3);
+            this.user.Controls.Add(this.ButtonAddNew);
             this.user.Controls.Add(this.comboBox3);
             this.user.Controls.Add(this.label6);
             this.user.Controls.Add(this.comboBox2);
@@ -79,18 +79,19 @@ namespace DieTop.Views
             this.user.Size = new System.Drawing.Size(424, 531);
             this.user.TabIndex = 0;
             // 
-            // button3
+            // ButtonAddNew
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(33, 330);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(353, 27);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "Adicionar um Alimento";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ButtonAddNew.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ButtonAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAddNew.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAddNew.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonAddNew.Location = new System.Drawing.Point(33, 330);
+            this.ButtonAddNew.Name = "ButtonAddNew";
+            this.ButtonAddNew.Size = new System.Drawing.Size(353, 27);
+            this.ButtonAddNew.TabIndex = 35;
+            this.ButtonAddNew.Text = "Adicionar um Alimento";
+            this.ButtonAddNew.UseVisualStyleBackColor = false;
+            this.ButtonAddNew.Click += new System.EventHandler(this.ButtonAddNew_Click);
             // 
             // comboBox3
             // 
@@ -375,7 +376,7 @@ namespace DieTop.Views
         private System.Windows.Forms.ComboBox selectAtvFisica;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ButtonAddNew;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox2;

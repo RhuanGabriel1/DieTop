@@ -41,3 +41,4 @@ C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Runtime.Compile
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Warning.resources
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.CreateFood.resources
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.Register_Food.resources

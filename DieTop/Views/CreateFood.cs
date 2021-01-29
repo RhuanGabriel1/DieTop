@@ -27,5 +27,14 @@ namespace DieTop.Views
             this.Closed += (s, args) => here.Close();
             dash.Show();
         }
+
+        private void ButtonAddNew_Click(object sender, EventArgs e)
+        {
+            Register_Food food = new Register_Food();
+            CreateFood here = new CreateFood();
+            this.Hide();
+            this.Closed += (s, args) => here.Close();
+            food.Show();
+        }
     }
 }

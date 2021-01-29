@@ -110,6 +110,12 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Register_Food.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Register_Food.Designer.cs">
+      <DependentUpon>Register_Food.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Register_View.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Register_Food.resx">
+      <DependentUpon>Register_Food.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Register_View.resx">
       <DependentUpon>Register_View.cs</DependentUpon>
