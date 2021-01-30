@@ -13,24 +13,10 @@ namespace DieTop.Class
             Populate();
         }
 
-
-
-        db.Database data = new db.Database();
-        List<string> getData = new List<string>();
-        List<string> getDia = new List<string>();
-
-        private void Connect()
-        {
-           getData = data.CommandSelectSQL("select nome,cpf,idade,senha,sexo,altura,peso from pessoa where cpf = '" + CPF_LOGIN + "' and senha ='" + SENHA_LOGIN + "';");
-           getDia = data.CommandSelectSQL("select cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,dieta_dia,atv_dia,dia from dia where cpf = '" + CPF_LOGIN + "';");
-        
-        
-      
-
         public void Populate()
         {
             Connect();
-            Nome = getData[0]; 
+            Nome = getData[0];
             Cpf = getData[1];
             Idade = getData[2];
             Senha = getData[3];
@@ -50,8 +36,20 @@ namespace DieTop.Class
             Dieta = getDia[7];
             AtvSem = getDia[8];
             Dia = getDia[9];
+        }
+
+        db.Database data = new db.Database();
+        List<string> getData = new List<string>();
+        List<string> getDia = new List<string>();
+
+        private void Connect()
+        {
+            getData = data.CommandSelectSQL("select nome,cpf,idade,senha,sexo,altura,peso from pessoa where cpf = '" + CPF_LOGIN + "' and senha ='" + SENHA_LOGIN + "';");
+            getDia = data.CommandSelectSQL("select cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,dieta_dia,atv_dia,dia from dia where cpf = '" + CPF_LOGIN + "';");
 
         }
+
+       
         //Dia
         public string Cafe_da_manha { get; set; }
         public string Almoco { get; set; }
