@@ -236,7 +236,7 @@ namespace Register_View
         private void handleFormSubmit(object sender, EventArgs e)
         //Fazer toda uma Verificação antes de Cadastrar.
         {
-            Console.WriteLine(GetChanges());
+            double getChanges = GetChanges();
 
             bool stop = false;
             bool correct = true;
@@ -278,7 +278,7 @@ namespace Register_View
                                 getAltura()+","+getPeso()+ ");");
 
                             //Inserto into DIA
-                            data.CommandSQL("insert into dia (cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,cpf,dieta_dia,atv_dia,dia) values ('Nada','Nada','Nada','0','0','Nenhuma','0','" + getCPF() + "', '" + selectDieta.SelectedItem.ToString() + "', '" + selectAtvFisica.SelectedItem.ToString() + "','1')");
+                            data.CommandSQL("insert into dia (cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,cpf,dieta_dia,atv_dia,dia) values ('Nada','Nada','Nada','"+getChanges+"','"+getChanges+"','Nenhuma','0','" + getCPF() + "', '" + selectDieta.SelectedItem.ToString() + "', '" + selectAtvFisica.SelectedItem.ToString() + "','1')");
                             DieTop.Welcome_View welcome = new DieTop.Welcome_View();
                             this.Hide();
                             this.Closed += (s, args) => this.Close();
