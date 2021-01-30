@@ -26,8 +26,8 @@ namespace DieTop.Views
             inputSexo.Text = dataUser.Sexo;
             inputAltura.Text = dataUser.Altura;
             inputPeso.Text = dataUser.Peso;
-            selectAtvFisica.SelectedItem = dataUser.AtvSem;
-            selectDieta.SelectedItem = dataUser.Dieta;
+            //selectAtvFisica.SelectedItem = dataUser.AtvSem;
+            //selectDieta.SelectedItem = dataUser.Dieta;
 
         }
 

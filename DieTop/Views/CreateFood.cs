@@ -8,6 +8,7 @@ namespace DieTop.Views
     {
         List<string> getNomeAli = new List<string>();
         List<string> getCaloriasAli = new List<string>();
+        private string getCalories;
 
         public CreateFood()
         {
@@ -38,7 +39,8 @@ namespace DieTop.Views
             db.Database dataZ = new db.Database();
             getNomeAli = dataZ.CommandSelectSQL("select nome_alim from alimento ");
             getCaloriasAli = dataZ.CommandSelectSQL("select calorias_alim from alimento ");
-           
+            getCalories = dataZ.CommandSelectSQL("select  caloria_restante from alimento").ToString();
+            Console.WriteLine(getCalories);
         }
 
         private void RealTimeLabels()
