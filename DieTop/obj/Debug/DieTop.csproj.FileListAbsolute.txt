@@ -38,7 +38,7 @@ C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Buffers.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Memory.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Warning.resources
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.CreateFood.resources
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.Register_Food.resources
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache

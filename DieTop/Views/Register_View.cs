@@ -64,6 +64,9 @@ namespace Register_View
         {
             MaximizeBox = false;
             InitializeComponent();
+
+            selectAtvFisica.SelectedIndex = 0;
+            selectDieta.SelectedIndex = 0;
         }
 
         private void handleCancelSubmit(object sender, EventArgs e)
@@ -163,9 +166,61 @@ namespace Register_View
 
         //Form Submit ( Envio de Formulário)
 
+        
+        private double ChangeCalories()
+        {
+            int getAtvFisCalc = selectAtvFisica.SelectedIndex;
+            int getDietaCalc = selectDieta.SelectedIndex;
+            //Não pratica
+            if (getAtvFisCalc == 0)
+            {
+               return 1.2;
+                //1 a 3 
+            }else if (getAtvFisCalc == 1)
+            {
+                return 1.335;
+                //4 a 6
+            }else if (getAtvFisCalc == 2)
+            {
+                return 1.550;
+                //7+
+            }else if (getAtvFisCalc == 3)
+            {
+                return 1.725;
+            }
+            else
+            {
+                return 0.0;
+            }
+            return 0.0;
+            }
+
+        private double ChangeCaloriesSexo()
+        {
+            
+
+            if (getSexo() == "Masculino")
+            {
+                return (66.5+(13.8*int.Parse(getPeso()))+(5*(int.Parse(getAltura())))-(6.8*int.Parse(getIdade())));
+            }
+            else
+            {
+                return  (65.51 + (9.5 * int.Parse(getPeso())) + (1.8 * (int.Parse(getAltura()))) - (4.7 * int.Parse(getIdade())));
+            }
+        }
+
+        private double GetChanges()
+        {
+           return  ChangeCaloriesSexo() * ChangeCalories();
+        }
+
+        
+
         private void handleFormSubmit(object sender, EventArgs e)
         //Fazer toda uma Verificação antes de Cadastrar.
         {
+            Console.WriteLine(GetChanges());
+
             bool stop = false;
             bool correct = true;
             correct = hook.FormValidator(correct,1,getNome(),nomeDefault,2);
