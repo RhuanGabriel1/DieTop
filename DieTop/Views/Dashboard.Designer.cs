@@ -53,8 +53,11 @@ namespace DieTop.Views
             this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ButtonRefeicao = new System.Windows.Forms.Button();
-            this.ButtonAtvFisica = new System.Windows.Forms.Button();
             this.ButtonFinalizar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.user.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -262,13 +265,17 @@ namespace DieTop.Views
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.selectDieta);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.selectAtvFisica);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(452, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 199);
+            this.panel1.Size = new System.Drawing.Size(483, 398);
             this.panel1.TabIndex = 13;
             // 
             // selectDieta
@@ -333,26 +340,13 @@ namespace DieTop.Views
             this.ButtonRefeicao.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonRefeicao.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonRefeicao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ButtonRefeicao.Location = new System.Drawing.Point(522, 365);
+            this.ButtonRefeicao.Location = new System.Drawing.Point(522, 439);
             this.ButtonRefeicao.Name = "ButtonRefeicao";
             this.ButtonRefeicao.Size = new System.Drawing.Size(422, 47);
             this.ButtonRefeicao.TabIndex = 30;
             this.ButtonRefeicao.Text = "Adicionar Refeição";
             this.ButtonRefeicao.UseVisualStyleBackColor = false;
             this.ButtonRefeicao.Click += new System.EventHandler(this.ButtonRefeicao_Click);
-            // 
-            // ButtonAtvFisica
-            // 
-            this.ButtonAtvFisica.BackColor = System.Drawing.SystemColors.Window;
-            this.ButtonAtvFisica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonAtvFisica.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonAtvFisica.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ButtonAtvFisica.Location = new System.Drawing.Point(522, 434);
-            this.ButtonAtvFisica.Name = "ButtonAtvFisica";
-            this.ButtonAtvFisica.Size = new System.Drawing.Size(422, 47);
-            this.ButtonAtvFisica.TabIndex = 35;
-            this.ButtonAtvFisica.Text = "Adicionar Atividade Física";
-            this.ButtonAtvFisica.UseVisualStyleBackColor = false;
             // 
             // ButtonFinalizar
             // 
@@ -367,13 +361,63 @@ namespace DieTop.Views
             this.ButtonFinalizar.Text = "Finalizar Dia";
             this.ButtonFinalizar.UseVisualStyleBackColor = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(33, 205);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(315, 29);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Atv Física Realizada no Dia :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Enabled = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.comboBox1.Items.AddRange(new object[] {
+            "NADA",
+            "MUSCULAÇÃO",
+            "CARDIO"});
+            this.comboBox1.Location = new System.Drawing.Point(83, 253);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(361, 21);
+            this.comboBox1.TabIndex = 31;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(33, 298);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(249, 29);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Duração (em minutos)";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(83, 343);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(361, 25);
+            this.textBox1.TabIndex = 34;
+            this.textBox1.Text = "60";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(956, 574);
-            this.Controls.Add(this.ButtonAtvFisica);
             this.Controls.Add(this.ButtonFinalizar);
             this.Controls.Add(this.ButtonRefeicao);
             this.Controls.Add(this.panel1);
@@ -414,7 +458,10 @@ namespace DieTop.Views
         private System.Windows.Forms.Button ButtonRefeicao;
         private System.Windows.Forms.Button ButtonAceitar;
         private System.Windows.Forms.Button ButtonVoltar;
-        private System.Windows.Forms.Button ButtonAtvFisica;
         private System.Windows.Forms.Button ButtonFinalizar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label9;
     }
 }
