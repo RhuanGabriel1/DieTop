@@ -53,8 +53,8 @@ namespace DieTop.Views
             this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ButtonRefeicao = new System.Windows.Forms.Button();
-            this.ButtonFinalizar = new System.Windows.Forms.Button();
             this.ButtonAtvFisica = new System.Windows.Forms.Button();
+            this.ButtonFinalizar = new System.Windows.Forms.Button();
             this.user.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -280,7 +280,6 @@ namespace DieTop.Views
             "GANHAR PESO",
             "MANTER PESO",
             "PERDER PESO"});
-            this.selectDieta.SelectedIndex = 0;
             this.selectDieta.Location = new System.Drawing.Point(83, 142);
             this.selectDieta.Name = "selectDieta";
             this.selectDieta.Size = new System.Drawing.Size(361, 21);
@@ -311,7 +310,6 @@ namespace DieTop.Views
             "1 A 3 VEZES POR SEMANA",
             "3 A 7 VEZES POR SEMANA",
             "7+ VEZES POR SEMANA"});
-            this.selectAtvFisica.SelectedIndex = 0;
             this.selectAtvFisica.Location = new System.Drawing.Point(83, 65);
             this.selectAtvFisica.Name = "selectAtvFisica";
             this.selectAtvFisica.Size = new System.Drawing.Size(361, 21);
@@ -343,20 +341,6 @@ namespace DieTop.Views
             this.ButtonRefeicao.UseVisualStyleBackColor = false;
             this.ButtonRefeicao.Click += new System.EventHandler(this.ButtonRefeicao_Click);
             // 
-            // ButtonFinalizar
-            // 
-            this.ButtonFinalizar.BackColor = System.Drawing.Color.DarkRed;
-            this.ButtonFinalizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonFinalizar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonFinalizar.ForeColor = System.Drawing.SystemColors.Control;
-            this.ButtonFinalizar.Location = new System.Drawing.Point(711, 505);
-            this.ButtonFinalizar.Name = "ButtonFinalizar";
-            this.ButtonFinalizar.Size = new System.Drawing.Size(233, 47);
-            this.ButtonFinalizar.TabIndex = 34;
-            this.ButtonFinalizar.Text = "Finalizar Dia";
-            this.ButtonFinalizar.UseVisualStyleBackColor = false;
-            this.ButtonFinalizar.Visible = false;
-            // 
             // ButtonAtvFisica
             // 
             this.ButtonAtvFisica.BackColor = System.Drawing.SystemColors.Window;
@@ -369,6 +353,19 @@ namespace DieTop.Views
             this.ButtonAtvFisica.TabIndex = 35;
             this.ButtonAtvFisica.Text = "Adicionar Atividade Física";
             this.ButtonAtvFisica.UseVisualStyleBackColor = false;
+            // 
+            // ButtonFinalizar
+            // 
+            this.ButtonFinalizar.BackColor = System.Drawing.Color.DarkRed;
+            this.ButtonFinalizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonFinalizar.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonFinalizar.ForeColor = System.Drawing.SystemColors.Control;
+            this.ButtonFinalizar.Location = new System.Drawing.Point(711, 505);
+            this.ButtonFinalizar.Name = "ButtonFinalizar";
+            this.ButtonFinalizar.Size = new System.Drawing.Size(233, 47);
+            this.ButtonFinalizar.TabIndex = 34;
+            this.ButtonFinalizar.Text = "Finalizar Dia";
+            this.ButtonFinalizar.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 
@@ -417,7 +414,7 @@ namespace DieTop.Views
         private System.Windows.Forms.Button ButtonRefeicao;
         private System.Windows.Forms.Button ButtonAceitar;
         private System.Windows.Forms.Button ButtonVoltar;
-        private System.Windows.Forms.Button ButtonFinalizar;
         private System.Windows.Forms.Button ButtonAtvFisica;
+        private System.Windows.Forms.Button ButtonFinalizar;
     }
 }

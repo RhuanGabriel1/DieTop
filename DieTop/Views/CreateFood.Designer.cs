@@ -368,6 +368,7 @@ namespace DieTop.Views
             this.Controls.Add(this.ButtonVoltar);
             this.Controls.Add(this.ButtonAdicionarAlimento);
             this.Controls.Add(this.user);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CreateFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Refeição!";
