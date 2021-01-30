@@ -211,7 +211,24 @@ namespace Register_View
 
         private double GetChanges()
         {
-           return  ChangeCaloriesSexo() * ChangeCalories();
+            //Ganhar peso
+            if (selectDieta.SelectedIndex == 0)
+            {
+                return (ChangeCaloriesSexo() * ChangeCalories())+500;
+
+                //Manter Peso
+            }
+            else if (selectDieta.SelectedIndex == 1)
+            {
+
+                return (ChangeCaloriesSexo() * ChangeCalories());
+
+                //Perder Peso
+            }
+            else 
+            {
+                return (ChangeCaloriesSexo() * ChangeCalories()) - 500;
+            }
         }
 
         
