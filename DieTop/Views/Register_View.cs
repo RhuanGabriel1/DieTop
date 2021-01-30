@@ -178,7 +178,7 @@ namespace Register_View
                 //1 a 3 
             }else if (getAtvFisCalc == 1)
             {
-                return 1.335;
+                return 1.375;
                 //4 a 6
             }else if (getAtvFisCalc == 2)
             {
