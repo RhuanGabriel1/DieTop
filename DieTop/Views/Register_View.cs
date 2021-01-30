@@ -193,22 +193,24 @@ namespace Register_View
                     //Input data: getNome()  getIdade()  getSexo() getPeso() getAltura() getSenha()
 
                    DialogResult result = MessageBox.Show("Os Seguintes Dados Serão Cadastrados : \n" + "Nome : " + getNome() + "\nIdade : " + getIdade() + 
-                        "\nSexo : " + getSexo() + "\nPeso : " + getPeso() + "\nAltura : " + getAltura() + "\nSenha : " + "*"+"\n Deseja Prosseguir?","Deseja Prosseguir?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                        "\nSexo : " + getSexo() + "\nPeso : " + getPeso() + "\nCPF : " + getCPF() + "\nAltura : " + getAltura() + "\nSenha : " + "*"+"\n Deseja Prosseguir?","Deseja Prosseguir?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
                     if (result.ToString() == "Yes" )
                     {
                         DieTop.db.Database data = new DieTop.db.Database();
                         try
                         {
-                            //insert into pessoa(senha, nome, idade, sexo, altura, peso) values('123','Leandro',18,'Macho',161,55);
-                            data.CommandSQL("insert into pessoa(cpf,senha, nome, idade, sexo, altura, peso,dieta,fisica) values('" + getCPF() + "','"+getSenha()+
+                            //insert into PESSOA
+                            data.CommandSQL("insert into pessoa(cpf,senha, nome, idade, sexo, altura, peso) values('" + getCPF() + "','"+getSenha()+
                                 "', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " +
-                                getAltura()+","+getPeso()+ ",'" + selectDieta.SelectedItem.ToString() + "','" + selectAtvFisica.SelectedItem.ToString() + "');");
+                                getAltura()+","+getPeso()+ ");");
 
-                                //DieTop.Welcome_View welcome = new DieTop.Welcome_View();
-                                //this.Hide();
-                                //this.Closed += (s, args) => this.Close();
-                                //welcome.Show();
+                            //Inserto into DIA
+                            data.CommandSQL("insert into dia (cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,cpf,dieta_dia,atv_dia,dia) values ('Nada','Nada','Nada','0','0','Nenhuma','0','" + getCPF() + "', '" + selectDieta.SelectedItem.ToString() + "', '" + selectAtvFisica.SelectedItem.ToString() + "','1')");
+                            DieTop.Welcome_View welcome = new DieTop.Welcome_View();
+                            this.Hide();
+                            this.Closed += (s, args) => this.Close();
+                            welcome.Show();
                         }
                         catch (Exception error)
                         {

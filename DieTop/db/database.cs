@@ -54,15 +54,12 @@ namespace DieTop.db
             }
             finally
             {
-                if(error == false)
-                {
-                    MessageBox.Show("Dados Inseridos com Sucesso!!", "Dados Inseridos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-                else
+                if(!error == false)
                 {
                     MessageBox.Show("Houve um Erro na Inserção de Dados!", "Houve um Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+               
                 CloseConnection();
             }
         }
