@@ -8,7 +8,7 @@ namespace DieTop.Views
     {
         List<string> getNomeAli = new List<string>();
         List<string> getCaloriasAli = new List<string>();
-        private string getCalories;
+  
 
         public CreateFood()
         {
@@ -39,8 +39,6 @@ namespace DieTop.Views
             db.Database dataZ = new db.Database();
             getNomeAli = dataZ.CommandSelectSQL("select nome_alim from alimento ");
             getCaloriasAli = dataZ.CommandSelectSQL("select calorias_alim from alimento ");
-            getCalories = dataZ.CommandSelectSQL("select  caloria_restante from alimento").ToString();
-            Console.WriteLine(getCalories);
         }
 
         private void RealTimeLabels()
@@ -48,9 +46,9 @@ namespace DieTop.Views
             string getComida1Name = "";
             string getComida2Name = "";
             string getComida3Name = "";
-            string getComida1Cal = "";
-            string getComida2Cal = "";
-            string getComida3Cal = "";
+            int getComida1Cal = 0;
+            int getComida2Cal = 0;
+            int getComida3Cal = 0;
             int getComida1Index = -1;
             int getComida2Index = -1;
             int getComida3Index = -1;
@@ -58,13 +56,13 @@ namespace DieTop.Views
             {
                 getComida1Name = SelectA1.Text;
                 getComida1Index = SelectA1.SelectedIndex - 1;
-                getComida1Cal = getCaloriasAli[getComida1Index];
+                getComida1Cal = int.Parse(getCaloriasAli[getComida1Index]);
             }
             if (SelectA2.SelectedIndex != 0)
             {
                 getComida2Name = SelectA2.Text;
                 getComida2Index = SelectA2.SelectedIndex - 1;
-                getComida2Cal = getCaloriasAli[getComida2Index];
+                getComida2Cal = int.Parse(getCaloriasAli[getComida2Index]);
 
             }
 
@@ -72,7 +70,7 @@ namespace DieTop.Views
             {
                 getComida3Name = SelectA3.Text;
                 getComida3Index = SelectA3.SelectedIndex - 1;
-                getComida3Cal = getCaloriasAli[getComida3Index];
+                getComida3Cal = int.Parse(getCaloriasAli[getComida3Index]);
 
             }
             Hooks.Hooks hook = new Hooks.Hooks();
@@ -131,6 +129,33 @@ namespace DieTop.Views
         {
             RealTimeLabels();
 
+        }
+
+        private void ButtonAdicionarAlimento_Click(object sender, EventArgs e)
+        {
+            /* data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
+                    "', peso = '" + inputPeso.Text + "', dieta = '" + selectDieta.SelectedItem.ToString() + "', fisica = '" + selectAtvFisica.SelectedItem.ToString() +
+                    "' WHERE cpf ='" + dataUser.Cpf + "';");*/
+
+            db.Database data = new db.Database();
+            Class.UserVar userVar = new Class.UserVar();
+            if (selectTipo.SelectedIndex == 0)
+            {
+                data.CommandSQL("update  dia set cafe_da_manha = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text+ "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "';"); ;
+
+            }
+            if (selectTipo.SelectedIndex == 1)
+            {
+                data.CommandSQL("update  dia set almoco = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "';"); ;
+
+
+            }
+            if (selectTipo.SelectedIndex == 2)
+            {
+                data.CommandSQL("update  dia set janta = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "';"); ;
+
+
+            }
         }
     }
 }

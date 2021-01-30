@@ -43,7 +43,7 @@ namespace DieTop.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ButtonAdicionarAlimento = new System.Windows.Forms.Button();
             this.ButtonVoltar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -227,18 +227,19 @@ namespace DieTop.Views
             this.label.TabIndex = 0;
             this.label.Text = "Cadastre sua Refeição!";
             // 
-            // button1
+            // ButtonAdicionarAlimento
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(683, 485);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(261, 47);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Adicionar Alimento";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ButtonAdicionarAlimento.BackColor = System.Drawing.SystemColors.Window;
+            this.ButtonAdicionarAlimento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonAdicionarAlimento.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAdicionarAlimento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonAdicionarAlimento.Location = new System.Drawing.Point(683, 485);
+            this.ButtonAdicionarAlimento.Name = "ButtonAdicionarAlimento";
+            this.ButtonAdicionarAlimento.Size = new System.Drawing.Size(261, 47);
+            this.ButtonAdicionarAlimento.TabIndex = 32;
+            this.ButtonAdicionarAlimento.Text = "Adicionar";
+            this.ButtonAdicionarAlimento.UseVisualStyleBackColor = false;
+            this.ButtonAdicionarAlimento.Click += new System.EventHandler(this.ButtonAdicionarAlimento_Click);
             // 
             // ButtonVoltar
             // 
@@ -365,7 +366,7 @@ namespace DieTop.Views
             this.ClientSize = new System.Drawing.Size(956, 574);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.ButtonVoltar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ButtonAdicionarAlimento);
             this.Controls.Add(this.user);
             this.Name = "CreateFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -386,7 +387,7 @@ namespace DieTop.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox selectTipo;
         private System.Windows.Forms.ComboBox SelectA1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ButtonAdicionarAlimento;
         private System.Windows.Forms.Button ButtonAddNew;
         private System.Windows.Forms.ComboBox SelectA3;
         private System.Windows.Forms.Label label6;

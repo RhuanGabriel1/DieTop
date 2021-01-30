@@ -8,29 +8,34 @@ namespace Hooks
     class Hooks 
     {
         //Validação de Caloria para Simulação RealTime
-        public void RealTimeCal(string aliName1, string aliName2, string aliName3, string cal1, string cal2, string cal3,Label comidaName1,Label comidaName2, 
+        public void RealTimeCal(string aliName1, string aliName2, string aliName3, int cal1, int cal2, int cal3,Label comidaName1,Label comidaName2, 
             Label comidaName3,Label comidaCal1,Label comidaCal2, Label comidaCal3 ,Label caloriesTotal)
         {
 
-            if (aliName1 != "Nada")
+            DieTop.Class.UserVar user = new DieTop.Class.UserVar();
+
+
+
+            if (aliName1 != "Nada" && cal1 != 0)
             {
                 comidaName1.Visible = true;
                 comidaCal1.Visible = true;
                 comidaName1.Text = aliName1;
-                comidaCal1.Text = cal1;
+                comidaCal1.Text = cal1.ToString();
 
             }
             else
             {
                 comidaName1.Visible = false;
                 comidaCal1.Visible = false;
+                
             }
-            if (aliName2 != "Nada")
+            if (aliName2 != "Nada" && cal2 != 0)
             {
                 comidaName2.Visible = true;
                 comidaCal2.Visible = true;
                 comidaName2.Text = aliName2;
-                comidaCal2.Text = cal2;
+                comidaCal2.Text = cal2.ToString();
 
 
             }
@@ -38,13 +43,15 @@ namespace Hooks
             {
                 comidaName2.Visible = false;
                 comidaCal2.Visible = false;
+             
+
             }
-            if (aliName3 != "Nada")
+            if (aliName3 != "Nada" && cal3 != 0)
             {
                 comidaName3.Visible = true;
                 comidaCal3.Visible = true;
                 comidaName3.Text = aliName3;
-                comidaCal3.Text = cal3;
+                comidaCal3.Text = cal3.ToString();
 
 
             }
@@ -52,18 +59,20 @@ namespace Hooks
             {
                 comidaName3.Visible = false;
                 comidaCal3.Visible = false;
+             
+
             }
 
 
+            int total = cal1 + cal2 + cal3;
+            string getCalories = user.Caloria_restante;
+
+            int convert = int.Parse(getCalories) - total;
 
 
 
 
-
-
-            //int total = int.Parse(cal1 + cal2 + cal3) ;
-
-            //caloriesTotal.Text = total+"";
+            caloriesTotal.Text = convert + "";
 
         }
 
