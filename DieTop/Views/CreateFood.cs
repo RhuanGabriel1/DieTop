@@ -132,69 +132,98 @@ namespace DieTop.Views
             {
                 ali3 = "Nadinha";
             }
-            DialogResult result = MessageBox.Show("Os Seguinte Alimentos Serão Cadastrados : \n" + ali1 + "/" + ali2 + "/" + ali3 + "\n Deseja Prosseguir?", "Deseja Prosseguir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (result.ToString() == "Yes")
+            bool error = false;
+            if (int.Parse(labelCalTotal.Text) <=0)
             {
-                userVar.Connect();
-               
-
-                  
-                if (selectTipo.SelectedIndex == 0)
+            DialogResult validation = MessageBox.Show("Parece que você estourará a quantidade de Calorias Proposta pelo programa, Deseja Continuar?", "WHAT????", MessageBoxButtons.YesNo,MessageBoxIcon.Error); ;
+                if (validation.ToString() == "Yes")
                 {
-                    if (userVar.Cafe_da_manha == "Nada")
-                    {
-                        data.CommandSQL("update  dia set cafe_da_manha = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
-
+                    error = false;
                 }
-                    else
-                    {
-                        MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                
-              
-                
-                    if (selectTipo.SelectedIndex == 1)
+                else
                 {
-                    if (userVar.Almoco == "Nada")
-                    {
-                        data.CommandSQL("update  dia set almoco = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
-
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                    }
+                    error = true;
                 }
-               
-               
-                    if (selectTipo.SelectedIndex == 2)
-                {
-                    if (userVar.Janta == "Nada")
-                    {
-                        data.CommandSQL("update  dia set janta = '" + ali1 + "/" + ali2 + "/" + ali3 +  "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
-
-                }
-                    else
-                    {
-                        MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
-                    }
-                }
-                
-
+            if (error)
+            {
                 selectTipo.SelectedIndex = 0;
                 SelectA1.SelectedIndex = 0;
                 SelectA2.SelectedIndex = 0;
                 SelectA3.SelectedIndex = 0;
+                LoadingComponents();
 
+                return;
             }
+            else
+            {
 
+                DialogResult result = MessageBox.Show("Os Seguinte Alimentos Serão Cadastrados : \n" + ali1 + "/" + ali2 + "/" + ali3 + "\n Deseja Prosseguir?", "Deseja Prosseguir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result.ToString() == "Yes")
+                {
+                    userVar.Connect();
+
+
+
+                    if (selectTipo.SelectedIndex == 0)
+                    {
+                        if (userVar.Cafe_da_manha == "Nada")
+                        {
+                            data.CommandSQL("update  dia set cafe_da_manha = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+
+
+                    if (selectTipo.SelectedIndex == 1)
+                    {
+                        if (userVar.Almoco == "Nada")
+                        {
+                            data.CommandSQL("update  dia set almoco = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                        }
+                    }
+
+
+                    if (selectTipo.SelectedIndex == 2)
+                    {
+                        if (userVar.Janta == "Nada")
+                        {
+                            data.CommandSQL("update  dia set janta = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                        }
+                    }
+
+
+                    selectTipo.SelectedIndex = 0;
+                    SelectA1.SelectedIndex = 0;
+                    SelectA2.SelectedIndex = 0;
+                    SelectA3.SelectedIndex = 0;
+
+                }
+            }
 
 
         }
