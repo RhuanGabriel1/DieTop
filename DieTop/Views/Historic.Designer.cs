@@ -128,23 +128,21 @@ namespace DieTop.Views
             // 
             this.labelAtvSem.AutoSize = true;
             this.labelAtvSem.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAtvSem.Location = new System.Drawing.Point(530, 119);
+            this.labelAtvSem.Location = new System.Drawing.Point(526, 309);
             this.labelAtvSem.Name = "labelAtvSem";
             this.labelAtvSem.Size = new System.Drawing.Size(19, 21);
             this.labelAtvSem.TabIndex = 53;
             this.labelAtvSem.Text = "0";
-            this.labelAtvSem.Visible = false;
             // 
             // labelDuracao
             // 
             this.labelDuracao.AutoSize = true;
             this.labelDuracao.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDuracao.Location = new System.Drawing.Point(530, 64);
+            this.labelDuracao.Location = new System.Drawing.Point(526, 254);
             this.labelDuracao.Name = "labelDuracao";
             this.labelDuracao.Size = new System.Drawing.Size(19, 21);
             this.labelDuracao.TabIndex = 52;
             this.labelDuracao.Text = "0";
-            this.labelDuracao.Visible = false;
             // 
             // labelDieta
             // 
@@ -155,7 +153,6 @@ namespace DieTop.Views
             this.labelDieta.Size = new System.Drawing.Size(19, 21);
             this.labelDieta.TabIndex = 51;
             this.labelDieta.Text = "0";
-            this.labelDieta.Visible = false;
             // 
             // labelAlmoco
             // 
@@ -166,7 +163,6 @@ namespace DieTop.Views
             this.labelAlmoco.Size = new System.Drawing.Size(19, 21);
             this.labelAlmoco.TabIndex = 50;
             this.labelAlmoco.Text = "0";
-            this.labelAlmoco.Visible = false;
             // 
             // labelJanta
             // 
@@ -177,7 +173,6 @@ namespace DieTop.Views
             this.labelJanta.Size = new System.Drawing.Size(19, 21);
             this.labelJanta.TabIndex = 49;
             this.labelJanta.Text = "0";
-            this.labelJanta.Visible = false;
             // 
             // labelTotal
             // 
@@ -188,7 +183,6 @@ namespace DieTop.Views
             this.labelTotal.Size = new System.Drawing.Size(19, 21);
             this.labelTotal.TabIndex = 48;
             this.labelTotal.Text = "0";
-            this.labelTotal.Visible = false;
             // 
             // labelRestante
             // 
@@ -199,7 +193,6 @@ namespace DieTop.Views
             this.labelRestante.Size = new System.Drawing.Size(19, 21);
             this.labelRestante.TabIndex = 47;
             this.labelRestante.Text = "0";
-            this.labelRestante.Visible = false;
             // 
             // labelAtividade
             // 
@@ -210,10 +203,10 @@ namespace DieTop.Views
             this.labelAtividade.Size = new System.Drawing.Size(19, 21);
             this.labelAtividade.TabIndex = 46;
             this.labelAtividade.Text = "0";
-            this.labelAtividade.Visible = false;
             // 
             // labelCafe
             // 
+            this.labelCafe.AllowDrop = true;
             this.labelCafe.AutoSize = true;
             this.labelCafe.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCafe.Location = new System.Drawing.Point(190, 64);
@@ -221,7 +214,6 @@ namespace DieTop.Views
             this.labelCafe.Size = new System.Drawing.Size(19, 21);
             this.labelCafe.TabIndex = 45;
             this.labelCafe.Text = "0";
-            this.labelCafe.Visible = false;
             // 
             // labelDia
             // 
@@ -232,7 +224,6 @@ namespace DieTop.Views
             this.labelDia.Size = new System.Drawing.Size(24, 28);
             this.labelDia.TabIndex = 44;
             this.labelDia.Text = "0";
-            this.labelDia.Visible = false;
             // 
             // label16
             // 
@@ -248,7 +239,7 @@ namespace DieTop.Views
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(328, 119);
+            this.label15.Location = new System.Drawing.Point(324, 309);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(174, 21);
             this.label15.TabIndex = 42;
@@ -268,7 +259,7 @@ namespace DieTop.Views
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(328, 64);
+            this.label13.Location = new System.Drawing.Point(324, 254);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(183, 21);
             this.label13.TabIndex = 40;
@@ -346,6 +337,7 @@ namespace DieTop.Views
             this.buttonAtt.TabIndex = 45;
             this.buttonAtt.Text = "Atualizar";
             this.buttonAtt.UseVisualStyleBackColor = false;
+            this.buttonAtt.Click += new System.EventHandler(this.buttonAtt_Click);
             // 
             // Historic
             // 
