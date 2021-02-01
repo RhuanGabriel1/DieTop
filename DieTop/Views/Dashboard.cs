@@ -207,5 +207,14 @@ namespace DieTop.Views
                 }
             }
         }
+
+        private void buttonBackDays_Click(object sender, EventArgs e)
+        {
+            Historic there= new Historic();
+            Dashboard here = new Dashboard();
+            this.Hide();
+            this.Closed += (s, args) => here.Close();
+            there.Show();
+        }
     }
 }

@@ -43,3 +43,4 @@ C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.CreateFoo
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.Register_Food.resources
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.csprojAssemblyReference.cache
 C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.Register_ATV.resources
+C:\Users\Leandro\Documents\GitHub\DieTop\DieTop\obj\Debug\DieTop.Views.Historic.resources
