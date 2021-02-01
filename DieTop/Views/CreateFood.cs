@@ -108,12 +108,31 @@ namespace DieTop.Views
 
         private void ButtonAdicionarAlimento_Click(object sender, EventArgs e)
         {
+            LoadingComponents();
 
             db.Database data = new db.Database();
             Class.UserVar userVar = new Class.UserVar();
 
+            string ali1, ali2, ali3;
+            ali1 = labelAli1.Text;
+            ali2 = labelAli2.Text;
+            ali3 = labelAli3.Text;
 
-            DialogResult result = MessageBox.Show("As Seguinte Refeições Serão Cadastradas : \n" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text +"\n Deseja Prosseguir?", "Deseja Prosseguir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (ali1 == "Alimento1")
+            {
+                ali1 = "Nadinha";
+            }
+            if (ali2 == "Alimento2")
+            {
+                ali2 = "Nadinha";
+            }
+            if (ali3 == "Alimento3")
+            {
+                ali3 = "Nadinha";
+            }
+
+            DialogResult result = MessageBox.Show("Os Seguinte Alimentos Serão Cadastrados : \n" + ali1 + "/" + ali2 + "/" + ali3 + "\n Deseja Prosseguir?", "Deseja Prosseguir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result.ToString() == "Yes")
             {
@@ -121,9 +140,11 @@ namespace DieTop.Views
                 if (userVar.Cafe_da_manha == "Nada")
                 {
 
+                  
                 if (selectTipo.SelectedIndex == 0)
                 {
-                    data.CommandSQL("update  dia set cafe_da_manha = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+                       
+                        data.CommandSQL("update  dia set cafe_da_manha = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
                 }
                 }
@@ -136,7 +157,7 @@ namespace DieTop.Views
                 
                     if (selectTipo.SelectedIndex == 1)
                 {
-                    data.CommandSQL("update  dia set almoco = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+                    data.CommandSQL("update  dia set almoco = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
 
                 }
@@ -151,7 +172,7 @@ namespace DieTop.Views
                 {
                     if (selectTipo.SelectedIndex == 2)
                 {
-                    data.CommandSQL("update  dia set janta = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+                    data.CommandSQL("update  dia set janta = '" + ali1 + "/" + ali2 + "/" + ali3 +  "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
                 }
                 }
@@ -166,7 +187,6 @@ namespace DieTop.Views
                 SelectA1.SelectedIndex = 0;
                 SelectA2.SelectedIndex = 0;
                 SelectA3.SelectedIndex = 0;
-                LoadingComponents();
             }
 
                

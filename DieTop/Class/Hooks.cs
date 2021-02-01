@@ -16,7 +16,7 @@ namespace Hooks
 
 
 
-            if (aliName1 != "Nada" && cal1 != 0)
+            if (cal1 != 0)
             {
                 comidaName1.Visible = true;
                 comidaCal1.Visible = true;
@@ -30,7 +30,7 @@ namespace Hooks
                 comidaCal1.Visible = false;
                 
             }
-            if (aliName2 != "Nada" && cal2 != 0)
+            if (cal2 != 0)
             {
                 comidaName2.Visible = true;
                 comidaCal2.Visible = true;
@@ -46,7 +46,7 @@ namespace Hooks
              
 
             }
-            if (aliName3 != "Nada" && cal3 != 0)
+            if (cal3 != 0)
             {
                 comidaName3.Visible = true;
                 comidaCal3.Visible = true;
