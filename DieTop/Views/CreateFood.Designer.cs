@@ -56,6 +56,10 @@ namespace DieTop.Views
             this.labelAli2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.ButtonReset = new System.Windows.Forms.Button();
+            this.buttonAtt1 = new System.Windows.Forms.Button();
+            this.buttonAtt2 = new System.Windows.Forms.Button();
+            this.buttonAtt3 = new System.Windows.Forms.Button();
+            this.buttonAtt4 = new System.Windows.Forms.Button();
             this.user.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +68,10 @@ namespace DieTop.Views
             // 
             this.user.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.user.Controls.Add(this.buttonAtt4);
+            this.user.Controls.Add(this.buttonAtt3);
+            this.user.Controls.Add(this.buttonAtt2);
+            this.user.Controls.Add(this.buttonAtt1);
             this.user.Controls.Add(this.button2);
             this.user.Controls.Add(this.ButtonAddNew);
             this.user.Controls.Add(this.SelectA3);
@@ -385,6 +393,62 @@ namespace DieTop.Views
             this.ButtonReset.UseVisualStyleBackColor = false;
             this.ButtonReset.Click += new System.EventHandler(this.ButtonReset_Click);
             // 
+            // buttonAtt1
+            // 
+            this.buttonAtt1.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonAtt1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAtt1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAtt1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAtt1.Location = new System.Drawing.Point(311, 119);
+            this.buttonAtt1.Name = "buttonAtt1";
+            this.buttonAtt1.Size = new System.Drawing.Size(98, 31);
+            this.buttonAtt1.TabIndex = 35;
+            this.buttonAtt1.Text = "Atualizar";
+            this.buttonAtt1.UseVisualStyleBackColor = false;
+            this.buttonAtt1.Click += new System.EventHandler(this.buttonAtt1_Click);
+            // 
+            // buttonAtt2
+            // 
+            this.buttonAtt2.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonAtt2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAtt2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAtt2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAtt2.Location = new System.Drawing.Point(311, 169);
+            this.buttonAtt2.Name = "buttonAtt2";
+            this.buttonAtt2.Size = new System.Drawing.Size(98, 31);
+            this.buttonAtt2.TabIndex = 36;
+            this.buttonAtt2.Text = "Atualizar";
+            this.buttonAtt2.UseVisualStyleBackColor = false;
+            this.buttonAtt2.Click += new System.EventHandler(this.buttonAtt2_Click);
+            // 
+            // buttonAtt3
+            // 
+            this.buttonAtt3.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonAtt3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAtt3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAtt3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAtt3.Location = new System.Drawing.Point(311, 219);
+            this.buttonAtt3.Name = "buttonAtt3";
+            this.buttonAtt3.Size = new System.Drawing.Size(98, 31);
+            this.buttonAtt3.TabIndex = 37;
+            this.buttonAtt3.Text = "Atualizar";
+            this.buttonAtt3.UseVisualStyleBackColor = false;
+            this.buttonAtt3.Click += new System.EventHandler(this.buttonAtt3_Click);
+            // 
+            // buttonAtt4
+            // 
+            this.buttonAtt4.BackColor = System.Drawing.SystemColors.Window;
+            this.buttonAtt4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAtt4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAtt4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAtt4.Location = new System.Drawing.Point(311, 269);
+            this.buttonAtt4.Name = "buttonAtt4";
+            this.buttonAtt4.Size = new System.Drawing.Size(98, 31);
+            this.buttonAtt4.TabIndex = 38;
+            this.buttonAtt4.Text = "Atualizar";
+            this.buttonAtt4.UseVisualStyleBackColor = false;
+            this.buttonAtt4.Click += new System.EventHandler(this.buttonAtt4_Click);
+            // 
             // CreateFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +499,10 @@ namespace DieTop.Views
         private System.Windows.Forms.Label labelAli2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ButtonReset;
+        private System.Windows.Forms.Button buttonAtt4;
+        private System.Windows.Forms.Button buttonAtt3;
+        private System.Windows.Forms.Button buttonAtt2;
+        private System.Windows.Forms.Button buttonAtt1;
     }
 }
     

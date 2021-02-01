@@ -132,8 +132,7 @@ namespace DieTop.Views
             {
                 db.Database data = new db.Database();
              bool queryRequest =  data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
-                    "', peso = '" + inputPeso.Text + "', dieta = '" +
-                    "' WHERE cpf ='" + dataUser.Cpf + "';");
+                    "', peso = '" + inputPeso.Text + "' WHERE cpf ='" + dataUser.Cpf + "';");
                 Dashboard dash = new Dashboard();
                
 
