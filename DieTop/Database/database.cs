@@ -31,7 +31,7 @@ namespace DieTop.db
             }
             finally
             {
-                CloseConnection();
+                connection.Close();
             }
         }
         
@@ -62,14 +62,12 @@ namespace DieTop.db
                     MessageBox.Show("Houve um Erro na Inserção de Dados!", "Houve um Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                CloseConnection();
+                connection.Close();
+               
             }
         }
       
-        public void CloseConnection()
-        {
-            connection.Close();
-        }
+     
 
         //TEST LIST FIELDS
 
@@ -101,6 +99,10 @@ namespace DieTop.db
             catch (Exception e)
             {
                 MessageBox.Show("Houve um Erro! "+e.ToString(), e.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
             }
 
         
