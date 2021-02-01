@@ -210,11 +210,19 @@ namespace DieTop.Views
 
         private void buttonBackDays_Click(object sender, EventArgs e)
         {
-            Historic there= new Historic();
-            Dashboard here = new Dashboard();
-            this.Hide();
-            this.Closed += (s, args) => here.Close();
-            there.Show();
+            Class.UserVar user = new Class.UserVar();
+            if (int.Parse(user.Dia) == 1)
+            {
+                MessageBox.Show("Hoje é seu primeiro dia aqui!", "ERRO!", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else {
+                Historic there = new Historic();
+                Dashboard here = new Dashboard();
+                this.Hide();
+                this.Closed += (s, args) => here.Close();
+                there.Show();
+            }
+            
         }
     }
 }
