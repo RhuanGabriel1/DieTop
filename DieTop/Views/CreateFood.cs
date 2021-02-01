@@ -111,28 +111,37 @@ namespace DieTop.Views
 
             db.Database data = new db.Database();
             Class.UserVar userVar = new Class.UserVar();
-            if (selectTipo.SelectedIndex == 0)
+
+
+            DialogResult result = MessageBox.Show("As Seguinte Refeições Serão Cadastradas : \n" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text +"\n Deseja Prosseguir?", "Deseja Prosseguir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result.ToString() == "Yes")
             {
-                data.CommandSQL("update  dia set cafe_da_manha = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text+ "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+                if (selectTipo.SelectedIndex == 0)
+                {
+                    data.CommandSQL("update  dia set cafe_da_manha = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
+                }
+                if (selectTipo.SelectedIndex == 1)
+                {
+                    data.CommandSQL("update  dia set almoco = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+
+
+                }
+                if (selectTipo.SelectedIndex == 2)
+                {
+                    data.CommandSQL("update  dia set janta = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+
+                }
+
+                selectTipo.SelectedIndex = 0;
+                SelectA1.SelectedIndex = 0;
+                SelectA2.SelectedIndex = 0;
+                SelectA3.SelectedIndex = 0;
+                LoadingComponents();
             }
-            if (selectTipo.SelectedIndex == 1)
-            {
-                data.CommandSQL("update  dia set almoco = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
-
-            }
-            if (selectTipo.SelectedIndex == 2)
-            {
-                data.CommandSQL("update  dia set janta = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
-
-            }
-
-            selectTipo.SelectedIndex = 0;
-            SelectA1.SelectedIndex = 0;
-            SelectA2.SelectedIndex = 0;
-            SelectA3.SelectedIndex = 0;
-            LoadingComponents();
+               
 
         }
 
@@ -145,9 +154,21 @@ namespace DieTop.Views
         {
             db.Database data = new db.Database();
             Class.UserVar userVar = new Class.UserVar();
-            data.CommandSQL("UPDATE dia SET almoco = 'Nada', cafe_da_manha = 'Nada' , janta = 'Nada', caloria_restante = '" + userVar.Total_calorias + "' WHERE cpf ='" + userVar.Cpf +
-                "' and dia = '"+userVar.Dia+"';");
-            LoadingComponents();
+            DialogResult result = MessageBox.Show("Deseja Resetar Todas as Refeições?", "MENSAGEM DE ALERTA!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result.ToString() == "Yes")
+            {
+                data.CommandSQL("UPDATE dia SET almoco = 'Nada', cafe_da_manha = 'Nada' , janta = 'Nada', caloria_restante = '" + userVar.Total_calorias + "' WHERE cpf ='" + userVar.Cpf +
+                    "' and dia = '" + userVar.Dia + "';");
+
+                selectTipo.SelectedIndex = 0;
+                SelectA1.SelectedIndex = 0;
+                SelectA2.SelectedIndex = 0;
+                SelectA3.SelectedIndex = 0;
+                LoadingComponents();
+            }
+        
+
+       
 
         }
     }

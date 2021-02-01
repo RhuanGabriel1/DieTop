@@ -20,7 +20,19 @@ namespace DieTop.Views
         private void ButtonCadastrar_Click(object sender, EventArgs e)
         {
             db.Database data = new db.Database();
-            data.CommandSQL("insert into alimento(nome_alim,calorias_alim) values('" + InputAlimento.Text + "','" + InputCaloria.Text +"');");
+           bool queryDB = data.CommandSQL("insert into alimento(nome_alim,calorias_alim) values('" + InputAlimento.Text + "','" + InputCaloria.Text +"');");
+            if (queryDB)
+            {
+                MessageBox.Show("Alteração Efetuada!", "Muito Obrigado!"
+                                                     , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+            else
+            {
+                MessageBox.Show("Alteração Não Efetuada!", "ERRO!"
+                                                                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void ButtonVoltar_Click(object sender, EventArgs e)

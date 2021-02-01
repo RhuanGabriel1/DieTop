@@ -131,13 +131,22 @@ namespace DieTop.Views
             try
             {
                 db.Database data = new db.Database();
-                data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
+             bool queryRequest =  data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
                     "', peso = '" + inputPeso.Text + "', dieta = '" +
                     "' WHERE cpf ='" + dataUser.Cpf + "';");
                 Dashboard dash = new Dashboard();
                
-                TurnOff(ButtonAceitar,ButtonVoltar,ButtonAlterar);
 
+                if (queryRequest)
+                {
+                    TurnOff(ButtonAceitar, ButtonVoltar, ButtonAlterar);
+                    MessageBox.Show("Alteração Efetuada!", "Muito Obrigado!"
+                                                      , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+
+                }
 
 
             }
