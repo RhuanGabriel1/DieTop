@@ -245,6 +245,11 @@ namespace Register_View
             correct = hook.FormValidator(correct, 0, getPeso(), pesoDefault, 4);
             correct = hook.FormValidator(correct, 0, getAltura(), alturaDefault, 4);
 
+            if (getCPF().Contains("Insira") || getCPF().Length <3)
+            {
+                correct = false;
+            }
+
             if (getPeso() != "" && getPeso() != pesoDefault)
             {
                 if (int.Parse(getPeso()) > 400)

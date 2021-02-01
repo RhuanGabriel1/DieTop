@@ -42,8 +42,7 @@ namespace DieTop.Views
             inputSexo.Enabled = true;
             inputAltura.Enabled = true;
             inputPeso.Enabled = true;
-            selectDieta.Enabled = true;
-            selectAtvFisica.Enabled = true;
+
 
             RealTime();
         }
@@ -58,8 +57,7 @@ namespace DieTop.Views
             inputSexo.Enabled = false;
             inputAltura.Enabled = false;
             inputPeso.Enabled = false;
-            selectDieta.Enabled = false;
-            selectAtvFisica.Enabled = false;
+
 
             RealTime();
         }
@@ -78,7 +76,7 @@ namespace DieTop.Views
             {
                 db.Database data = new db.Database();
                 data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
-                    "', peso = '" + inputPeso.Text + "', dieta = '" + selectDieta.SelectedItem.ToString() + "', fisica = '" + selectAtvFisica.SelectedItem.ToString() +
+                    "', peso = '" + inputPeso.Text + "', dieta = '" +
                     "' WHERE cpf ='" + dataUser.Cpf + "';");
                 Dashboard dash = new Dashboard();
                
@@ -106,6 +104,15 @@ namespace DieTop.Views
             this.Hide();
             this.Closed += (s, args) => here.Close();
             food.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Register_ATV atividade = new Register_ATV();
+            Dashboard here = new Dashboard();
+            this.Hide();
+            this.Closed += (s, args) => here.Close();
+            atividade.Show();
         }
     }
 }

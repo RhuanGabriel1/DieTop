@@ -48,18 +48,10 @@ namespace DieTop.Views
             this.label1 = new System.Windows.Forms.Label();
             this.labelUserInformation = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.selectDieta = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.selectAtvFisica = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.ButtonRefeicao = new System.Windows.Forms.Button();
             this.ButtonFinalizar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.user.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // user
@@ -265,74 +257,10 @@ namespace DieTop.Views
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.selectDieta);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.selectAtvFisica);
-            this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(452, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(483, 398);
+            this.panel1.Size = new System.Drawing.Size(492, 222);
             this.panel1.TabIndex = 13;
-            // 
-            // selectDieta
-            // 
-            this.selectDieta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectDieta.Enabled = false;
-            this.selectDieta.FormattingEnabled = true;
-            this.selectDieta.Items.AddRange(new object[] {
-            "GANHAR PESO",
-            "MANTER PESO",
-            "PERDER PESO"});
-            this.selectDieta.Location = new System.Drawing.Point(83, 142);
-            this.selectDieta.Name = "selectDieta";
-            this.selectDieta.Size = new System.Drawing.Size(361, 21);
-            this.selectDieta.TabIndex = 29;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(33, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 29);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Dieta Escolhida :";
-            // 
-            // selectAtvFisica
-            // 
-            this.selectAtvFisica.BackColor = System.Drawing.SystemColors.Window;
-            this.selectAtvFisica.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selectAtvFisica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.selectAtvFisica.Enabled = false;
-            this.selectAtvFisica.FormattingEnabled = true;
-            this.selectAtvFisica.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.selectAtvFisica.Items.AddRange(new object[] {
-            "NÃO PRATICO ATV FÍSICA",
-            "1 A 3 VEZES POR SEMANA",
-            "3 A 7 VEZES POR SEMANA",
-            "7+ VEZES POR SEMANA"});
-            this.selectAtvFisica.Location = new System.Drawing.Point(83, 65);
-            this.selectAtvFisica.Name = "selectAtvFisica";
-            this.selectAtvFisica.Size = new System.Drawing.Size(361, 21);
-            this.selectAtvFisica.TabIndex = 27;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(33, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(427, 29);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Qtd. de Atv. Fís. Práticadas na Semana";
             // 
             // ButtonRefeicao
             // 
@@ -361,56 +289,19 @@ namespace DieTop.Views
             this.ButtonFinalizar.Text = "Finalizar Dia";
             this.ButtonFinalizar.UseVisualStyleBackColor = false;
             // 
-            // label9
+            // button1
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(33, 205);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(315, 29);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Atv Física Realizada no Dia :";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.comboBox1.Items.AddRange(new object[] {
-            "NADA",
-            "MUSCULAÇÃO",
-            "CARDIO"});
-            this.comboBox1.Location = new System.Drawing.Point(83, 253);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(361, 21);
-            this.comboBox1.TabIndex = 31;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(33, 298);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(249, 29);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Duração (em minutos)";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(83, 343);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 25);
-            this.textBox1.TabIndex = 34;
-            this.textBox1.Text = "60";
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(522, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(422, 47);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Adicionar Atividade Física";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dashboard
             // 
@@ -418,6 +309,7 @@ namespace DieTop.Views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(956, 574);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ButtonFinalizar);
             this.Controls.Add(this.ButtonRefeicao);
             this.Controls.Add(this.panel1);
@@ -427,8 +319,6 @@ namespace DieTop.Views
             this.Text = "Dashboard";
             this.user.ResumeLayout(false);
             this.user.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -451,17 +341,10 @@ namespace DieTop.Views
         private System.Windows.Forms.TextBox inputNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button ButtonAlterar;
-        private System.Windows.Forms.ComboBox selectDieta;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox selectAtvFisica;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button ButtonRefeicao;
         private System.Windows.Forms.Button ButtonAceitar;
         private System.Windows.Forms.Button ButtonVoltar;
         private System.Windows.Forms.Button ButtonFinalizar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
     }
 }
