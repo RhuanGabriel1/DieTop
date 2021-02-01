@@ -176,7 +176,7 @@ namespace DieTop.Views
             DataBase.Database data = new DataBase.Database();
             Class.UserVar user = new Class.UserVar();
             int day = int.Parse(user.Dia);
-            Console.WriteLine(day + 1);
+            day = day + 1;
             DialogResult result = MessageBox.Show("Os Seguintes Dados Serão Cadastrados : \n" + "Café da  Manhã : " + user.Cafe_da_manha + "\nAlmoço : " + user.Almoco +
                         "\nJanta : " + user.Janta + "\nTotal de Calorias : " + user.Total_calorias + "\nCalorias Restantes : " + user.Caloria_restante +
                         "\nTipo de Atividade Física : " + user.Tipo_atividade + "\nDieta : " + user.Dieta + "\nDuração da Atividade : " +

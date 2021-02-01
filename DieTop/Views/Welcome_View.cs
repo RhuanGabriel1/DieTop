@@ -71,19 +71,22 @@ namespace DieTop
 
         //HandleFormSubmit
 
-       
-
 
         private void loginButton_Click(object sender, EventArgs e)
         {
             List<string> getData = new List<string>();
             DataBase.Database data = new DataBase.Database();
+
+
+            List<string> day = new List<string>();
+            day = data.CommandSelectSQL("select MAX(dia) from dia where cpf = '" + inputLogin.Text + "';");
             getData = data.CommandSelectSQL("select cpf,senha,nome from pessoa where cpf = '" + inputLogin.Text + "' and senha ='" + inputSenha.Text + "'");
 
             if (getData.Count != 0)
             {
                 Class.UserVar.CPF_LOGIN = getData[0];
                 Class.UserVar.SENHA_LOGIN = getData[1];
+                Class.UserVar.TODAY = day[0];
 
                 Views.Dashboard userView = new Views.Dashboard();
                 Welcome_View welcome_View = new Welcome_View();

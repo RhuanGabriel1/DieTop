@@ -8,6 +8,8 @@ namespace DieTop.Class
 
         public static string CPF_LOGIN { get; set; }
         public static string SENHA_LOGIN{ get; set; }
+        public static string TODAY { get; set; }
+        
         public UserVar()
         {
             Populate();
@@ -45,7 +47,7 @@ namespace DieTop.Class
         public void Connect()
         {
             getData = data.CommandSelectSQL("select nome,cpf,idade,senha,sexo,altura,peso from pessoa where cpf = '" + CPF_LOGIN + "' and senha ='" + SENHA_LOGIN + "';");
-            getDia = data.CommandSelectSQL("select cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,dieta_dia,atv_dia,dia from dia where cpf = '" + CPF_LOGIN + "';");
+            getDia = data.CommandSelectSQL("select cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,dieta_dia,atv_dia,dia from dia where cpf = '" + CPF_LOGIN + " ' and dia ='"+TODAY+"' ;");
 
         }
 
