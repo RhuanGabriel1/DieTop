@@ -31,6 +31,9 @@ namespace DieTop.Views
             SelectA2.SelectedIndex = 0;
             SelectA3.SelectedIndex = 0;
 
+            LoadingComponents();
+
+
         }
 
 
@@ -123,8 +126,14 @@ namespace DieTop.Views
             {
                 data.CommandSQL("update  dia set janta = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "';"); ;
 
-
             }
+
+            selectTipo.SelectedIndex = 0;
+            SelectA1.SelectedIndex = 0;
+            SelectA2.SelectedIndex = 0;
+            SelectA3.SelectedIndex = 0;
+            LoadingComponents();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -134,6 +143,10 @@ namespace DieTop.Views
 
         private void ButtonReset_Click(object sender, EventArgs e)
         {
+            db.Database data = new db.Database();
+            Class.UserVar userVar = new Class.UserVar();
+            data.CommandSQL("UPDATE dia SET almoco = 'Nada', cafe_da_manha = 'Nada' , janta = 'Nada', caloria_restante = '" + userVar.Total_calorias + "' WHERE cpf ='" + userVar.Cpf + "';");
+            LoadingComponents();
 
         }
     }

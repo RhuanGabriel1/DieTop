@@ -14,7 +14,62 @@ namespace DieTop.Views
             MaximizeBox = false;
             InitializeComponent();
             RealTime();
+            Refresh();
 
+        }
+
+
+        private void Refresh()
+        {
+            Class.UserVar user = new Class.UserVar();
+            Console.WriteLine(user.Cafe_da_manha);
+            Console.WriteLine(user.Almoco);
+            Console.WriteLine(user.Janta);
+            Console.WriteLine(user.Total_calorias);
+            Console.WriteLine(user.Caloria_restante);
+            Console.WriteLine(user.Tipo_atividade);
+            Console.WriteLine(user.Duracao_atv);
+            Console.WriteLine(user.AtvSem);
+            Console.WriteLine(user.Dia);
+
+            try
+            {
+            labelDia.Text = user.Dia;
+            labelCafe.Text = user.Cafe_da_manha;
+            labelAlmoco.Text = user.Almoco;
+            labelJanta.Text = user.Janta;
+            labelTotal.Text = user.Total_calorias;
+            labelRestante.Text = user.Caloria_restante;
+            labelAtividade.Text = user.Tipo_atividade;
+            labelDieta.Text = user.Dieta;
+            labelDuracao.Text = user.Duracao_atv;
+            labelAtvSem.Text = user.AtvSem;
+
+                labelDia.Visible = true;
+                labelCafe.Visible = true;
+                labelAlmoco.Visible = true;
+                labelJanta.Visible= true;
+                labelTotal.Visible = true;
+                labelRestante.Visible = true;
+                labelAtividade.Visible = true;
+                labelDieta.Visible = true;
+                labelDuracao.Visible = true;
+                labelAtvSem.Visible = true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                labelDia.Visible = false;
+                labelCafe.Visible = false;
+                labelAlmoco.Visible = false;
+                labelJanta.Visible = false;
+                labelTotal.Visible = false;
+                labelRestante.Visible = false;
+                labelAtividade.Visible = false;
+                labelDieta.Visible = false;
+                labelDuracao.Visible = false;
+                labelAtvSem.Visible = false;
+            }
         }
 
         public void RealTime()
@@ -118,16 +173,7 @@ namespace DieTop.Views
 
         private void ButtonFinalizar_Click(object sender, EventArgs e)
         {
-            Class.UserVar user = new Class.UserVar();
-            Console.WriteLine(user.Cafe_da_manha);
-            Console.WriteLine(user.Almoco);
-            Console.WriteLine(user.Janta);
-            Console.WriteLine(user.Total_calorias);
-            Console.WriteLine(user.Caloria_restante);
-            Console.WriteLine(user.Tipo_atividade);
-            Console.WriteLine(user.Duracao_atv);
-            Console.WriteLine(user.AtvSem);
-            Console.WriteLine(user.Dia);
+            
         }
     }
 }
