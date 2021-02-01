@@ -54,6 +54,8 @@ namespace DieTop.Views
             this.labelCal1 = new System.Windows.Forms.Label();
             this.labelAli3 = new System.Windows.Forms.Label();
             this.labelAli2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.ButtonReset = new System.Windows.Forms.Button();
             this.user.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +64,7 @@ namespace DieTop.Views
             // 
             this.user.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.user.Controls.Add(this.button2);
             this.user.Controls.Add(this.ButtonAddNew);
             this.user.Controls.Add(this.SelectA3);
             this.user.Controls.Add(this.label6);
@@ -78,7 +81,6 @@ namespace DieTop.Views
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(424, 531);
             this.user.TabIndex = 0;
-            this.user.MouseHover += new System.EventHandler(this.painelHover);
             // 
             // ButtonAddNew
             // 
@@ -93,7 +95,6 @@ namespace DieTop.Views
             this.ButtonAddNew.Text = "Adicionar um Alimento";
             this.ButtonAddNew.UseVisualStyleBackColor = false;
             this.ButtonAddNew.Click += new System.EventHandler(this.ButtonAddNew_Click);
-            this.ButtonAddNew.MouseHover += new System.EventHandler(this.ButtonAddHover);
             // 
             // SelectA3
             // 
@@ -108,7 +109,6 @@ namespace DieTop.Views
             this.SelectA3.Name = "SelectA3";
             this.SelectA3.Size = new System.Drawing.Size(128, 21);
             this.SelectA3.TabIndex = 34;
-            this.SelectA3.MouseHover += new System.EventHandler(this.ali3Hover);
             // 
             // label6
             // 
@@ -133,7 +133,6 @@ namespace DieTop.Views
             this.SelectA2.Name = "SelectA2";
             this.SelectA2.Size = new System.Drawing.Size(128, 21);
             this.SelectA2.TabIndex = 32;
-            this.SelectA2.MouseHover += new System.EventHandler(this.ali2Hover);
             // 
             // label5
             // 
@@ -179,7 +178,6 @@ namespace DieTop.Views
             this.SelectA1.Name = "SelectA1";
             this.SelectA1.Size = new System.Drawing.Size(128, 21);
             this.SelectA1.TabIndex = 28;
-            this.SelectA1.MouseHover += new System.EventHandler(this.ali1Hover);
             // 
             // selectTipo
             // 
@@ -290,6 +288,7 @@ namespace DieTop.Views
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.ButtonReset);
             this.panel2.Controls.Add(this.labelCal3);
             this.panel2.Controls.Add(this.labelCal2);
             this.panel2.Controls.Add(this.labelCal1);
@@ -358,6 +357,34 @@ namespace DieTop.Views
             this.labelAli2.Text = "Alimento2";
             this.labelAli2.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Window;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(311, 474);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 31);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "Atualizar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // ButtonReset
+            // 
+            this.ButtonReset.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ButtonReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonReset.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonReset.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonReset.Location = new System.Drawing.Point(83, 310);
+            this.ButtonReset.Name = "ButtonReset";
+            this.ButtonReset.Size = new System.Drawing.Size(353, 27);
+            this.ButtonReset.TabIndex = 36;
+            this.ButtonReset.Text = "Resetar Calorias (Zerar Alimentação)";
+            this.ButtonReset.UseVisualStyleBackColor = false;
+            this.ButtonReset.Click += new System.EventHandler(this.ButtonReset_Click);
+            // 
             // CreateFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,6 +433,8 @@ namespace DieTop.Views
         private System.Windows.Forms.Label labelCal1;
         private System.Windows.Forms.Label labelAli3;
         private System.Windows.Forms.Label labelAli2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ButtonReset;
     }
 }
     

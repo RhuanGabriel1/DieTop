@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace DieTop.Views
@@ -113,6 +114,20 @@ namespace DieTop.Views
             this.Hide();
             this.Closed += (s, args) => here.Close();
             atividade.Show();
+        }
+
+        private void ButtonFinalizar_Click(object sender, EventArgs e)
+        {
+            Class.UserVar user = new Class.UserVar();
+            Console.WriteLine(user.Cafe_da_manha);
+            Console.WriteLine(user.Almoco);
+            Console.WriteLine(user.Janta);
+            Console.WriteLine(user.Total_calorias);
+            Console.WriteLine(user.Caloria_restante);
+            Console.WriteLine(user.Tipo_atividade);
+            Console.WriteLine(user.Duracao_atv);
+            Console.WriteLine(user.AtvSem);
+            Console.WriteLine(user.Dia);
         }
     }
 }

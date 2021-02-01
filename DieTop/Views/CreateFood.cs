@@ -41,7 +41,7 @@ namespace DieTop.Views
             getCaloriasAli = dataZ.CommandSelectSQL("select calorias_alim from alimento ");
         }
 
-        private void RealTimeLabels()
+        private void LoadingComponents()
         {
             string getComida1Name = "";
             string getComida2Name = "";
@@ -101,41 +101,10 @@ namespace DieTop.Views
      
       
 
-        private void ali1Hover(object sender, EventArgs e)
-        {
-            RealTimeLabels();
-
-        }
-
-        private void painelHover(object sender, EventArgs e)
-        {
-            RealTimeLabels();
-
-        }
-
-        private void ali2Hover(object sender, EventArgs e)
-        {
-            RealTimeLabels();
-
-        }
-
-        private void ali3Hover(object sender, EventArgs e)
-        {
-            RealTimeLabels();
-
-        }
-
-        private void ButtonAddHover(object sender, EventArgs e)
-        {
-            RealTimeLabels();
-
-        }
+   
 
         private void ButtonAdicionarAlimento_Click(object sender, EventArgs e)
         {
-            /* data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
-                    "', peso = '" + inputPeso.Text + "', dieta = '" + selectDieta.SelectedItem.ToString() + "', fisica = '" + selectAtvFisica.SelectedItem.ToString() +
-                    "' WHERE cpf ='" + dataUser.Cpf + "';");*/
 
             db.Database data = new db.Database();
             Class.UserVar userVar = new Class.UserVar();
@@ -156,6 +125,16 @@ namespace DieTop.Views
 
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadingComponents();
+        }
+
+        private void ButtonReset_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -288,6 +288,7 @@ namespace DieTop.Views
             this.ButtonFinalizar.TabIndex = 34;
             this.ButtonFinalizar.Text = "Finalizar Dia";
             this.ButtonFinalizar.UseVisualStyleBackColor = false;
+            this.ButtonFinalizar.Click += new System.EventHandler(this.ButtonFinalizar_Click);
             // 
             // button1
             // 
