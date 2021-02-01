@@ -14,6 +14,7 @@ namespace DieTop
     {
         public Warning()
         {
+            MaximizeBox = false;
             InitializeComponent();
         }
 

@@ -110,12 +110,6 @@
     <Compile Include="Views\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Register_ATV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Register_ATV.Designer.cs">
-      <DependentUpon>Register_ATV.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Register_Food.cs">
       <SubType>Form</SubType>
     </Compile>

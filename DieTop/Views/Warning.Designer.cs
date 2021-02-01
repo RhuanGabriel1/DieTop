@@ -142,6 +142,7 @@ namespace DieTop
             this.Controls.Add(this.labelAvisloLinha2);
             this.Controls.Add(this.labelAvisoLinha1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Warning";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Warning";

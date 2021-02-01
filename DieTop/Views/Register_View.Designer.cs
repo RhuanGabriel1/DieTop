@@ -52,8 +52,8 @@ namespace Register_View
             this.selectAtvFisica = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.selectDieta = new System.Windows.Forms.ComboBox();
-            this.inputCPF = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.inputCPF = new System.Windows.Forms.TextBox();
             sexoGroup = new System.Windows.Forms.GroupBox();
             sexoGroup.SuspendLayout();
             this.SuspendLayout();
@@ -205,7 +205,7 @@ namespace Register_View
             this.inputAltura.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputAltura.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputAltura.ForeColor = System.Drawing.Color.Silver;
-            this.inputAltura.Location = new System.Drawing.Point(172, 345);
+            this.inputAltura.Location = new System.Drawing.Point(172, 416);
             this.inputAltura.Multiline = true;
             this.inputAltura.Name = "inputAltura";
             this.inputAltura.Size = new System.Drawing.Size(229, 31);
@@ -224,7 +224,7 @@ namespace Register_View
             this.labelAltura.BackColor = System.Drawing.Color.Transparent;
             this.labelAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAltura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelAltura.Location = new System.Drawing.Point(54, 345);
+            this.labelAltura.Location = new System.Drawing.Point(54, 418);
             this.labelAltura.Name = "labelAltura";
             this.labelAltura.Size = new System.Drawing.Size(86, 29);
             this.labelAltura.TabIndex = 13;
@@ -235,7 +235,7 @@ namespace Register_View
             this.inputConfirmarSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputConfirmarSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputConfirmarSenha.ForeColor = System.Drawing.Color.Silver;
-            this.inputConfirmarSenha.Location = new System.Drawing.Point(697, 134);
+            this.inputConfirmarSenha.Location = new System.Drawing.Point(697, 147);
             this.inputConfirmarSenha.Multiline = true;
             this.inputConfirmarSenha.Name = "inputConfirmarSenha";
             this.inputConfirmarSenha.Size = new System.Drawing.Size(229, 31);
@@ -253,7 +253,7 @@ namespace Register_View
             this.labelConfirmarSenha.BackColor = System.Drawing.Color.Transparent;
             this.labelConfirmarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmarSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelConfirmarSenha.Location = new System.Drawing.Point(486, 136);
+            this.labelConfirmarSenha.Location = new System.Drawing.Point(486, 149);
             this.labelConfirmarSenha.Name = "labelConfirmarSenha";
             this.labelConfirmarSenha.Size = new System.Drawing.Size(205, 29);
             this.labelConfirmarSenha.TabIndex = 17;
@@ -264,7 +264,7 @@ namespace Register_View
             this.inputSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.inputSenha.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputSenha.ForeColor = System.Drawing.Color.Silver;
-            this.inputSenha.Location = new System.Drawing.Point(697, 69);
+            this.inputSenha.Location = new System.Drawing.Point(697, 82);
             this.inputSenha.Multiline = true;
             this.inputSenha.Name = "inputSenha";
             this.inputSenha.Size = new System.Drawing.Size(229, 31);
@@ -282,7 +282,7 @@ namespace Register_View
             this.labelSenha.BackColor = System.Drawing.Color.Transparent;
             this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelSenha.Location = new System.Drawing.Point(597, 69);
+            this.labelSenha.Location = new System.Drawing.Point(597, 82);
             this.labelSenha.Name = "labelSenha";
             this.labelSenha.Size = new System.Drawing.Size(94, 29);
             this.labelSenha.TabIndex = 15;
@@ -322,7 +322,7 @@ namespace Register_View
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(499, 223);
+            this.label1.Location = new System.Drawing.Point(499, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(427, 29);
             this.label1.TabIndex = 21;
@@ -340,7 +340,7 @@ namespace Register_View
             "1 A 3 VEZES POR SEMANA",
             "4 A 6 VEZES POR SEMANA",
             "7+ VEZES POR SEMANA"});
-            this.selectAtvFisica.Location = new System.Drawing.Point(550, 280);
+            this.selectAtvFisica.Location = new System.Drawing.Point(565, 269);
             this.selectAtvFisica.Name = "selectAtvFisica";
             this.selectAtvFisica.Size = new System.Drawing.Size(361, 21);
             this.selectAtvFisica.TabIndex = 23;
@@ -351,7 +351,7 @@ namespace Register_View
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(565, 319);
+            this.label2.Location = new System.Drawing.Point(565, 305);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(334, 29);
             this.label2.TabIndex = 24;
@@ -365,27 +365,10 @@ namespace Register_View
             "GANHAR PESO",
             "MANTER PESO",
             "PERDER PESO"});
-            this.selectDieta.Location = new System.Drawing.Point(550, 357);
+            this.selectDieta.Location = new System.Drawing.Point(565, 353);
             this.selectDieta.Name = "selectDieta";
             this.selectDieta.Size = new System.Drawing.Size(361, 21);
             this.selectDieta.TabIndex = 25;
-            // 
-            // inputCPF
-            // 
-            this.inputCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.inputCPF.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputCPF.ForeColor = System.Drawing.Color.Silver;
-            this.inputCPF.Location = new System.Drawing.Point(172, 410);
-            this.inputCPF.Multiline = true;
-            this.inputCPF.Name = "inputCPF";
-            this.inputCPF.Size = new System.Drawing.Size(229, 31);
-            this.inputCPF.TabIndex = 27;
-            this.inputCPF.Tag = "";
-            this.inputCPF.Text = "Insira seu CPF";
-            this.inputCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.inputCPF.WordWrap = false;
-            this.inputCPF.Enter += new System.EventHandler(this.inputEnterCPF);
-            this.inputCPF.Leave += new System.EventHandler(this.inputLeaveCPF);
             // 
             // label3
             // 
@@ -393,11 +376,28 @@ namespace Register_View
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(54, 410);
+            this.label3.Location = new System.Drawing.Point(62, 345);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 26;
             this.label3.Text = "CPF :";
+            // 
+            // inputCPF
+            // 
+            this.inputCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.inputCPF.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputCPF.ForeColor = System.Drawing.Color.Silver;
+            this.inputCPF.Location = new System.Drawing.Point(172, 345);
+            this.inputCPF.Multiline = true;
+            this.inputCPF.Name = "inputCPF";
+            this.inputCPF.Size = new System.Drawing.Size(229, 31);
+            this.inputCPF.TabIndex = 28;
+            this.inputCPF.Tag = "";
+            this.inputCPF.Text = "Insira seu CPF";
+            this.inputCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.inputCPF.WordWrap = false;
+            this.inputCPF.Enter += new System.EventHandler(this.inputEnterCPF);
+            this.inputCPF.Leave += new System.EventHandler(this.inputLeaveCPF);
             // 
             // Register_View
             // 
@@ -463,7 +463,7 @@ namespace Register_View
         private System.Windows.Forms.ComboBox selectAtvFisica;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox selectDieta;
-        private System.Windows.Forms.TextBox inputCPF;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox inputCPF;
     }
 }
