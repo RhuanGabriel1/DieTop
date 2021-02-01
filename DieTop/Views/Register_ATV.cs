@@ -31,7 +31,7 @@ namespace DieTop.Views
         {
             Class.UserVar user = new Class.UserVar();
             db.Database data = new db.Database();
-            data.CommandSQL("UPDATE dia SET tipo_atividade = '" + selectTipo.SelectedItem + "', duracao_atv = '" + inputTempo.Text+ "'WHERE cpf ='" + user.Cpf + "';");
+            data.CommandSQL("UPDATE dia SET tipo_atividade = '" + selectTipo.SelectedItem + "', duracao_atv = '" + inputTempo.Text+ "'WHERE cpf ='" + user.Cpf + "' and dia = '" + user.Dia + "';");
         }
     }
 }

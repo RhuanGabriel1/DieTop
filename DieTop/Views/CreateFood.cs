@@ -113,18 +113,18 @@ namespace DieTop.Views
             Class.UserVar userVar = new Class.UserVar();
             if (selectTipo.SelectedIndex == 0)
             {
-                data.CommandSQL("update  dia set cafe_da_manha = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text+ "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "';"); ;
+                data.CommandSQL("update  dia set cafe_da_manha = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text+ "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
             }
             if (selectTipo.SelectedIndex == 1)
             {
-                data.CommandSQL("update  dia set almoco = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "';"); ;
+                data.CommandSQL("update  dia set almoco = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
 
             }
             if (selectTipo.SelectedIndex == 2)
             {
-                data.CommandSQL("update  dia set janta = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "';"); ;
+                data.CommandSQL("update  dia set janta = '" + labelAli1.Text + "/" + labelAli2.Text + "/" + labelAli3.Text + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
             }
 
@@ -145,7 +145,8 @@ namespace DieTop.Views
         {
             db.Database data = new db.Database();
             Class.UserVar userVar = new Class.UserVar();
-            data.CommandSQL("UPDATE dia SET almoco = 'Nada', cafe_da_manha = 'Nada' , janta = 'Nada', caloria_restante = '" + userVar.Total_calorias + "' WHERE cpf ='" + userVar.Cpf + "';");
+            data.CommandSQL("UPDATE dia SET almoco = 'Nada', cafe_da_manha = 'Nada' , janta = 'Nada', caloria_restante = '" + userVar.Total_calorias + "' WHERE cpf ='" + userVar.Cpf +
+                "' and dia = '"+userVar.Dia+"';");
             LoadingComponents();
 
         }

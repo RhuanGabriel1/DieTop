@@ -277,17 +277,33 @@ namespace Register_View
                         DieTop.db.Database data = new DieTop.db.Database();
                         try
                         {
+                            bool queryError = false;
+                            bool queryError2 = false;
+
                             //insert into PESSOA
-                            data.CommandSQL("insert into pessoa(cpf,senha, nome, idade, sexo, altura, peso) values('" + getCPF() + "','"+getSenha()+
+                            queryError =  data.CommandSQL("insert into pessoa(cpf,senha, nome, idade, sexo, altura, peso) values('" + getCPF() + "','"+getSenha()+
                                 "', '"+getNome()+"',"+getIdade()+ ",'" + getSexo() + "', " +
                                 getAltura()+","+getPeso()+ ");");
 
                             //Inserto into DIA
-                            data.CommandSQL("insert into dia (cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,cpf,dieta_dia,atv_dia,dia) values ('Nada','Nada','Nada','"+getChanges+"','"+getChanges+"','Nenhuma','0','" + getCPF() + "', '" + selectDieta.SelectedItem.ToString() + "', '" + selectAtvFisica.SelectedItem.ToString() + "','1')");
-                            DieTop.Welcome_View welcome = new DieTop.Welcome_View();
-                            this.Hide();
-                            this.Closed += (s, args) => this.Close();
-                            welcome.Show();
+                            queryError2 = data.CommandSQL("insert into dia (cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,cpf,dieta_dia,atv_dia,dia) values ('Nada','Nada','Nada','"+getChanges+"','"+getChanges+"','Nenhuma','0','" + getCPF() + "', '" + selectDieta.SelectedItem.ToString() + "', '" + selectAtvFisica.SelectedItem.ToString() + "','1')");
+
+                            if (!queryError)
+                            {
+                                MessageBox.Show("Houve um Erro Durante o Cadastro! Favor entrar em contato com Suporte", "Muito Obrigado!"
+                                  , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            
+                            if (queryError && queryError2)
+                            {
+                                DieTop.Welcome_View welcome = new DieTop.Welcome_View();
+                                this.Hide();
+                                this.Closed += (s, args) => this.Close();
+                                welcome.Show();
+                                MessageBox.Show("Cadastro Efetuado! Favor, Fazer login para continuar", "Muito Obrigado!"
+                                    , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            }
+                           
                         }
                         catch (Exception error)
                         {

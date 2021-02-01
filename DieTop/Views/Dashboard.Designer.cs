@@ -71,6 +71,7 @@ namespace DieTop.Views
             this.labelDieta = new System.Windows.Forms.Label();
             this.labelDuracao = new System.Windows.Forms.Label();
             this.labelAtvSem = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.user.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +80,7 @@ namespace DieTop.Views
             // 
             this.user.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.user.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.user.Controls.Add(this.button2);
             this.user.Controls.Add(this.ButtonAceitar);
             this.user.Controls.Add(this.ButtonAlterar);
             this.user.Controls.Add(this.ButtonVoltar);
@@ -555,6 +557,19 @@ namespace DieTop.Views
             this.labelAtvSem.Text = "0";
             this.labelAtvSem.Visible = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(243, 64);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 35);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "< Dias Anteriores";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,5 +635,6 @@ namespace DieTop.Views
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
     }
 }

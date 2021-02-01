@@ -97,7 +97,7 @@
   <ItemGroup>
     <Compile Include="Class\Hooks.cs" />
     <Compile Include="Class\UserVar.cs" />
-    <Compile Include="db\database.cs" />
+    <Compile Include="Database\database.cs" />
     <Compile Include="Views\CreateFood.cs">
       <SubType>Form</SubType>
     </Compile>
