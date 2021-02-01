@@ -34,6 +34,11 @@ namespace DieTop.Views
            bool queryDb = data.CommandSQL("UPDATE dia SET tipo_atividade = '" + selectTipo.SelectedItem + "', duracao_atv = '" + inputTempo.Text+ "'WHERE cpf ='" + user.Cpf + "' and dia = '" + user.Dia + "';");
             if (queryDb)
             {
+                Register_ATV here = new Register_ATV();
+                Dashboard there = new Dashboard();
+                this.Hide();
+                this.Closed += (s, args) => here.Close();
+                there.Show();
                 MessageBox.Show("Alteração Efetuada!", "Muito Obrigado!"
                                                      , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 

@@ -24,8 +24,6 @@ namespace DieTop
             catch (Exception e)
             {
                 Application.Exit();
-                data.CloseConnection();
-
             }
             
             Application.Run(new Welcome_View());

@@ -23,6 +23,11 @@ namespace DieTop.Views
            bool queryDB = data.CommandSQL("insert into alimento(nome_alim,calorias_alim) values('" + InputAlimento.Text + "','" + InputCaloria.Text +"');");
             if (queryDB)
             {
+                Register_Food here = new Register_Food();
+                CreateFood food = new CreateFood();
+                this.Hide();
+                this.Closed += (s, args) => here.Close();
+                food.Show();
                 MessageBox.Show("Alteração Efetuada!", "Muito Obrigado!"
                                                      , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
