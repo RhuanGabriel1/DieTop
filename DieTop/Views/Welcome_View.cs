@@ -77,7 +77,7 @@ namespace DieTop
         private void loginButton_Click(object sender, EventArgs e)
         {
             List<string> getData = new List<string>();
-            db.Database data = new db.Database();
+            DataBase.Database data = new DataBase.Database();
             getData = data.CommandSelectSQL("select cpf,senha,nome from pessoa where cpf = '" + inputLogin.Text + "' and senha ='" + inputSenha.Text + "'");
 
             if (getData.Count != 0)

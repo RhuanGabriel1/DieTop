@@ -14,7 +14,7 @@ namespace DieTop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            db.Database data = new db.Database();
+            DataBase.Database data = new DataBase.Database();
             try
             {
             data.ConnectDB();

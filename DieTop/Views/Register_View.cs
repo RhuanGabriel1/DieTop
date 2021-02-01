@@ -274,7 +274,7 @@ namespace Register_View
 
                     if (result.ToString() == "Yes" )
                     {
-                        DieTop.db.Database data = new DieTop.db.Database();
+                        DieTop.DataBase.Database data = new DieTop.DataBase.Database();
                         try
                         {
                             bool queryError = false;

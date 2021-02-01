@@ -22,15 +22,7 @@ namespace DieTop.Views
         private void Refresh()
         {
             Class.UserVar user = new Class.UserVar();
-            Console.WriteLine(user.Cafe_da_manha);
-            Console.WriteLine(user.Almoco);
-            Console.WriteLine(user.Janta);
-            Console.WriteLine(user.Total_calorias);
-            Console.WriteLine(user.Caloria_restante);
-            Console.WriteLine(user.Tipo_atividade);
-            Console.WriteLine(user.Duracao_atv);
-            Console.WriteLine(user.AtvSem);
-            Console.WriteLine(user.Dia);
+            
 
             try
             {
@@ -130,8 +122,8 @@ namespace DieTop.Views
 
             try
             {
-                db.Database data = new db.Database();
-             bool queryRequest =  data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
+                DataBase.Database  data = new DataBase.Database();
+                bool queryRequest =  data.CommandSQL("UPDATE pessoa SET nome = '" + inputNome.Text + "', idade = '" + inputIdade.Text + "', sexo = '" + inputSexo.Text + "', altura = '" + inputAltura.Text +
                     "', peso = '" + inputPeso.Text + "' WHERE cpf ='" + dataUser.Cpf + "';");
                 Dashboard dash = new Dashboard();
                
@@ -181,7 +173,39 @@ namespace DieTop.Views
 
         private void ButtonFinalizar_Click(object sender, EventArgs e)
         {
-            
+            DataBase.Database data = new DataBase.Database();
+            Class.UserVar user = new Class.UserVar();
+            int day = int.Parse(user.Dia);
+            Console.WriteLine(day + 1);
+            DialogResult result = MessageBox.Show("Os Seguintes Dados Serão Cadastrados : \n" + "Café da  Manhã : " + user.Cafe_da_manha + "\nAlmoço : " + user.Almoco +
+                        "\nJanta : " + user.Janta + "\nTotal de Calorias : " + user.Total_calorias + "\nCalorias Restantes : " + user.Caloria_restante +
+                        "\nTipo de Atividade Física : " + user.Tipo_atividade + "\nDieta : " + user.Dieta + "\nDuração da Atividade : " +
+                        user.Duracao_atv + "\nAtividades Semanais: " + user.AtvSem+
+                        "\n Deseja Prosseguir?", "Deseja Prosseguir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result.ToString() == "Yes")
+            {
+                
+              bool  query= data.CommandSQL("insert into dia (cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,cpf,dieta_dia,atv_dia,dia) values ('Nada','Nada','Nada','" + user.Total_calorias + "','" + user.Total_calorias + "','Nenhuma','0','" + user.Cpf + "', '" + user.Dieta + "', '" + user.AtvSem + "','"+day+"')");
+                if (!query)
+                {
+                  
+                        MessageBox.Show("Houve um Erro Durante o Cadastro! Favor entrar em contato com Suporte", "Muito Obrigado!"
+                          , MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    
+                    Dashboard here = new Dashboard();
+                    this.Hide();
+                    this.Closed += (s, args) => here.Close();
+                    here.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Cadastro Efetuado! Obrigado por Utilizar Dietop! Esperamos te ver Amanhã!", "Muito Obrigado!"
+                                 , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Application.Exit();
+                }
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ namespace DieTop.Views
 
         private void ButtonCadastrar_Click(object sender, EventArgs e)
         {
-            db.Database data = new db.Database();
+            DataBase.Database data = new DataBase.Database();
            bool queryDB = data.CommandSQL("insert into alimento(nome_alim,calorias_alim) values('" + InputAlimento.Text + "','" + InputCaloria.Text +"');");
             if (queryDB)
             {

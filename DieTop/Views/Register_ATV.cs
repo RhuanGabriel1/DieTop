@@ -30,7 +30,7 @@ namespace DieTop.Views
         private void ButtonCadastrar_Click(object sender, EventArgs e)
         {
             Class.UserVar user = new Class.UserVar();
-            db.Database data = new db.Database();
+            DataBase.Database data = new DataBase.Database();
            bool queryDb = data.CommandSQL("UPDATE dia SET tipo_atividade = '" + selectTipo.SelectedItem + "', duracao_atv = '" + inputTempo.Text+ "'WHERE cpf ='" + user.Cpf + "' and dia = '" + user.Dia + "';");
             if (queryDb)
             {

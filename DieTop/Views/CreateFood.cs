@@ -39,7 +39,7 @@ namespace DieTop.Views
 
         private void ReceiveData()
         {
-            db.Database dataZ = new db.Database();
+            DataBase.Database  dataZ = new DataBase.Database() ;
             getNomeAli = dataZ.CommandSelectSQL("select nome_alim from alimento ");
             getCaloriasAli = dataZ.CommandSelectSQL("select calorias_alim from alimento ");
         }
@@ -110,7 +110,7 @@ namespace DieTop.Views
         {
             LoadingComponents();
 
-            db.Database data = new db.Database();
+            DataBase.Database data = new DataBase.Database();
             Class.UserVar userVar = new Class.UserVar();
 
             string ali1, ali2, ali3;
@@ -118,6 +118,7 @@ namespace DieTop.Views
             ali2 = labelAli2.Text;
             ali3 = labelAli3.Text;
 
+           
 
             if (ali1 == "Alimento1")
             {
@@ -131,65 +132,70 @@ namespace DieTop.Views
             {
                 ali3 = "Nadinha";
             }
-
             DialogResult result = MessageBox.Show("Os Seguinte Alimentos Serão Cadastrados : \n" + ali1 + "/" + ali2 + "/" + ali3 + "\n Deseja Prosseguir?", "Deseja Prosseguir?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result.ToString() == "Yes")
             {
-
-                if (userVar.Cafe_da_manha == "Nada")
-                {
+                userVar.Connect();
+               
 
                   
                 if (selectTipo.SelectedIndex == 0)
                 {
-                       
+                    if (userVar.Cafe_da_manha == "Nada")
+                    {
                         data.CommandSQL("update  dia set cafe_da_manha = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
                 }
+                    else
+                    {
+                        MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                if (userVar.Almoco == "Nada")
-                { 
+                
+              
                 
                     if (selectTipo.SelectedIndex == 1)
                 {
-                    data.CommandSQL("update  dia set almoco = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+                    if (userVar.Almoco == "Nada")
+                    {
+                        data.CommandSQL("update  dia set almoco = '" + ali1 + "/" + ali2 + "/" + ali3 + "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                    }
                 }
-                }
-                else
-                {
-                    MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                }
-                if (userVar.Janta== "Nada")
-                {
+               
+               
                     if (selectTipo.SelectedIndex == 2)
                 {
-                    data.CommandSQL("update  dia set janta = '" + ali1 + "/" + ali2 + "/" + ali3 +  "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
+                    if (userVar.Janta == "Nada")
+                    {
+                        data.CommandSQL("update  dia set janta = '" + ali1 + "/" + ali2 + "/" + ali3 +  "', caloria_restante = '" + labelCalTotal.Text + "' where cpf ='" + userVar.Cpf + "' and dia = '" + userVar.Dia + "';");
 
                 }
-                }
-                else
-                {
-                    MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Parece que Você Já Realizou essa Refeição hoje! ", " Ação Indisponível.", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
+                    }
                 }
+                
 
                 selectTipo.SelectedIndex = 0;
                 SelectA1.SelectedIndex = 0;
                 SelectA2.SelectedIndex = 0;
                 SelectA3.SelectedIndex = 0;
+
             }
 
-               
+
 
         }
 
@@ -200,7 +206,7 @@ namespace DieTop.Views
 
         private void ButtonReset_Click(object sender, EventArgs e)
         {
-            db.Database data = new db.Database();
+            DataBase.Database  data = new DataBase.Database();
             Class.UserVar userVar = new Class.UserVar();
             DialogResult result = MessageBox.Show("Deseja Resetar Todas as Refeições?", "MENSAGEM DE ALERTA!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -218,9 +224,9 @@ namespace DieTop.Views
                 SelectA3.SelectedIndex = 0;
                 LoadingComponents();
             }
-        
 
-       
+
+
 
         }
 

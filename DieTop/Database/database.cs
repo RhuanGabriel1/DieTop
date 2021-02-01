@@ -4,7 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace DieTop.db
+namespace DieTop.DataBase
 {
     class Database
     {

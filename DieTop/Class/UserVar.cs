@@ -38,11 +38,11 @@ namespace DieTop.Class
             Dia = getDia[9];
         }
 
-        db.Database data = new db.Database();
+        DataBase.Database data = new DataBase.Database();
         List<string> getData = new List<string>();
         List<string> getDia = new List<string>();
 
-        private void Connect()
+        public void Connect()
         {
             getData = data.CommandSelectSQL("select nome,cpf,idade,senha,sexo,altura,peso from pessoa where cpf = '" + CPF_LOGIN + "' and senha ='" + SENHA_LOGIN + "';");
             getDia = data.CommandSelectSQL("select cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,dieta_dia,atv_dia,dia from dia where cpf = '" + CPF_LOGIN + "';");
