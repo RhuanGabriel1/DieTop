@@ -60,6 +60,7 @@ namespace Register_View
         }
 
         Hooks.Hooks hook = new Hooks.Hooks();
+
         public Register_View()
         {
             MaximizeBox = false;
@@ -240,7 +241,7 @@ namespace Register_View
 
             bool stop = false;
             bool correct = true;
-            correct = hook.FormValidator(correct,1,getNome(),nomeDefault,2);
+            correct = hook.FormValidator(correct,1,  getNome(),nomeDefault,2);
             correct = hook.FormValidator(correct, 0, getIdade(), idadeDefault, 4);
             correct = hook.FormValidator(correct, 0, getPeso(), pesoDefault, 4);
             correct = hook.FormValidator(correct, 0, getAltura(), alturaDefault, 4);
@@ -288,7 +289,7 @@ namespace Register_View
                             //Inserto into DIA
                             queryError2 = data.CommandSQL("insert into dia (cafe_da_manha,almoco,janta,total_calorias,caloria_restante,tipo_atividade,duracao_atv,cpf,dieta_dia,atv_dia,dia) values ('Nada','Nada','Nada','"+getChanges+"','"+getChanges+"','Nenhuma','0','" + getCPF() + "', '" + selectDieta.SelectedItem.ToString() + "', '" + selectAtvFisica.SelectedItem.ToString() + "','1')");
 
-                            if (!queryError)
+                            if (queryError == false)
                             {
                                 MessageBox.Show("Houve um Erro Durante o Cadastro! Favor entrar em contato com Suporte", "Muito Obrigado!"
                                   , MessageBoxButtons.OK, MessageBoxIcon.Error);

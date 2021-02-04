@@ -74,8 +74,7 @@ namespace DieTop.Views
             inputSexo.Text = dataUser.Sexo;
             inputAltura.Text = dataUser.Altura;
             inputPeso.Text = dataUser.Peso;
-            //selectAtvFisica.SelectedItem = dataUser.AtvSem;
-            //selectDieta.SelectedItem = dataUser.Dieta;
+ 
 
         }
 
@@ -134,10 +133,7 @@ namespace DieTop.Views
                     MessageBox.Show("Alteração Efetuada!", "Muito Obrigado!"
                                                       , MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                else
-                {
-
-                }
+             
 
 
             }
@@ -193,11 +189,6 @@ namespace DieTop.Views
                         MessageBox.Show("Houve um Erro Durante o Cadastro! Favor entrar em contato com Suporte", "Muito Obrigado!"
                           , MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    
-                    Dashboard here = new Dashboard();
-                    this.Hide();
-                    this.Closed += (s, args) => here.Close();
-                    here.Show();
                 }
                 else
                 {

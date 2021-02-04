@@ -8,28 +8,26 @@ namespace DieTop
 
     public partial class Welcome_View : Form
     {
+
+        Hooks.Hooks hook = new Hooks.Hooks();
+
         public Welcome_View()
         {
             MaximizeBox = false;
-           
             InitializeComponent();
-            SendLogin();
             
         }
 
     
-        List<string> getData = new List<string>();
-      
-
+    
         //If clicked is different of default text , will turn of personalized text
-        Hooks.Hooks hook = new Hooks.Hooks();
        
 
        //Quando Clica no input
         private void InputSenha_enter(object sender, EventArgs e)
         {
            hook.ChangeInputTextClicked(inputSenha, "Insira sua Senha");
-            hook.TurnItToPassword(inputSenha, "Insira sua Senha");
+           hook.TurnItToPassword(inputSenha, "Insira sua Senha");
 
         }
         //Quando Sai do input e nao contém nenhum dado
@@ -54,10 +52,7 @@ namespace DieTop
             hook.ChangeInputTextClickedNull(inputLogin, "Insira seu CPF");
 
         }
-        private List<string> SendLogin()
-        {
-            return getData;
-        }
+        
         private void LoadRegisterScreen(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Welcome_View welcome_View = new Welcome_View();
